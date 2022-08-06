@@ -1,0 +1,125 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1">
+<meta name="keywords" content=" 网页生成器"> <!-- 关键词 -->
+<meta name="description" content=" 网页生成器"> <!-- 内容摘要 -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<link rel="icon" href="/favicon.ico">
+<link rel="stylesheet" type="text/css" href="/style.css">
+<title>网页生成器</title></head><body>
+
+  <header id='masthead'>
+    <div class='site-header-inner'>
+      <h1 class='site-title'> <a href='/' class='logo'>月牙博客</a> </h1>
+      <nav id="nav-top">
+        <ul id="menu-top" class="nav-top-items">
+           <li class="menu-item"><a href="/">首页</a></li> <li class="menu-item"><a href="/t/t.html">微语</a></li> <li class="menu-item"><a href="/about.html">关于</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div id="content">
+    <div id="primary">
+      <article class="post">
+        <header class="post-header">
+          <h1 class="post-title">网页生成器</h1>
+          <time class="post-time"> 2021-02-08 13:26:56</time>
+        </header>
+        <div class="post-content"> <h1>网页生成器</h1>
+<p>一直在使用hexo（基于nodejs）作为html生成器，有点复杂，占用电脑内存太多，便萌生了使用python制作一个html生成器的概念，查了一些资料，还真有这方面的资料，目前做出了一个雏形，还有很多东西需要修改。<br />
+1. html标签解析不完整，达不到理想的效果。<br />
+2. 速度还可以。<br />
+3. 文件标题/路径/文章标题如何处理。</p>
+<p>2021.2.10补充<br />
+html生成器，我已经完成，能满足基本要求，但还是有很多问题：<br />
+1. 文章顺序<br />
+2. 分页<br />
+不管了，先用着。</p>
+<p>2021/2/12补充：<br />
+1. 文章顺序功能已经完成，文章目录按照创作时间进行降序排列<br />
+2. 分页功能还需完善。</p>
+<p>2021/2/12补充：<br />
+分页功能已经完成，html生成器已经完成，分页和排序功能都有了；html美观方面，凑活用。 运行前，要在<code>xxx.py</code>对应的文件目录下建立如下文件夹：</p>
+<pre><code>posts  //程序生成的HTML格式的文章，目标文件
+source  //.md格式的文章
+pages   //分页
+</code></pre>
+<p>运行：<code>python xxx.py</code> 在本地会生成<code>index.html</code>首页</p>
+<p>2021/2/14补充：<br />
+把电脑上面的hexo网页生成器，nodejs程序卸载了，<code>npm_modules</code>目录下面太多东西了，占用存储，以后就用这个程序了，或许不完美，待完善，凑合着用。</p>
+<p>2021/2/15补充：<br />
+把算法中的错误更正了，现在能正常运行，之前错误的原因是分页导航键有问题，第一页和第二页导航有错误，这次更改了。</p>
+<p>2021/4/1补充：<br />
+使用 <strong>面向对象</strong> 方法重新把程序写了一遍，现在运行速度更快了，代码更精简了，:)，其实可以用 <em>PyQt</em>
+编写一个可视化软件哈，操作简单化，增加一点个性化功能，让不懂编程的也能简单地更改源码，更改CSS，网址标题。</p>
+<p>2022.4.17<br />
+把数据结构改了一下，使用数组+结点的方式。</p>
+<p>2022.4.21<br />
+更新：更改数据存储结构，改用列表+对象结点的方式，先预读取markdown文件，存储在数据存储结构中，然后使用多线程进行网页生成。<br />
+使用这种方式的好处在于：可以方便地将文章置顶，隐藏，关键在于更加方便的编写内部的导航按钮，增加站内留存率。 文件结构</p>
+<pre><code>pages //分页文件夹
+pics  //图片文件夹
+posts //生成的html存储文件夹
+source //markdown存储文件夹
+template //文章模板、目录模板文件夹
+create.py //程序
+</code></pre>
+<p>应该算是最终版本，以后不会在程序方面下功夫了，毕竟也没那个精力了。</p>
+<p><strong>项目地址</strong>：<a href="https://github.com/qing2zijin/staticblog">staticblog</a></p>
+<p>use_markdownmodule:ABCCSX</p> </div>
+        <footer class="post-footer">
+          <div class="post-tags"> <span>python</span> </div>
+          <nav class="post-nav">
+		    <p>
+            <span style="float:left">上一篇：<a href="/posts/2018-10-01-yuan-wang.html">礼记：大道之行也</a></span> 
+			<span style="float:right">下一篇：<a href="/posts/2021-02-15-trip_qibugou_the-spring-festival.html">七步沟风景</a></span>
+            <!-- 上下文导航按钮  -->
+			</p>
+          </nav>
+        </footer>
+        <div class="comments" id="comments">
+			 <p style="font-size:90%">给我留言：
+								<a href="http://users3.smartgb.com/g/g.php?a=s&i=g36-33383-d2" target="blank" rel="nofollow">here</a>
+			 </p>
+        </div>
+      </article>
+    </div>
+  </div>
+  <!--尾部-->
+  <footer id="colophon"> <span class="copyright-year">&copy;2016-2023 <span class="footer-author">月牙博客</span>
+    <!--  <span class="power-by">Powered by Python</span>  --> 
+    </span><span style="display:none"><a href="/sitemap.txt">站点地图</a></span> </footer>
+
+<!--badu analysis-->
+<script>
+	var _hmt = _hmt || [];
+	(function() {
+		var hm = document.createElement("script");
+		hm.src = "https://hm.baidu.com/hm.js?3ff9d8eddf09cd222676889e6d8e0ea7";
+		var s = document.getElementsByTagName("script")[0]; 
+		s.parentNode.insertBefore(hm, s);		
+	})();
+	
+		// 获取所有的图片标签
+    const imgs = document.getElementsByTagName('img')
+    // 获取可视区域的高度
+    const viewHeight = window.innerHeight || document.documentElement.clientHeight
+    // num用于统计当前显示到了哪一张图片，避免每次都从第一张图片开始检查是否露出
+    let num = 0
+    function lazyload(){
+        for(let i=num; i<imgs.length; i++) {
+            // 用可视区域高度减去元素顶部距离可视区域顶部的高度
+            let distance = viewHeight - imgs[i].getBoundingClientRect().top
+            // 如果可视区域高度大于等于元素顶部距离可视区域顶部的高度，说明元素露出
+            if(distance >= 0 ){
+                // 给元素写入真实的src，展示图片
+                imgs[i].src = imgs[i].getAttribute('data-src')
+                // 前i张图片已经加载完毕，下次从第i+1张开始检查是否露出
+                num = i + 1
+            }
+        }
+    }
+    // 监听Scroll事件
+    window.addEventListener('scroll', lazyload, false);
+</script>
+</body>
+</html>

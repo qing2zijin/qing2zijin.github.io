@@ -1,0 +1,94 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1">
+<meta name="keywords" content="写给远方的你"> <!-- 关键词 -->
+<meta name="description" content="写给远方的你"> <!-- 内容摘要 -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<link rel="icon" href="/favicon.ico">
+<link rel="stylesheet" type="text/css" href="/style.css">
+<title>写给远方的你</title></head><body>
+
+  <header id='masthead'>
+    <div class='site-header-inner'>
+      <h1 class='site-title'> <a href='/' class='logo'>月牙博客</a> </h1>
+      <nav id="nav-top">
+        <ul id="menu-top" class="nav-top-items">
+           <li class="menu-item"><a href="/">首页</a></li> <li class="menu-item"><a href="/t/t.html">微语</a></li> <li class="menu-item"><a href="/about.html">关于</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div id="content">
+    <div id="primary">
+      <article class="post">
+        <header class="post-header">
+          <h1 class="post-title">写给远方的你</h1>
+          <time class="post-time"> 2017-06-10 14:20:05</time>
+        </header>
+        <div class="post-content"> <p>写给远方的你写给远方的你，过去的你，我一无所知；</p>
+<p>现在的你，我也不想明白；</p>
+<p>将来的你，我也不想知道。</p>
+<p>任凭时间流逝，将你我内心洗涤。写给远方的你，</p>
+<p>记得那是一个充满秋色的一天，</p>
+<p>我们一起在球场嬉戏，诉说青春的乐趣；</p>
+<p>打闹，</p>
+<p>离去；</p>
+<p>就让时间来淘洗我们的内心。</p>
+<p>而你已不是曾经的你，我也不是现在的我；</p>
+<p>我们都是青春。写给远方的你； 你离去，我走开</p> </div>
+        <footer class="post-footer">
+          <div class="post-tags"> <span>life</span> </div>
+          <nav class="post-nav">
+		    <p>
+            <span style="float:left">上一篇：<a href="/posts/2016-06-28-real-study.html">学习</a></span> 
+			<span style="float:right">下一篇：<a href="/posts/2018-06-13-da-xue-biye-le.html">毕业了</a></span>
+            <!-- 上下文导航按钮  -->
+			</p>
+          </nav>
+        </footer>
+        <div class="comments" id="comments">
+			 <p style="font-size:90%">给我留言：
+								<a href="http://users3.smartgb.com/g/g.php?a=s&i=g36-33383-d2" target="blank" rel="nofollow">here</a>
+			 </p>
+        </div>
+      </article>
+    </div>
+  </div>
+  <!--尾部-->
+  <footer id="colophon"> <span class="copyright-year">&copy;2016-2023 <span class="footer-author">月牙博客</span>
+    <!--  <span class="power-by">Powered by Python</span>  --> 
+    </span><span style="display:none"><a href="/sitemap.txt">站点地图</a></span> </footer>
+
+<!--badu analysis-->
+<script>
+	var _hmt = _hmt || [];
+	(function() {
+		var hm = document.createElement("script");
+		hm.src = "https://hm.baidu.com/hm.js?3ff9d8eddf09cd222676889e6d8e0ea7";
+		var s = document.getElementsByTagName("script")[0]; 
+		s.parentNode.insertBefore(hm, s);		
+	})();
+	
+		// 获取所有的图片标签
+    const imgs = document.getElementsByTagName('img')
+    // 获取可视区域的高度
+    const viewHeight = window.innerHeight || document.documentElement.clientHeight
+    // num用于统计当前显示到了哪一张图片，避免每次都从第一张图片开始检查是否露出
+    let num = 0
+    function lazyload(){
+        for(let i=num; i<imgs.length; i++) {
+            // 用可视区域高度减去元素顶部距离可视区域顶部的高度
+            let distance = viewHeight - imgs[i].getBoundingClientRect().top
+            // 如果可视区域高度大于等于元素顶部距离可视区域顶部的高度，说明元素露出
+            if(distance >= 0 ){
+                // 给元素写入真实的src，展示图片
+                imgs[i].src = imgs[i].getAttribute('data-src')
+                // 前i张图片已经加载完毕，下次从第i+1张开始检查是否露出
+                num = i + 1
+            }
+        }
+    }
+    // 监听Scroll事件
+    window.addEventListener('scroll', lazyload, false);
+</script>
+</body>
+</html>

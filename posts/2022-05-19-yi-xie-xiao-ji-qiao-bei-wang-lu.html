@@ -1,0 +1,100 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1">
+<meta name="keywords" content="关于电脑的一些小操作备忘录-关闭自动维护/关闭某软件联网,月牙博客"> <!-- 关键词 -->
+<meta name="description" content="关于电脑的一些小操作备忘录-关闭自动维护/关闭某软件联网"> <!-- 内容摘要 -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<link rel="icon" href="/favicon.ico">
+<link rel="stylesheet" type="text/css" href="/style.css">
+<title>关于电脑的一些小操作备忘录-关闭自动维护/关闭某软件联网</title></head><body>
+
+  <header id='masthead'>
+    <div class='site-header-inner'>
+      <h1 class='site-title'> <a href='/' class='logo'>月牙博客</a> </h1>
+      <nav id="nav-top">
+        <ul id="menu-top" class="nav-top-items">
+           <li class="menu-item"><a href="/">首页</a></li> <li class="menu-item"><a href="/t/t.html">微语</a></li> <li class="menu-item"><a href="/about.html">关于</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div id="content">
+    <div id="primary">
+      <article class="post">
+        <header class="post-header">
+          <h1 class="post-title">关于电脑的一些小操作备忘录-关闭自动维护/关闭某软件联网</h1>
+          <time class="post-time">2022-05-19 11:34:00</time>
+        </header>
+        <div class="post-content"> <p>最近电脑老是自动维护，维护的时候就卡，很是影响电脑操作，于是关闭它。
+具体操作：<a href="https://product.pconline.com.cn/itbk/software/dnyw/1492/14921790.html">https://product.pconline.com.cn/itbk/software/dnyw/1492/14921790.html</a></p>
+<blockquote>
+第一步、Win+R组合键调出运行命令输入框，输入regedit后，点击确定或者回车<br>
+温馨提示：如果弹出用户账户控制窗口，点击“是”即可<br>
+第二步、在注册表编辑器窗口，依次展开并定位至<br>
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Schedule\Maintenance<br>
+第三步、在Maintenance对应的右侧窗口，单击鼠标右键，弹出菜单中鼠标指向“ 新建”然后点击次级菜单中的“DWORD(32位)值”，<br>
+第四步、将新建的DWORD(32位)值命名为MaintenanceDisabled，对其双击鼠标<br>
+第五步、在弹出的编辑DWORD(32位)值窗口，把MaintenanceDisabled的数值数据从“0”更改为“1”，然后点击“确定”<br>
+第六步、重启计算机，Windows10系统自动维护功能就会关闭了<br>
+温馨提示：需要重新开启自动维护功能，只需把MaintenanceDisabled数值数据从“1”修改为“0”，或删除MaintenanceDisabled值即可
+</blockquote>
+
+<p>另外，有些软件开启之后就加载广告，导致开启缓慢，于是可以考虑关闭软件联网：
+<a href="https://www.52zixue.com/dnjc/06/01/32402/">https://www.52zixue.com/dnjc/06/01/32402/</a></p>
+<p>很实用。</p> </div>
+        <footer class="post-footer">
+          <div class="post-tags"> <span>life</span> </div>
+          <nav class="post-nav">
+		    <p>
+            <span style="float:left">上一篇：<a href="/posts/gongkao_zhaunlan/2022-05-11-zi-su.html">如何提高考试成绩</a></span> 
+			<span style="float:right">下一篇：<a href="/posts/gongkao_zhaunlan/2022-07-31-gongkao_baomingdiqu.html">四川省考报考分数低位区</a></span>
+            <!-- 上下文导航按钮  -->
+			</p>
+          </nav>
+        </footer>
+        <div class="comments" id="comments">
+			 <p style="font-size:90%">给我留言：
+								<a href="http://users3.smartgb.com/g/g.php?a=s&i=g36-33383-d2" target="blank" rel="nofollow">here</a>
+			 </p>
+        </div>
+      </article>
+    </div>
+  </div>
+  <!--尾部-->
+  <footer id="colophon"> <span class="copyright-year">&copy;2016-2023 <span class="footer-author">月牙博客</span>
+    <!--  <span class="power-by">Powered by Python</span>  --> 
+    </span><span style="display:none"><a href="/sitemap.txt">站点地图</a></span> </footer>
+
+<!--badu analysis-->
+<script>
+	var _hmt = _hmt || [];
+	(function() {
+		var hm = document.createElement("script");
+		hm.src = "https://hm.baidu.com/hm.js?3ff9d8eddf09cd222676889e6d8e0ea7";
+		var s = document.getElementsByTagName("script")[0]; 
+		s.parentNode.insertBefore(hm, s);		
+	})();
+	
+		// 获取所有的图片标签
+    const imgs = document.getElementsByTagName('img')
+    // 获取可视区域的高度
+    const viewHeight = window.innerHeight || document.documentElement.clientHeight
+    // num用于统计当前显示到了哪一张图片，避免每次都从第一张图片开始检查是否露出
+    let num = 0
+    function lazyload(){
+        for(let i=num; i<imgs.length; i++) {
+            // 用可视区域高度减去元素顶部距离可视区域顶部的高度
+            let distance = viewHeight - imgs[i].getBoundingClientRect().top
+            // 如果可视区域高度大于等于元素顶部距离可视区域顶部的高度，说明元素露出
+            if(distance >= 0 ){
+                // 给元素写入真实的src，展示图片
+                imgs[i].src = imgs[i].getAttribute('data-src')
+                // 前i张图片已经加载完毕，下次从第i+1张开始检查是否露出
+                num = i + 1
+            }
+        }
+    }
+    // 监听Scroll事件
+    window.addEventListener('scroll', lazyload, false);
+</script>
+</body>
+</html>
