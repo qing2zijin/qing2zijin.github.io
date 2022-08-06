@@ -1,0 +1,5 @@
+# robots.txt generated at http://tool.chinaz.com/robots/ 
+User-agent: *
+Disallow: /links
+Disallow: /pics
+Sitemap: http://blog.jtjiang.top/sitemap.txt
