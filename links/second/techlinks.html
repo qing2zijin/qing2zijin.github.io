@@ -11,6 +11,9 @@
 	h2{font-size:1.2em}
 	.mokuai{padding:1em; margin:0;margin-bottom:1em;border:1px dashed}
 	p{line-height:1.2em;padding:0;margin:0;margin-bottom:0.5em}
+	pre{margin:0; padding:0.5em; border:1px dashed;}
+	code{font-size:1.2em}
+	pre, code{border-radius:10px;background-color:#f1ecec; color:black}
 </style>
 </head>
 <body>
@@ -61,19 +64,27 @@
   <div class="mokuai">
 	  <p>python 爬虫</p>
 	  <p><a href="https://www.bilibili.com/read/cv6259208/" target="_blank">使用 Python 分析知乎搜索结果: </a><br>
-  </p>
+      </p>
   </div>
-   <div class="mokuai">
+   
+  <div class="mokuai">
 	  <p>Python 项目</p>
-	  <p> <a href="https://blog.csdn.net/luanpeng825485697/article/details/78757563" target="_blank">python机器学习库教程——结巴中文分词</a>&nbsp;&nbsp<a href="https://blog.csdn.net/u014028063/article/details/85231523" target="_blank">结巴分词原理及使用 </a></p>
+	  <p> <a href="https://blog.csdn.net/luanpeng825485697/article/details/78757563" target="_blank">python机器学习库教程——结巴中文分词</a>&nbsp;&nbsp;<a href="https://blog.csdn.net/u014028063/article/details/85231523" target="_blank">结巴分词原理及使用 </a>	  </p>
 	  <p><a href="https://rdc.hundsun.com/portal/article/958.html " target="_blank">自然语言处理（NLP）的基础难点：分词算法</a>
-	  
 	  </p>
   </div>
+   
   <div class="mokuai">
 	  <p>网页</p>
 	  <p><a href="https://www.cnblogs.com/panwudi/p/16076379.html" target="_blank">性能优化Lazy-Load懒加载(网页需滑动才起效):  </a>
-  </p>
+      <br>代码优化：在中间<code>imgs[i].src = imgs[i].getAttribute('data-src')</code>改成：
+	  <pre><code>if (imgs[i].hasAttribute('data-src') ){ 		
+		imgs[i].src = imgs[i].getAttribute('data-src') 		
+	}	  </code></pre>
+	  先做判断，再替换，不然编写网页时候没有将<code>src</code>改成<code>data-src</code>，就会造成<code>src="null"</code>的情况，滑动网页图片消失的神奇现象。
+	  </p>
+  
+  
   </div>
   
 </div>
