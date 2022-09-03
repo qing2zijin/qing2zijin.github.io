@@ -11,6 +11,7 @@
 	<style>
 	 .tt{padding:1em; margin:0;margin-bottom:1em;border:1px dashed}
 	</style>
+	<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
 </head>
 <body>
 	<div id='page'>
@@ -21,10 +22,15 @@
 			   </h1>
 			   <nav id="nav-top">
 			      <ul id="menu-top" class="nav-top-items">
-				       <li class="menu-item"><a href="/index.html">首页</a></li>
+				       <!-- <li class="menu-item"><a href="/index.html">首页</a></li>
 					   <li class="menu-item"><a href="/t/t.html">微语</a></li>
-					   <li class="menu-item"><a href="/about.html">关于</a></li>
+					   <li class="menu-item"><a href="/about.html">关于</a></li> -->
 				  </ul>
+				  <script>
+				     $(function(){
+				       $("#menu-top").load("/extra/menu.html");
+					   });
+				  </script>
 				</nav>
 			</div>
 		</header>
@@ -33,10 +39,11 @@
 		     <article class="post">
 			   <header class="post-header">
 			        <h1 class="post-title">微语</h1>
-			         <time class="post-time" style="display:None">2022-8-29</time>
+			         <time class="post-time" style="display:None">2022-9-2</time>
 			    </header>
 				<div class="post-content">
-					<div class="tt">2022-8-29<br>&nbsp;&nbsp;降温了，门被风吹得嘎吱嘎吱的响。</div>
+					<div class="tt">2022-9-2<br>&nbsp;&nbsp;成都疫情，考试延后，“差点就一口老血”，习惯了。</div>
+<div class="tt">2022-8-29<br>&nbsp;&nbsp;降温了，门被风吹得嘎吱嘎吱的响。</div>
 <div class="tt">2022-8-21<br>&nbsp;&nbsp;热。</div>
 <div class="tt">2022-8-10<br>&nbsp;&nbsp;小镇做题家还在努力的复习，备考巴中的某事业单位岗位的考试。</div>
 <div class="tt">2022-7-31<br>&nbsp;&nbsp; 中国法律里面关于结社和新闻传播的条款还是模糊不清，甚至是不做规定，但是美国宪法第一修正案对于结社自由和新闻自由做了详尽介绍及规定。对比起来中国官方在法律成面可操作空间大，想想如果有人发生了对政府不愉快的事情，其后果是多么的可怕，因为美国有法律，通过诉讼来保护公民权利，而中国连法律都没有，诉讼也就成了难事。</div>
@@ -71,16 +78,6 @@
 			</span>
 		</footer>
 	</div>
-	<script>
-		var _hmt = _hmt || [];
-		(function() {
-			/*百度统计*/
-			var hm = document.createElement("script");
-			hm.src = "https://hm.baidu.com/hm.js?3ff9d8eddf09cd222676889e6d8e0ea7";
-			var s = document.getElementsByTagName("script")[0]; 
-			s.parentNode.insertBefore(hm, s);
-		    
-	</script>
 
 </body>
 </html>
