@@ -3,79 +3,42 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" href="/extra/favicon.ico">
 		<meta name="keywords" content="红楼梦人物关系图"> <!-- 关键词 -->
 		<meta name="description" content="红楼梦人物关系图"> <!-- 内容摘要 -->
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-		<link rel="icon" href="/extra/favicon.ico">
-		<link rel="stylesheet" type="text/css" href="/extra/css/style.css">
-		<title>红楼梦人物关系图</title>
-		<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+        <title>红楼梦人物关系图</title>
+        <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="/extra/css/mini.css">
 	</head>
 	<body>
-		<header id='masthead'>
-		<div class='site-header-inner'>
-		  <h1 class='site-title'> <a href='/' class='logo'>月牙博客</a> </h1>
-		  <nav id="nav-top">
-			<ul id="menu-top" class="nav-top-items">
-			   <!-- {{menu}} -->
-			</ul>
-		  </nav>
-		</div>
+		<a href="/"><h1>月牙博客</h1></a>
+		<ul id="menu-top" >
+					<!-- {{menu}} -->
+		</ul>
 		<script>
-		 $(function(){
-		   $("#menu-top").load("/extra/menu.html");
-		   });
+			 $(function(){
+			   $("#menu-top").load("/extra/menu.html");
+			   });
 		</script>
-		
-		</header>
-
-		<div id="content"><!-- 内容 -->
-			<div id="primary">
-				<article class="post">
-					<header class="post-header">
-					  <h1 class="post-title">红楼梦人物关系图</h1>
-					  <time class="post-time"> 2021-08-26 13:15:00</time>
-					</header>
-					<div class="post-content"> 
-						<h1 id="_1">红楼梦人物关系图</h1>
+		<hr>
+		<h2>红楼梦人物关系图</h2>
+		<p>写于 2021-08-26 13:15:00</p>
+		<h1 id="_1">红楼梦人物关系图</h1>
 <p>红楼梦人物众多，关系复杂，读前了解，更明白。</p>
 <p><img alt="w" src="../pics/2021/hongloumeng.png" /></p> 
-					</div>
-					<footer class="post-footer">
-						<div class="post-tags"> <span>TAGS:&nbsp;life,reading</span> </div>
-						
-						<div id="recent_posts">
-						 
-						</div>
-						<script>
-						  $(function(){
-		                        $("#recent_posts").load("/extra/recent_posts.html");
-		                  });
-						</script>
-						<nav class="post-nav"><!-- 上下文导航按钮  -->
-							<p><span style="float:left">上一篇：<a href="/posts/2021-06-30-aboutblogui.html">关于本博客界面的一些想法</a></span><span style="float:right">下一篇：<a href="/posts/2021-12-22-month_whisper.html">12月闲聊</a></span></p>
-						</nav>
-					</footer>
-					<div class="comments" id="comments"><!--评论区-->
-						 <!-- <p style="font-size:90%">给我留言：
-											<a href="http://users3.smartgb.com/g/g.php?a=s&i=g36-33383-d2" target="blank" rel="nofollow">here</a>
-						 </p> -->
-						 <p style="font-size:90%">通过邮件联系我，具体是: <a href="mailto:2067939028@qq.com" rel="nofollow">2067939028@qq.com</a>。</p>
-					</div>
-				</article>
-			</div>
+		<hr>
+		<p><span>TAGS:&nbsp;life,reading</span></p>
+		<div id="recent_posts">
+							 
 		</div>
-		
-		<footer id="colophon"> <!--尾部-->
-			<span class="copyright-year">
-				&copy;2016-2023 <span class="footer-author">月牙博客</span>
-			<!--  <span class="power-by">Powered by Python</span>  --> 
-			</span>
-			<span style="display:none">
-				<a href="/sitemap.txt">站点地图</a>
-			</span> 
-		</footer>
-
-		
+		<script>
+		  $(function(){
+				$("#recent_posts").load("/extra/recent_posts.html");
+		  });
+		</script>
+		<p><span style="float:left">上一篇：<a href="/posts/2021-06-30-aboutblogui.html">关于本博客界面的一些想法</a></span><span style="float:right">下一篇：<a href="/posts/2021-12-22-month_whisper.html">12月闲聊</a></span></p>
+		<hr>
+		<p>&copy;2016-2023<span>月牙博客</span><span style="display:none"><a href="/sitemap.txt">站点地图</a></span> </p>
+		<script type="text/javascript" src="/extra/js/img.js"></script>
 	</body>
 </html>

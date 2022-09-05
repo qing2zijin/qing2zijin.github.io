@@ -3,41 +3,27 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" href="/extra/favicon.ico">
 		<meta name="keywords" content="网页生成器"> <!-- 关键词 -->
 		<meta name="description" content="网页生成器"> <!-- 内容摘要 -->
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-		<link rel="icon" href="/extra/favicon.ico">
-		<link rel="stylesheet" type="text/css" href="/extra/css/style.css">
-		<title>网页生成器</title>
-		<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+        <title>网页生成器</title>
+        <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="/extra/css/mini.css">
 	</head>
 	<body>
-		<header id='masthead'>
-		<div class='site-header-inner'>
-		  <h1 class='site-title'> <a href='/' class='logo'>月牙博客</a> </h1>
-		  <nav id="nav-top">
-			<ul id="menu-top" class="nav-top-items">
-			   <!-- {{menu}} -->
-			</ul>
-		  </nav>
-		</div>
+		<a href="/"><h1>月牙博客</h1></a>
+		<ul id="menu-top" >
+					<!-- {{menu}} -->
+		</ul>
 		<script>
-		 $(function(){
-		   $("#menu-top").load("/extra/menu.html");
-		   });
+			 $(function(){
+			   $("#menu-top").load("/extra/menu.html");
+			   });
 		</script>
-		
-		</header>
-
-		<div id="content"><!-- 内容 -->
-			<div id="primary">
-				<article class="post">
-					<header class="post-header">
-					  <h1 class="post-title">网页生成器</h1>
-					  <time class="post-time"> 2021-02-08 13:26:56</time>
-					</header>
-					<div class="post-content"> 
-						<h1 id="_1">网页生成器</h1>
+		<hr>
+		<h2>网页生成器</h2>
+		<p>写于 2021-02-08 13:26:56</p>
+		<h1 id="_1">网页生成器</h1>
 <p>一直在使用hexo（基于nodejs）作为html生成器，有点复杂，占用电脑内存太多，便萌生了使用python制作一个html生成器的概念，查了一些资料，还真有这方面的资料，目前做出了一个雏形，还有很多东西需要修改。<br />
 1. html标签解析不完整，达不到理想的效果。<br />
 2. 速度还可以。<br />
@@ -79,42 +65,19 @@ create.py //程序
 <p>应该算是最终版本，以后不会在程序方面下功夫了，毕竟也没那个精力了。</p>
 <p><strong>项目地址</strong>：<a href="https://github.com/qing2zijin/staticblog">staticblog</a></p>
 <p>use_markdownmodule:ABCCSX</p> 
-					</div>
-					<footer class="post-footer">
-						<div class="post-tags"> <span>TAGS:&nbsp;python</span> </div>
-						
-						<div id="recent_posts">
-						 
-						</div>
-						<script>
-						  $(function(){
-		                        $("#recent_posts").load("/extra/recent_posts.html");
-		                  });
-						</script>
-						<nav class="post-nav"><!-- 上下文导航按钮  -->
-							<p><span style="float:left">上一篇：<a href="/posts/2018-06-13-da-xue-biye-le.html">毕业了</a></span><span style="float:right">下一篇：<a href="/posts/2021-02-15-trip_qibugou_the-spring-festival.html">七步沟风景</a></span></p>
-						</nav>
-					</footer>
-					<div class="comments" id="comments"><!--评论区-->
-						 <!-- <p style="font-size:90%">给我留言：
-											<a href="http://users3.smartgb.com/g/g.php?a=s&i=g36-33383-d2" target="blank" rel="nofollow">here</a>
-						 </p> -->
-						 <p style="font-size:90%">通过邮件联系我，具体是: <a href="mailto:2067939028@qq.com" rel="nofollow">2067939028@qq.com</a>。</p>
-					</div>
-				</article>
-			</div>
+		<hr>
+		<p><span>TAGS:&nbsp;python</span></p>
+		<div id="recent_posts">
+							 
 		</div>
-		
-		<footer id="colophon"> <!--尾部-->
-			<span class="copyright-year">
-				&copy;2016-2023 <span class="footer-author">月牙博客</span>
-			<!--  <span class="power-by">Powered by Python</span>  --> 
-			</span>
-			<span style="display:none">
-				<a href="/sitemap.txt">站点地图</a>
-			</span> 
-		</footer>
-
-		
+		<script>
+		  $(function(){
+				$("#recent_posts").load("/extra/recent_posts.html");
+		  });
+		</script>
+		<p><span style="float:left">上一篇：<a href="/posts/2018-06-13-da-xue-biye-le.html">毕业了</a></span><span style="float:right">下一篇：<a href="/posts/2021-02-15-trip_qibugou_the-spring-festival.html">七步沟风景</a></span></p>
+		<hr>
+		<p>&copy;2016-2023<span>月牙博客</span><span style="display:none"><a href="/sitemap.txt">站点地图</a></span> </p>
+		<script type="text/javascript" src="/extra/js/img.js"></script>
 	</body>
 </html>

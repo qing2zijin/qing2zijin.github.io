@@ -1,48 +1,30 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1">
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <link rel="icon" href="../extra/favicon.ico">
-	<link rel="stylesheet" type="text/css" href="../extra/css/style.css">
-	<title>微语</title>
-	<style>
-	 .tt{padding:1em; margin:0;margin-bottom:1em;border:1px dashed}
+<html lang="zh-Hans">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" href="/extra/favicon.ico">
+        <title>微语</title>
+        <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="/extra/css/mini.css">
+		<style>
+		 .tt{padding:1em; margin:0;margin-bottom:1em;border:1px dashed}
 	</style>
-	<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
-</head>
-<body>
-	<div id='page'>
-		<header id='masthead'>
-			<div class='site-header-inner'>
-			   <h1 class='site-title'>
-			   <a href='/' class='logo'>月牙博客</a>
-			   </h1>
-			   <nav id="nav-top">
-			      <ul id="menu-top" class="nav-top-items">
-				       <!-- <li class="menu-item"><a href="/index.html">首页</a></li>
-					   <li class="menu-item"><a href="/t/t.html">微语</a></li>
-					   <li class="menu-item"><a href="/about.html">关于</a></li> -->
-				  </ul>
-				  <script>
-				     $(function(){
-				       $("#menu-top").load("/extra/menu.html");
-					   });
-				  </script>
-				</nav>
-			</div>
-		</header>
-		<div id="content">
-		   <div id="primary">
-		     <article class="post">
-			   <header class="post-header">
-			        <h1 class="post-title">微语</h1>
-			         <time class="post-time" style="display:None">2022-9-2</time>
-			    </header>
-				<div class="post-content">
-					<div class="tt">2022-9-2<br>&nbsp;&nbsp;成都疫情，考试延后，“差点就一口老血”，习惯了。</div>
+	</head>
+	<body>
+		<a href="/"><h1>月牙博客</h1></a>
+		<ul id="menu-top" >
+					<!-- {{menu}} -->
+		</ul>
+		<script>
+			 $(function(){
+			   $("#menu-top").load("/extra/menu.html");
+			   });
+		</script>
+		<hr>
+		<h2>微语</h2>
+		<p>2022-9-2</p>
+		 <div class="tt">2022-9-2<br>&nbsp;&nbsp;成都疫情，考试延后，“差点就一口老血”，习惯了。</div>
 <div class="tt">2022-8-29<br>&nbsp;&nbsp;降温了，门被风吹得嘎吱嘎吱的响。</div>
 <div class="tt">2022-8-21<br>&nbsp;&nbsp;热。</div>
 <div class="tt">2022-8-10<br>&nbsp;&nbsp;小镇做题家还在努力的复习，备考巴中的某事业单位岗位的考试。</div>
@@ -54,30 +36,8 @@
 <div class="tt">2022-6-11<br>&nbsp;&nbsp;要考试了。绵阳的，也要出成绩了。</div>
 <div class="tt">2022-6-10<br>&nbsp;&nbsp;今天，仿效emlog，设置微语专栏，发“小博客”。</div>
 
-				</div>
-				<footer class="post-footer">
-                   <div class="post-tags">
-				     <span></span>
-				   </div>
-				   <nav class="post-nav">
-				     <span></span>
-					 <span></span>
-				   </nav>
-				</footer>
-				<div class="comments" id="comments">
-				
-                </div>
-			 </article>
-		   </div>
-		</div>
-		<!--尾部-->
-		<footer id="colophon">
-			<span class="copyright-year">&copy;2016-2023
-			  <span class="footer-author">月牙博客</span>
-			  <!--<span class="power-by">Powered by Python</span> -->
-			</span>
-		</footer>
-	</div>
+		<hr>
 
-</body>
+		<p>&copy;2016-2023<span>月牙博客</span><span style="display:none"><a href="/sitemap.txt">站点地图</a></span> </p>
+	</body>
 </html>

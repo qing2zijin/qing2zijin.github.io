@@ -3,47 +3,32 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 		<link rel="icon" href="/extra/favicon.ico">
-		<link rel="stylesheet" type="text/css" href="/extra/css/style.css">
-		<title>月牙博客</title>
-	    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+		
+        <title>月牙博客</title>
+        <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="/extra/css/mini.css">
 	</head>
 	<body>
-		<header id='masthead'>
-			<div class='site-header-inner'>
-			<h1 class='site-title'> <a href='/' class='logo'>月牙博客</a> </h1>
-			<nav id="nav-top">
-				<ul id="menu-top" class="nav-top-items">
-				<!-- {{menu}} -->
-				</ul>
-			</nav>
-			</div>
-			<script>
-				     $(function(){
-				       $("#menu-top").load("/extra/menu.html");
-					   });
-				  </script>
-		</header>
-		<div id="content">
-			<div id="primary">
-				<section id="archive" class="archive">
-				<!--下面一段需要循环生成-->
-				<div class="archive-post"><span class="archive-post-time">2022-08-26</span><span class="archive-post-title"><a href="posts/2022-08-26-jin.html" class="archive-post-link">历史视频：西晋东晋到五代十国大混乱时期</a></span></div><div class="archive-post"><span class="archive-post-time">2022-08-23</span><span class="archive-post-title"><a href="posts/2022-08-23-AAA.html" class="archive-post-link">科普视频：相对论和量子力学</a></span></div><div class="archive-post"><span class="archive-post-time">2022-07-31</span><span class="archive-post-title"><a href="posts/gongkao_zhaunlan/2022-04-25-gong-kao-zhi-lu_zhuanlan.html" class="archive-post-link">公考之路(专题)</a></span></div><div class="archive-post"><span class="archive-post-time">2022-05-19</span><span class="archive-post-title"><a href="posts/2022-05-19-yi-xie-xiao-ji-qiao-bei-wang-lu.html" class="archive-post-link">关于电脑的一些小操作备忘录-关闭自动维护/关闭某软件联网</a></span></div><div class="archive-post"><span class="archive-post-time">2021-12-22</span><span class="archive-post-title"><a href="posts/2021-12-22-month_whisper.html" class="archive-post-link">12月闲聊</a></span></div><div class="archive-post"><span class="archive-post-time">2021-08-26</span><span class="archive-post-title"><a href="posts/2021-08-26-hongloumeng_ren_wu_guan_xi_tu.html" class="archive-post-link">红楼梦人物关系图</a></span></div><div class="archive-post"><span class="archive-post-time">2021-06-30</span><span class="archive-post-title"><a href="posts/2021-06-30-aboutblogui.html" class="archive-post-link">关于本博客界面的一些想法</a></span></div><div class="archive-post"><span class="archive-post-time">2021-04-23</span><span class="archive-post-title"><a href="posts/2021-04-23-markdown-yu-fa-back-up.html" class="archive-post-link">Markdown文档书写方式备忘录</a></span></div><div class="archive-post"><span class="archive-post-time">2021-04-17</span><span class="archive-post-title"><a href="posts/2021-04-17-er_ji_jian.html" class="archive-post-link">一次耳机购买记录</a></span></div><div class="archive-post"><span class="archive-post-time">2021-04-05</span><span class="archive-post-title"><a href="posts/2021-04-05-reading-responses_of_the-narrative-history-of-ming-dynasty.html" class="archive-post-link">《明朝那些事儿》读后感</a></span></div><div class="archive-post"><span class="archive-post-time">2021-02-15</span><span class="archive-post-title"><a href="posts/2021-02-15-trip_qibugou_the-spring-festival.html" class="archive-post-link">七步沟风景</a></span></div><div class="archive-post"><span class="archive-post-time">2021-02-08</span><span class="archive-post-title"><a href="posts/2021-02-08-zi-ji-zuo-yi-ge-md-parser.html" class="archive-post-link">网页生成器</a></span></div><div class="archive-post"><span class="archive-post-time">2018-06-13</span><span class="archive-post-title"><a href="posts/2018-06-13-da-xue-biye-le.html" class="archive-post-link">毕业了</a></span></div><div class="archive-post"><span class="archive-post-time">2017-06-10</span><span class="archive-post-title"><a href="posts/2017-06-10-old-poem.html" class="archive-post-link">写给远方的你</a></span></div><div class="archive-post"><span class="archive-post-time">2016-06-28</span><span class="archive-post-title"><a href="posts/2016-06-28-real-study.html" class="archive-post-link">学习</a></span></div> 
-				</section>
-			</div>
-			<!--以下代码也需要判断-->
-			<nav class="pagination">  </nav>
-			<!--尾部-->
-			<footer id="colophon"> 
-				<span class="copyright-year">
-					&copy;2016-2023 <span class="footer-author">月牙博客</span>
-					<!--  <span class="power-by">Powered by Python</span> --> 		  
-				</span> 
-				<span style="display:none"><a href="/sitemap.txt">站点地图</a></span> 
-			</footer>
-		</div>
-
 		
+			<a href="/"><h1>月牙博客</h1></a>
+			<ul id="menu-top" >
+						<!-- {{menu}} -->
+			</ul>
+			<script>
+				 $(function(){
+				   $("#menu-top").load("/extra/menu.html");
+				   });
+			</script>
+		<hr>
+		
+			<p>2022-08-26&nbsp;<a href="posts/2022-08-26-jin.html" >历史视频：西晋东晋到五代十国大混乱时期</a></p><p>2022-08-23&nbsp;<a href="posts/2022-08-23-AAA.html" >科普视频：相对论和量子力学</a></p><p>2022-07-31&nbsp;<a href="posts/gongkao_zhaunlan/2022-04-25-gong-kao-zhi-lu_zhuanlan.html" >公考之路(专题)</a></p><p>2022-05-19&nbsp;<a href="posts/2022-05-19-yi-xie-xiao-ji-qiao-bei-wang-lu.html" >关于电脑的一些小操作备忘录-关闭自动维护/关闭某软件联网</a></p><p>2021-12-22&nbsp;<a href="posts/2021-12-22-month_whisper.html" >12月闲聊</a></p><p>2021-08-26&nbsp;<a href="posts/2021-08-26-hongloumeng_ren_wu_guan_xi_tu.html" >红楼梦人物关系图</a></p><p>2021-06-30&nbsp;<a href="posts/2021-06-30-aboutblogui.html" >关于本博客界面的一些想法</a></p><p>2021-04-23&nbsp;<a href="posts/2021-04-23-markdown-yu-fa-back-up.html" >Markdown文档书写方式备忘录</a></p><p>2021-04-17&nbsp;<a href="posts/2021-04-17-er_ji_jian.html" >一次耳机购买记录</a></p><p>2021-04-05&nbsp;<a href="posts/2021-04-05-reading-responses_of_the-narrative-history-of-ming-dynasty.html" >《明朝那些事儿》读后感</a></p> 
+		<hr>
+		
+		    <p><a  href="pages/2.html"><span style="float:right">Next</span></a></p>
+		
+		<hr>
+			<p>&copy;2016-2023<span>月牙博客</span><span style="display:none"><a href="/sitemap.txt">站点地图</a></span> </p>
+	    
 	</body>
 </html>

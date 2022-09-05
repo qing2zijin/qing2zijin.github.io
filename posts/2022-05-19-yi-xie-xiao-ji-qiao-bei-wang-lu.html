@@ -3,41 +3,27 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="keywords" content=""> <!-- 关键词 -->
-		<meta name="description" content="关于电脑的一些小操作备忘录-关闭自动维护/关闭某软件联网"> <!-- 内容摘要 -->
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 		<link rel="icon" href="/extra/favicon.ico">
-		<link rel="stylesheet" type="text/css" href="/extra/css/style.css">
-		<title>关于电脑的一些小操作备忘录-关闭自动维护/关闭某软件联网</title>
-		<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+		<meta name="keywords" content="关于电脑的一些小操作备忘录-关闭自动维护/关闭某软件联网,月牙博客,life"> <!-- 关键词 -->
+		<meta name="description" content="关于电脑的一些小操作备忘录-关闭自动维护/关闭某软件联网"> <!-- 内容摘要 -->
+        <title>关于电脑的一些小操作备忘录-关闭自动维护/关闭某软件联网</title>
+        <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="/extra/css/mini.css">
 	</head>
 	<body>
-		<header id='masthead'>
-		<div class='site-header-inner'>
-		  <h1 class='site-title'> <a href='/' class='logo'>月牙博客</a> </h1>
-		  <nav id="nav-top">
-			<ul id="menu-top" class="nav-top-items">
-			   <!-- {{menu}} -->
-			</ul>
-		  </nav>
-		</div>
+		<a href="/"><h1>月牙博客</h1></a>
+		<ul id="menu-top" >
+					<!-- {{menu}} -->
+		</ul>
 		<script>
-		 $(function(){
-		   $("#menu-top").load("/extra/menu.html");
-		   });
+			 $(function(){
+			   $("#menu-top").load("/extra/menu.html");
+			   });
 		</script>
-		
-		</header>
-
-		<div id="content"><!-- 内容 -->
-			<div id="primary">
-				<article class="post">
-					<header class="post-header">
-					  <h1 class="post-title">关于电脑的一些小操作备忘录-关闭自动维护/关闭某软件联网</h1>
-					  <time class="post-time">2022-05-19 11:34:00</time>
-					</header>
-					<div class="post-content"> 
-						<p>最近电脑老是自动维护，维护的时候就卡，很是影响电脑操作，于是关闭它。
+		<hr>
+		<h2>关于电脑的一些小操作备忘录-关闭自动维护/关闭某软件联网</h2>
+		<p>写于2022-05-19 11:34:00</p>
+		<p>最近电脑老是自动维护，维护的时候就卡，很是影响电脑操作，于是关闭它。
 具体操作：<a href="https://product.pconline.com.cn/itbk/software/dnyw/1492/14921790.html">https://product.pconline.com.cn/itbk/software/dnyw/1492/14921790.html</a></p>
 <blockquote>
 第一步、Win+R组合键调出运行命令输入框，输入regedit后，点击确定或者回车<br>
@@ -54,42 +40,19 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Schedule\Mainten
 <p>另外，有些软件开启之后就加载广告，导致开启缓慢，于是可以考虑关闭软件联网：
 <a href="https://www.52zixue.com/dnjc/06/01/32402/">https://www.52zixue.com/dnjc/06/01/32402/</a></p>
 <p>很实用。</p> 
-					</div>
-					<footer class="post-footer">
-						<div class="post-tags"> <span>TAGS:&nbsp;life</span> </div>
-						
-						<div id="recent_posts">
-						 
-						</div>
-						<script>
-						  $(function(){
-		                        $("#recent_posts").load("/extra/recent_posts.html");
-		                  });
-						</script>
-						<nav class="post-nav"><!-- 上下文导航按钮  -->
-							<p><span style="float:left">上一篇：<a href="/posts/2021-12-22-month_whisper.html">12月闲聊</a></span><span style="float:right">下一篇：<a href="/posts/gongkao_zhaunlan\2022-04-25-gong-kao-zhi-lu_zhuanlan.html">公考之路(专题)</a></span></p>
-						</nav>
-					</footer>
-					<div class="comments" id="comments"><!--评论区-->
-						 <!-- <p style="font-size:90%">给我留言：
-											<a href="http://users3.smartgb.com/g/g.php?a=s&i=g36-33383-d2" target="blank" rel="nofollow">here</a>
-						 </p> -->
-						 <p style="font-size:90%">通过邮件联系我，具体是: <a href="mailto:2067939028@qq.com" rel="nofollow">2067939028@qq.com</a>。</p>
-					</div>
-				</article>
-			</div>
+		<hr>
+		<p><span>TAGS:&nbsp;life</span></p>
+		<div id="recent_posts">
+							 
 		</div>
-		
-		<footer id="colophon"> <!--尾部-->
-			<span class="copyright-year">
-				&copy;2016-2023 <span class="footer-author">月牙博客</span>
-			<!--  <span class="power-by">Powered by Python</span>  --> 
-			</span>
-			<span style="display:none">
-				<a href="/sitemap.txt">站点地图</a>
-			</span> 
-		</footer>
-
-		
+		<script>
+		  $(function(){
+				$("#recent_posts").load("/extra/recent_posts.html");
+		  });
+		</script>
+		<p><span style="float:left">上一篇：<a href="/posts/2021-12-22-month_whisper.html">12月闲聊</a></span><span style="float:right">下一篇：<a href="/posts/gongkao_zhaunlan\2022-04-25-gong-kao-zhi-lu_zhuanlan.html">公考之路(专题)</a></span></p>
+		<hr>
+		<p>&copy;2016-2023<span>月牙博客</span><span style="display:none"><a href="/sitemap.txt">站点地图</a></span> </p>
+		<script type="text/javascript" src="/extra/js/img.js"></script>
 	</body>
 </html>

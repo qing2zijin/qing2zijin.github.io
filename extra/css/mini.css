@@ -1,0 +1,9 @@
+﻿body{max-width:900px; margin: 0 auto;font-family:"宋体"}
+h1{font-size:1.5em}
+h2{font-size:1.2em}
+h3{font-size:1em}
+hr{width:100%}
+p{line-height:1.5em;padding:0;margin:0;margin-bottom:0.5em}
+pre{margin:0; padding:0.5em; border:1px dashed; overflow:auto}
+code{font-size:1.1em}
+pre, code{border-radius:10px;background-color:#f1ecec; color:black}
