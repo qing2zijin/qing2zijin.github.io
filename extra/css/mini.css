@@ -1,57 +1,24 @@
-﻿body{
-	max-width:900px; 
-	margin: 0 auto;
-	padding:1em;
-	font-family:"宋体"
-	}
-h1{
-	font-size:1.5em
-	}
-h2{
-	font-size:1.2em
-	}
-h3{
-	font-size:1em
-	}
-hr{
-	width:100%
-	}
-p{
-	line-height:1.5em;
-	padding:0;
-	margin:0;
-	margin-bottom:0.5em
-	}
-pre{
-	margin:0; 
-	padding:0.5em; 
-	border:1px dashed; 
-	overflow:auto}
-code{
-	font-size:1.1em
-	}
-pre, code{
-	border-radius:10px;
-	background-color:#f1ecec; 
-	color:black
-	}
-/*图片显示优化*/
+﻿body{	max-width:800px; 	margin: 0 auto;	padding:1em;	font-family:"宋体"	}
+h1{	font-size:1.5em	}
+h2{	font-size:1.2em	}
+h3{	font-size:1em	}
+hr{	width:100%	}
+/*#content*/
+#content p{	line-height:2em;	padding:0;	margin:0; /*text-indent:2em*/}
+#content pre{	margin:0; 	padding:0.5em; 	border:1px dashed; 	overflow:auto}
+#content code{	font-size:1.1em	}
+#content pre, code{	border-radius:10px;	background-color:#f1ecec; 	color:black	}
+#content img{margin:0;padding:0;margin-bottom:2em;border:0;}
+#content blockquote{margin:0;padding:0;}
+/*<600[mobile]*/
  @media screen and (max-width:600px){
-	img{
-		max-width:100%;
-		border-radius:6px;
-	}
+	#content img{max-width:100%;border-radius:6px;}
 }
+/*600-960[pad]*/
  @media screen and (min-width:600px) and (max-width:960px){
-	img{
-		max-width:100%;
-		border-radius:8px;
-	}
+	#content img{max-width:100%;border-radius:8px;}
 }
- 
+/*>960[pc]*/
 @media screen and (min-width:960px){
-	img{
-		max-width:500px;
-		border-radius:10px;
-	}
+	#content img{max-width:800px;border-radius:10px;}
 }
