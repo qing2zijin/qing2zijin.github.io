@@ -1,29 +1,42 @@
-﻿body{	max-width:800px; 	margin: 0 auto;	padding:1em;	font-family:"宋体"	}
-h1{	font-size:1.5em	}
-h2{	font-size:1.2em	}
-h3{	font-size:1em	}
-#menu-top{margin:0; padding:0}
+﻿body{max-width:800px; height:100%; 	margin: 0 auto;	
+     padding:1em;	font-family:"宋体"	}
+h1{	font-size:2em	}
+h2{	font-size:1.5em	}
+h3{	font-size:1.2em	}
+h4{ font-size:1em}
+h1, h2, h3, h4{margin:1em 0 1em 0; padding:0}
+#logo{margin:1em 1em 0 0;padding:0;font-size:2em; font-style:italic}
+#menu-top{margin:0; padding:0;width:100%;height:auto; font-size:1em}
 hr{	width:100%	}
-/*#content*/
-#content{margin:0; padding:0}
-#content p{	line-height:1.7em;	padding:0;	margin:0; /*text-indent:2em*/}
+
+#content{margin:0; padding:0; width:100%; min-height:80vh}
+#content p{	line-height:2em;	padding:0;	margin:0; /*text-indent:2em*/}
 #content pre{	margin:0; 	padding:0.5em; 	border:1px dashed; 	overflow:auto}
 #content code{	font-size:1.1em	}
 #content pre, code{	border-radius:10px;	background-color:#f1ecec; 	color:black	}
 #content img{margin:0;padding:0;margin-bottom:2em;border:0;}
-#content blockquote{margin:10px 0 10px 0;padding:0; border-top:1px dashed;border-bottom:1px dashed; background-color:#EBEBEB;font-size:95%}
-
-/*<600[mobile]*/
+#content blockquote{margin:10px 0 10px 0;padding:0 1em 0 1em; border-top:1px dashed;
+                    border-bottom:1px dashed; background-color:#EBEBEB;font-size:90%;
+					/*border-radius:10px*/
+					}
+/*mobile*/
  @media screen and (max-width:600px){
-	#content img{max-width:100%;border-radius:6px;}
+	#content img{max-width:100%;/*border-radius:6px;*/}
 }
-/*600-960[pad]*/
+/*pad*/
  @media screen and (min-width:600px) and (max-width:960px){
-	#content img{max-width:100%;border-radius:8px;}
+	#content img{max-width:100%;/*border-radius:8px;*/}
 }
-/*>960[pc]*/
+/*pc*/
 @media screen and (min-width:960px){
-	#content img{max-width:800px;border-radius:10px;}
+	#content img{max-width:70%;/*border-radius:10px;*/}
 }
 
-#side{margin:0; padding:0}
+#side{margin:0; padding:0; width:100%; height:auto}
+
+
+/*页内目录*/
+.toc{margin:0;padding:0 1em 0 1em; width:60%;
+    float:right;background-color:floralwhite; font-size:80%;
+	/*border-radius:10px*/
+	}
