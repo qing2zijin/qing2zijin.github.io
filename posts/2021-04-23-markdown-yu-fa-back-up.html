@@ -45,18 +45,22 @@
 <p>想到再写</p> 
 		</div>
 		<hr>
-		<p><span>TAGS:&nbsp;life</span></p>
-		<div id="recent_posts">
-							 
+		<div id="side">
+			<p><span>TAGS:&nbsp;life</span></p>
+			<div id="recent_posts">
+								 
+			</div>
+			<script>
+			  $(function(){
+					$("#recent_posts").load("/extra/recent_posts.html");
+			  });
+			</script>
+			<p><span style="float:left">上一篇：<a href="/posts/2021-04-17-er_ji_jian.html">一次耳机购买记录</a></span><span style="float:right">下一篇：<a href="/posts/2021-06-30-aboutblogui.html">关于本博客界面的一些想法</a></span></p>
 		</div>
-		<script>
-		  $(function(){
-				$("#recent_posts").load("/extra/recent_posts.html");
-		  });
-		</script>
-		<p><span style="float:left">上一篇：<a href="/posts/2021-04-17-er_ji_jian.html">一次耳机购买记录</a></span><span style="float:right">下一篇：<a href="/posts/2021-06-30-aboutblogui.html">关于本博客界面的一些想法</a></span></p>
 		<hr>
-		<p>&copy;2016-2023<span>月牙博客</span><span style="display:none"><a href="/sitemap.txt">站点地图</a></span> </p>
+			<p style="text-align:center">
+				&copy;2016-2023<span>月牙博客</span><span style="display:none"><a href="/sitemap.txt">站点地图</a></span> 
+			</p>
 		<script type="text/javascript" src="/extra/js/img.js"></script>
 	</body>
 </html>

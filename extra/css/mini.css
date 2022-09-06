@@ -2,14 +2,17 @@
 h1{	font-size:1.5em	}
 h2{	font-size:1.2em	}
 h3{	font-size:1em	}
+#menu-top{margin:0; padding:0}
 hr{	width:100%	}
 /*#content*/
-#content p{	line-height:2em;	padding:0;	margin:0; /*text-indent:2em*/}
+#content{margin:0; padding:0}
+#content p{	line-height:1.7em;	padding:0;	margin:0; /*text-indent:2em*/}
 #content pre{	margin:0; 	padding:0.5em; 	border:1px dashed; 	overflow:auto}
 #content code{	font-size:1.1em	}
 #content pre, code{	border-radius:10px;	background-color:#f1ecec; 	color:black	}
 #content img{margin:0;padding:0;margin-bottom:2em;border:0;}
-#content blockquote{margin:0;padding:0;}
+#content blockquote{margin:10px 0 10px 0;padding:0; border-top:1px dashed;border-bottom:1px dashed; background-color:#EBEBEB;font-size:95%}
+
 /*<600[mobile]*/
  @media screen and (max-width:600px){
 	#content img{max-width:100%;border-radius:6px;}
@@ -22,3 +25,5 @@ hr{	width:100%	}
 @media screen and (min-width:960px){
 	#content img{max-width:800px;border-radius:10px;}
 }
+
+#side{margin:0; padding:0}
