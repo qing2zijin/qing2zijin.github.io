@@ -32,8 +32,8 @@ hr{	width:100%	}
 	#content img{max-width:70%;/*border-radius:10px;*/}
 }
 
-#side{margin:0; padding:0; width:100%; height:auto}
-
+#side{margin:0; padding:5px; width:100%; height:auto}
+#side  ul,li{list-style:none; margin:0;padding:0}
 
 /*页内目录*/
 .toc{margin:0;padding:0 1em 0 1em; width:60%;
@@ -43,5 +43,6 @@ hr{	width:100%	}
 	
 @media screen and (min-width:600px){
 	.main{width:70%;float:left}
-	#side{width:30%;float:right}
+	#side{width:25%;float:right;}
+	
 }
