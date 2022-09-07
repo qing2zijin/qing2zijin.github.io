@@ -12,19 +12,20 @@
 	</head>
 	<body>
 		<div id="logo">月牙博客</div>
-		<div id="menu-top" >
-					<!-- {{menu}} -->
-		</div>
-		<script>
-			 $(function(){
-			   $("#menu-top").load("/extra/menu.html");
-			   });
-		</script>
-		<hr>
-		<h2>关于电脑的一些小操作备忘录-关闭自动维护/关闭某软件联网</h2>
-		<p>写于2022-05-19 11:34:00</p>
-		<div id="content">
-			<p>最近电脑老是自动维护，维护的时候就卡，很是影响电脑操作，于是关闭它。
+		<div id="menu-top" ><!-- {{menu}} --></div>
+				<script>
+					 $(function(){
+					   $("#menu-top").load("/extra/menu.html");
+					   });
+				</script>
+	<hr>
+		<div class="main">
+
+				<h2>关于电脑的一些小操作备忘录-关闭自动维护/关闭某软件联网</h2>
+				<p>写于2022-05-19 11:34:00</p>
+
+            <div id="content">
+				<p>最近电脑老是自动维护，维护的时候就卡，很是影响电脑操作，于是关闭它。
 具体操作：<a href="https://product.pconline.com.cn/itbk/software/dnyw/1492/14921790.html">https://product.pconline.com.cn/itbk/software/dnyw/1492/14921790.html</a></p>
 <blockquote>
 第一步、Win+R组合键调出运行命令输入框，输入regedit后，点击确定或者回车<br>
@@ -41,20 +42,25 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Schedule\Mainten
 <p>另外，有些软件开启之后就加载广告，导致开启缓慢，于是可以考虑关闭软件联网：
 <a href="https://www.52zixue.com/dnjc/06/01/32402/">https://www.52zixue.com/dnjc/06/01/32402/</a></p>
 <p>很实用。</p> 
-		</div>
-		<hr>
-		<div id="side">
-			<p><span>TAGS:&nbsp;life</span></p>
-			<div id="recent_posts">
-								 
 			</div>
+				<p><span>TAGS:&nbsp;life</span></p>
+
+		</div>
+		<div id="side">
+			
 			<script>
 			  $(function(){
 					$("#recent_posts").load("/extra/recent_posts.html");
 			  });
 			</script>
-			<p><span style="float:left">上一篇：<a href="/posts/2021-12-22-month_whisper.html">12月闲聊</a></span><span style="float:right">下一篇：<a href="/posts/gongkao_zhaunlan\2022-04-25-gong-kao-zhi-lu_zhuanlan.html">公考之路(专题)</a></span></p>
+			
 		</div>
+		<hr>
+		<nav>
+		    <p><span style="float:left">上一篇：<a href="/posts/2021-12-22-month_whisper.html">12月闲聊</a></span>
+			   <span style="float:right">下一篇：<a href="/posts/gongkao_zhaunlan\2022-04-25-gong-kao-zhi-lu_zhuanlan.html">公考之路(专题)</a></span>
+			</p>
+	    <nav>
 		<hr>
 			<p style="text-align:center">
 				&copy;2016-2023<span>月牙博客</span><span style="display:none"><a href="/sitemap.txt">站点地图</a></span> 

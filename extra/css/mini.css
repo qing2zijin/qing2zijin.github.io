@@ -1,16 +1,16 @@
-﻿body{max-width:800px; height:100%; 	margin: 0 auto;	
+﻿body{max-width:1000px; height:100%; 	margin: 0 auto;	
      padding:1em;	font-family:"宋体"	}
 h1{	font-size:2em	}
 h2{	font-size:1.5em	}
 h3{	font-size:1.2em	}
 h4{ font-size:1em}
 h1, h2, h3, h4{margin:1em 0 1em 0; padding:0}
-#logo{margin:1em 1em 0 0;padding:0;font-size:2em; font-style:italic}
+#logo{margin:1em 0 1em 0;padding:0;font-size:2em; font-style:italic;}
 #menu-top{margin:0; padding:0;width:100%;height:auto; font-size:1em}
 hr{	width:100%	}
 
 #content{margin:0; padding:0; width:100%; min-height:80vh}
-#content p{	line-height:2em;	padding:0;	margin:0; /*text-indent:2em*/}
+#content p{	line-height:1.5em;	padding:0;	margin:0 0 1em 0; /*text-indent:2em*/}
 #content pre{	margin:0; 	padding:0.5em; 	border:1px dashed; 	overflow:auto}
 #content code{	font-size:1.1em	}
 #content pre, code{	border-radius:10px;	background-color:#f1ecec; 	color:black	}
@@ -40,3 +40,8 @@ hr{	width:100%	}
     float:right;background-color:floralwhite; font-size:80%;
 	/*border-radius:10px*/
 	}
+	
+@media screen and (min-width:600px){
+	.main{width:70%;float:left}
+	#side{width:30%;float:right}
+}

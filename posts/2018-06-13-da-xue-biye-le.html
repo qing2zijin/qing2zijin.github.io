@@ -12,34 +12,40 @@
 	</head>
 	<body>
 		<div id="logo">月牙博客</div>
-		<div id="menu-top" >
-					<!-- {{menu}} -->
-		</div>
-		<script>
-			 $(function(){
-			   $("#menu-top").load("/extra/menu.html");
-			   });
-		</script>
-		<hr>
-		<h2>毕业了</h2>
-		<p>写于2018-06-13  20:18:00</p>
-		<div id="content">
-			<p><img alt="集体照" src="../pics/2018/e6af95e4b89a.jpg" /></p>
+		<div id="menu-top" ><!-- {{menu}} --></div>
+				<script>
+					 $(function(){
+					   $("#menu-top").load("/extra/menu.html");
+					   });
+				</script>
+	<hr>
+		<div class="main">
+
+				<h2>毕业了</h2>
+				<p>写于2018-06-13  20:18:00</p>
+
+            <div id="content">
+				<p><img alt="集体照" src="../pics/2018/e6af95e4b89a.jpg" /></p>
 <p><img alt="梧桐大道" src="../pics/2018/img_0532-e1530008412707.jpg" /></p> 
-		</div>
-		<hr>
-		<div id="side">
-			<p><span>TAGS:&nbsp;life</span></p>
-			<div id="recent_posts">
-								 
 			</div>
+				<p><span>TAGS:&nbsp;life</span></p>
+
+		</div>
+		<div id="side">
+			
 			<script>
 			  $(function(){
 					$("#recent_posts").load("/extra/recent_posts.html");
 			  });
 			</script>
-			<p><span style="float:left">上一篇：<a href="/posts/2017-06-10-old-poem.html">写给远方的你</a></span><span style="float:right">下一篇：<a href="/posts/2021-02-08-zi-ji-zuo-yi-ge-md-parser.html">网页生成器</a></span></p>
+			
 		</div>
+		<hr>
+		<nav>
+		    <p><span style="float:left">上一篇：<a href="/posts/2017-06-10-old-poem.html">写给远方的你</a></span>
+			   <span style="float:right">下一篇：<a href="/posts/2021-02-08-zi-ji-zuo-yi-ge-md-parser.html">网页生成器</a></span>
+			</p>
+	    <nav>
 		<hr>
 			<p style="text-align:center">
 				&copy;2016-2023<span>月牙博客</span><span style="display:none"><a href="/sitemap.txt">站点地图</a></span> 

@@ -12,34 +12,40 @@
 	</head>
 	<body>
 		<div id="logo">月牙博客</div>
-		<div id="menu-top" >
-					<!-- {{menu}} -->
-		</div>
-		<script>
-			 $(function(){
-			   $("#menu-top").load("/extra/menu.html");
-			   });
-		</script>
-		<hr>
-		<h2>红楼梦人物关系图</h2>
-		<p>写于 2021-08-26 13:15:00</p>
-		<div id="content">
-			<p>红楼梦人物众多，关系复杂，读前了解，更明白。</p>
+		<div id="menu-top" ><!-- {{menu}} --></div>
+				<script>
+					 $(function(){
+					   $("#menu-top").load("/extra/menu.html");
+					   });
+				</script>
+	<hr>
+		<div class="main">
+
+				<h2>红楼梦人物关系图</h2>
+				<p>写于 2021-08-26 13:15:00</p>
+
+            <div id="content">
+				<p>红楼梦人物众多，关系复杂，读前了解，更明白。</p>
 <p><img alt="w" src="../pics/2021/hongloumeng.png" /></p> 
-		</div>
-		<hr>
-		<div id="side">
-			<p><span>TAGS:&nbsp;life,reading</span></p>
-			<div id="recent_posts">
-								 
 			</div>
+				<p><span>TAGS:&nbsp;life,reading</span></p>
+
+		</div>
+		<div id="side">
+			
 			<script>
 			  $(function(){
 					$("#recent_posts").load("/extra/recent_posts.html");
 			  });
 			</script>
-			<p><span style="float:left">上一篇：<a href="/posts/2021-06-30-aboutblogui.html">关于本博客界面的一些想法</a></span><span style="float:right">下一篇：<a href="/posts/2021-12-22-month_whisper.html">12月闲聊</a></span></p>
+			
 		</div>
+		<hr>
+		<nav>
+		    <p><span style="float:left">上一篇：<a href="/posts/2021-06-30-aboutblogui.html">关于本博客界面的一些想法</a></span>
+			   <span style="float:right">下一篇：<a href="/posts/2021-12-22-month_whisper.html">12月闲聊</a></span>
+			</p>
+	    <nav>
 		<hr>
 			<p style="text-align:center">
 				&copy;2016-2023<span>月牙博客</span><span style="display:none"><a href="/sitemap.txt">站点地图</a></span> 

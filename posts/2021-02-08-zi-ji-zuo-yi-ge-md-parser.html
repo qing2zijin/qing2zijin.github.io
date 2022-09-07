@@ -12,19 +12,20 @@
 	</head>
 	<body>
 		<div id="logo">月牙博客</div>
-		<div id="menu-top" >
-					<!-- {{menu}} -->
-		</div>
-		<script>
-			 $(function(){
-			   $("#menu-top").load("/extra/menu.html");
-			   });
-		</script>
-		<hr>
-		<h2>网页生成器</h2>
-		<p>写于 2021-02-08 13:26:56</p>
-		<div id="content">
-			<p>一直在使用hexo（基于nodejs）作为html生成器，有点复杂，占用电脑内存太多，便萌生了使用python制作一个html生成器的概念，查了一些资料，还真有这方面的资料，目前做出了一个雏形，还有很多东西需要修改。<br />
+		<div id="menu-top" ><!-- {{menu}} --></div>
+				<script>
+					 $(function(){
+					   $("#menu-top").load("/extra/menu.html");
+					   });
+				</script>
+	<hr>
+		<div class="main">
+
+				<h2>网页生成器</h2>
+				<p>写于 2021-02-08 13:26:56</p>
+
+            <div id="content">
+				<p>一直在使用hexo（基于nodejs）作为html生成器，有点复杂，占用电脑内存太多，便萌生了使用python制作一个html生成器的概念，查了一些资料，还真有这方面的资料，目前做出了一个雏形，还有很多东西需要修改。<br />
 1. html标签解析不完整，达不到理想的效果。<br />
 2. 速度还可以。<br />
 3. 文件标题/路径/文章标题如何处理。</p>
@@ -65,20 +66,25 @@ create.py //程序
 <p>应该算是最终版本，以后不会在程序方面下功夫了，毕竟也没那个精力了。</p>
 <p><strong>项目地址</strong>：<a href="https://github.com/qing2zijin/staticblog">staticblog</a></p>
 <p>use_markdownmodule:ABCCSX</p> 
-		</div>
-		<hr>
-		<div id="side">
-			<p><span>TAGS:&nbsp;python</span></p>
-			<div id="recent_posts">
-								 
 			</div>
+				<p><span>TAGS:&nbsp;python</span></p>
+
+		</div>
+		<div id="side">
+			
 			<script>
 			  $(function(){
 					$("#recent_posts").load("/extra/recent_posts.html");
 			  });
 			</script>
-			<p><span style="float:left">上一篇：<a href="/posts/2018-06-13-da-xue-biye-le.html">毕业了</a></span><span style="float:right">下一篇：<a href="/posts/2021-02-15-trip_qibugou_the-spring-festival.html">七步沟风景</a></span></p>
+			
 		</div>
+		<hr>
+		<nav>
+		    <p><span style="float:left">上一篇：<a href="/posts/2018-06-13-da-xue-biye-le.html">毕业了</a></span>
+			   <span style="float:right">下一篇：<a href="/posts/2021-02-15-trip_qibugou_the-spring-festival.html">七步沟风景</a></span>
+			</p>
+	    <nav>
 		<hr>
 			<p style="text-align:center">
 				&copy;2016-2023<span>月牙博客</span><span style="display:none"><a href="/sitemap.txt">站点地图</a></span> 
