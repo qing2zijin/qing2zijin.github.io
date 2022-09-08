@@ -1,3 +1,23 @@
+***使用规则
+* /dir_name/过滤整个文件夹
+* *.zip 过滤该文件
+*  /dir_name/do.c 过滤具体某文件
+
+* !src/ 不过滤该文件夹
+* !*.zip 不过滤该文件
+* !/dir_name/do.c 不过滤该文件
+
+
+*.py
+
+*.c
+
+*.cpp
+
 .htaccess
 
 nginx.htaccess
+
+sql_basic_query.html
+
+/temp/
