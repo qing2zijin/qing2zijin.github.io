@@ -15,7 +15,7 @@ html
 
 body
 {
-	font-family:宋体,"Open Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Microsoft Jhenghei", sans-serif;
+	font-family:"宋体","Open Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Microsoft Jhenghei", sans-serif;
 	font-weight:400;
 	-webkit-font-smoothing:antialiased;
 	-moz-osx-font-smoothing:grayscale;
@@ -72,7 +72,7 @@ dfn
 h1
 {
 	font-size:1.5rem;
-	font-family:宋体,"Open Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Microsoft Jhenghei", sans-serif;
+	font-family:"宋体","Open Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Microsoft Jhenghei", sans-serif;
 	margin:.67em 0;
 }
 
@@ -221,37 +221,37 @@ p
 	text-align:justify;
 	margin:0 0 20px;
 	font-size:1rem
-	font-family:宋体,"Open Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Microsoft Jhenghei", sans-serif;
+	font-family:"宋体","Open Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Microsoft Jhenghei", sans-serif;
 }
 
 h2
 {
 	font-size:1.3rem;
-	font-family:宋体,"Open Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Microsoft Jhenghei", sans-serif;
+	font-family:"宋体","Open Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Microsoft Jhenghei", sans-serif;
 }
 
 h3
 {
 	font-size:1.2rem;
-	font-family:宋体,"Open Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Microsoft Jhenghei", sans-serif;
+	font-family:"宋体","Open Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Microsoft Jhenghei", sans-serif;
 }
 
 h4
 {
 	font-size:1.1rem;
-	font-family:宋体,"Open Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Microsoft Jhenghei", sans-serif;
+	font-family:"宋体","Open Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Microsoft Jhenghei", sans-serif;
 }
 
 h5
 {
 	font-size:1.0rem;
-	font-family:宋体,"Open Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Microsoft Jhenghei", sans-serif;
+	font-family:"宋体","Open Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Microsoft Jhenghei", sans-serif;
 }
 
 h6
 {
 	font-size:0.9rem;
-	font-family:宋体,"Open Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Microsoft Jhenghei", sans-serif;
+	font-family:"宋体","Open Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Microsoft Jhenghei", sans-serif;
 }
 
 .content-wrapper
@@ -380,7 +380,7 @@ h6
 	line-height:1.4;
 	font-size:1.3em;
 	font-weight:400;
-	font-family:宋体,"Open Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Microsoft Jhenghei", sans-serif;
+	font-family:"宋体","Open Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Microsoft Jhenghei", sans-serif;
 	margin:0 0 10px;
 }
 
@@ -495,7 +495,7 @@ h6
 .post .post-content code,.post .post-content pre
 {
 	font-size:1rem;
-	font-family:宋体,"Open Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Microsoft Jhenghei", sans-serif;
+	font-family:"宋体","Open Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Microsoft Jhenghei", sans-serif;
 	background:#f1ecec;
 	padding:7px;
 	border-radius:10px
@@ -688,14 +688,14 @@ h6
 {
 	color:#4D89FB;
 	font-size:1.1em;
-	font-family:宋体,"Open Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Microsoft Jhenghei", sans-serif;
+	font-family:"宋体","Open Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Microsoft Jhenghei", sans-serif;
 }
 
 .post .post-footer
 {
 	margin-top:20px;
 	border-top:1px solid #eee;
-	font-family:宋体,"Open Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Microsoft Jhenghei", sans-serif;
+	font-family:"宋体","Open Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Microsoft Jhenghei", sans-serif;
 }
 
 .post .post-footer .post-tags
@@ -725,7 +725,7 @@ h6
 	font-weight:400;
 	font-size:16px;
 	color:rgba(0,0,0,0.75);
-	font-family:宋体,"Open Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Microsoft Jhenghei", sans-serif;
+	font-family:"宋体","Open Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Microsoft Jhenghei", sans-serif;
 	transition-property:transform;
 	transition-timing-function:ease-out;
 	transition-duration:.3s;
@@ -740,7 +740,7 @@ h6
 {
 	font-weight:400;
 	font-size:16px;
-	font-family:宋体,"Open Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Microsoft Jhenghei", sans-serif;
+	font-family:"宋体","Open Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Microsoft Jhenghei", sans-serif;
 	transition-property:transform;
 	transition-timing-function:ease-out;
 	transition-duration:.3s;
@@ -860,7 +860,7 @@ h6
 
 .archive .archive-title
 {
-	font-family:宋体,"Open Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Microsoft Jhenghei", sans-serif;
+	font-family:"宋体","Open Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Microsoft Jhenghei", sans-serif;
 }
 
 .archive .archive-title .archive-name
@@ -874,7 +874,7 @@ h6
 
 .archive .collection-title
 {
-	font-family:宋体,"Open Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Microsoft Jhenghei", sans-serif;
+	font-family:"宋体","Open Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Microsoft Jhenghei", sans-serif;
 	font-size:29px;
 }
 
@@ -1147,7 +1147,7 @@ button::-moz-focus-inner,input::-moz-focus-inner,legend
 {
 	font-size:1.3em;
 	font-weight:400;
-	font-family:宋体,"Open Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Microsoft Jhenghei", sans-serif;
+	font-family:"宋体","Open Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Microsoft Jhenghei", sans-serif;
 	margin-top:1.2em;
 }
 
@@ -1195,7 +1195,7 @@ button::-moz-focus-inner,input::-moz-focus-inner,legend
 .tag-cloud,.categories
 {
 	text-align:center;
-	font-family:宋体,"Open Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Microsoft Jhenghei", sans-serif;
+	font-family:"宋体","Open Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Microsoft Jhenghei", sans-serif;
 	margin:2em 0 3em;
 }
 
