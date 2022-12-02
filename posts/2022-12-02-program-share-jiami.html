@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" href="/extra/favicon.ico">
+		<meta name="keywords" content="Python,私密,加密,程序"> <!-- 关键词 -->
+		<meta name="description" content="基于Python3的加密程序分享"> <!-- 内容摘要 -->
+        <title>基于Python3的加密程序分享</title>
+		<link rel="stylesheet" type="text/css" href="/extra/css/mini.css">
+		<script  src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+	</head>
+	<body>
+		<div id="logo">月牙博客</div>
+		<div id="menu-top" ><!-- {{menu}} --></div>
+				<script>
+					 $(function(){
+					   $("#menu-top").load("/extra/menu.html");
+					   });
+				</script>
+	<hr>
+		<div class="main">
+
+				<h2>基于Python3的加密程序分享</h2>
+				<p>写于2022-12-02 18:16:00</p>
+
+            <div id="content">
+				<p>运行环境：Python3.0以上</p>
+<p>初始创建文件：rawFile 和 outPath 作为输入文件，输出文件。</p>
+<pre><code>import base64, sys, os
+import hashlib
+
+def isFile(File):
+    return os.path.isfile(File)
+
+def read_file(file_path, encodingl):
+    content=None
+    try:
+        with open(file_path,&quot;r&quot;,encoding=encodingl) as file:
+            content = file.read()
+        file.close()
+    except Exception as err:
+        print(err)
+    return content
+
+def save_file(file_path,content, encodingl):
+    try:
+        with open(file_path, &quot;w&quot;,encoding=encodingl) as file:
+            file.write(content)
+        file.close()
+    except Exception as err:
+        print(err)
+
+def getMD5ID(Num):
+    content = str(Num*3.1415).encode(&quot;utf-8&quot;)
+    md5hash = hashlib.md5(content)
+    md5 = md5hash.hexdigest()
+    return md5.upper()
+
+def ChangeBackNum(strl, Num):
+    md5 = getMD5ID(Num)
+    len_md5 = len(md5)
+    lln = list(strl)
+    changeNum = Num%10
+    if changeNum == 0:
+        changeNum = 10
+    first = len(lln)-1-changeNum
+    for i in range(first, -1, -1):
+        temp = lln[i]
+        lln[i] = lln[i+changeNum]
+        lln[i+changeNum] = temp
+    chars = &quot;&quot;.join(lln)
+    charss = chars.replace(md5[0:len_md5//2],&quot;&quot;).replace(md5[len_md5//2:],&quot;&quot;)
+    return charss
+
+def ChangeNum(strl, Num):
+    md5 = getMD5ID(Num)
+    len_md5 = len(md5)
+    len_strl = len(strl)
+    lln = list( strl[0:len_strl//2]+md5[0:len_md5//2]+strl[len_strl//2:]+md5[len_md5//2:] )
+    changeNum = Num%10 
+    if changeNum == 0:
+        changeNum = 10
+    length = len(lln)
+    for i in range(0,length,1):
+        if i+changeNum &gt; (length-1):
+            break
+        temp = lln[i]
+        lln[i] = lln[i+changeNum]
+        lln[i+changeNum] = temp
+    chars = &quot;&quot;.join(lln)
+    return chars
+
+def main1(stringl,program_version):#加密
+    try:
+        sec_key =int( input(&quot;密钥：&quot;) )
+    except:
+        return
+    t = base64.b64encode(stringl.encode(&quot;utf-8&quot;))
+    outstring = str(t).split(&quot;'&quot;)
+    return &quot;program_version:{}\nsecurity_key:{}\n{}&quot;.format(program_version, sec_key, ChangeNum(outstring[1], sec_key) )
+
+def main2(stringl):#解密
+    tt = None
+    try:
+        sec_key =int( input(&quot;密钥：&quot;) )
+    except:
+        return
+    t = ChangeBackNum(stringl, sec_key)
+    t1 = bytes(t, encoding=&quot;utf-8&quot;)
+    try:
+        tt = base64.b64decode(t1).decode(&quot;utf-8&quot;)
+    except Exception as err:
+        print(err)
+    return tt
+
+if __name__ == &quot;__main__&quot;:
+    program_version = &quot;2.0&quot;
+
+    rawFile = &quot;rawr.txt&quot;
+    #rawFile = &quot;q.txt&quot;
+    outPath = &quot;temp/security.txt&quot;
+
+    print(&quot;1：加密，2：解密&quot;)
+    id = input(&quot;input:&quot;)
+
+    if id == &quot;1&quot;:
+        pass
+    if id == &quot;2&quot;:
+       temp_file = rawFile
+       rawFile = outPath
+       outPath = temp_file
+
+    dic_TF = {&quot;y&quot;:True, &quot;n&quot;:False}
+    isWay = input(&quot;是否通过命令行输入输出：y/n &quot;)
+    if dic_TF[isWay]:
+        stringl = input(&quot;内容：&quot;)
+    else:
+        if isFile(rawFile) == False:
+            print(&quot;{}不存在，请先创建&quot;.format(rawFile))
+            sys.exit(1)
+        stringl = read_file(rawFile, &quot;utf-8&quot;)
+    if stringl == None:
+        sys.exit(1)
+
+    if &quot;1&quot; == id:
+        res = main1(stringl, program_version)
+        if dic_TF[isWay]:
+            print(res)
+        else:
+            save_file(outPath,res, &quot;utf-8&quot;)
+    elif &quot;2&quot; == id:
+        res = main2(stringl)
+        if dic_TF[isWay]:
+            print(res)
+        else:
+            save_file(outPath, res,&quot;utf-8&quot;)
+    else:
+        pass
+</code></pre> 
+			</div>
+				<p><span>category:&nbsp;life</span></p>
+
+		</div>
+		<div id="side">
+			<div id="recent_posts"></div>
+			<div id="friend_link">	</div>
+			<script>
+			  $(function(){
+					$("#recent_posts").load("/extra/recent_posts.html");
+					$("#friend_link").load("/extra/friend_link.html");
+			    });
+			</script>
+			
+		</div>
+		<hr>
+		<nav>
+		    <p><span style="float:left">上一篇：<a href="/posts/2022-09-06-li_lun_xue_xi.html">政治理论学习，积极备考</a></span>
+			   <span style="float:right">下一篇：没有了</span>
+			</p>
+	    <nav>
+		<hr>
+			<p style="text-align:center">
+				&copy;2016-2023<span>月牙博客</span><span style="display:none"><a href="/sitemap.txt">站点地图</a></span> 
+			</p>
+		<script type="text/javascript" src="/extra/js/img.js"></script>
+		<script>
+			var _hmt = _hmt || [];
+			(function() {
+			  var hm = document.createElement("script");
+			  hm.src = "https://hm.baidu.com/hm.js?3ff9d8eddf09cd222676889e6d8e0ea7";
+			  var s = document.getElementsByTagName("script")[0]; 
+			  s.parentNode.insertBefore(hm, s);
+			})();
+		</script>
+	</body>
+
+</html>
