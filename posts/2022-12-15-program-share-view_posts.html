@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" href="/extra/favicon.ico">
+		<meta name="keywords" content="viewsource,程序,外网"> <!-- 关键词 -->
+		<meta name="description" content="程序分享"> <!-- 内容摘要 -->
+        <title>viewsource查看网页程序</title>
+		<link rel="stylesheet" type="text/css" href="/extra/css/mini.css">
+		<script  src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+	</head>
+	<body>
+		<div id="logo">月牙博客</div>
+		<div id="menu-top" ><!-- {{menu}} --></div>
+				<script>
+					 $(function(){
+					   $("#menu-top").load("/extra/menu.html");
+					   });
+				</script>
+	<hr>
+		<div class="main">
+
+				<h2>viewsource查看网页程序</h2>
+				<p>写于2022-12-15 13:55:00</p>
+
+            <div id="content">
+				<div class="toc">
+<ul>
+<li><a href="#_1">前言</a></li>
+<li><a href="#_2">程序</a></li>
+<li><a href="#_3">利用</a></li>
+<li><a href="#_4">谷歌镜像链接分享：</a></li>
+</ul>
+</div>
+<h3 id="_1">前言</h3>
+<p>view source 即为查看网页源代码。</p>
+<h3 id="_2">程序</h3>
+<pre><code>import urllib.request as UR
+import random, time, re
+from lxml import etree
+import urllib.parse as urlParse
+import sys
+#import json
+import os
+
+def delay(n=1):
+   time.sleep(random.random()*n)
+   return None
+
+#isPc: 是否是PC端 有的时候，random_headers函数可以不用使用，headers单独写。
+def random_headers(isPc,cookie=None): 
+    if isPc:
+        ua = [ &quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.84 Safari/537.36&quot;,                &quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36&quot;, &quot;Mozilla/5.0 (X11; Ubuntu; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2919.83 Safari/537.36&quot;, &quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 Edge/18.19582&quot;, &quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.164 Safari/537.36 OPR/77.0.4054.277&quot;] #5
+    else:
+        ua = [ &quot;Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1&quot;,&quot;Mozilla/5.0 (iPad; CPU OS 13_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/87.0.4280.77 Mobile/15E148 Safari/604.1&quot;,&quot;Mozilla/5.0 (Linux; Android 8.0.0; SM-G955U Build/R16NW) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Mobile Safari/537.36&quot;,&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1&quot;,&quot;Mozilla/5.0 (Linux; Android 10; HarmonyOS; FRL-AN00a; HMSCore 6.8.0.332) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.105 HuaweiBrowser/12.1.4.304 Mobile Safari/537.36&quot;]#5
+    if cookie == None:
+        headers = {&quot;User-Agent&quot;: random.choice(ua)}
+    else:
+        headers = {&quot;User-Agent&quot;: random.choice(ua), &quot;cookie&quot;:cookie}
+
+    return headers
+
+def get_htmlData(url, Method, decodel=None, headers=None, encodel=None, data_dic=None, cnt=None):
+    if cnt == None:
+        cnt = 3
+    if decodel == None:
+        decodel = &quot;utf-8&quot;
+    data = None
+    out_time = 5
+    n = 1
+    while True:
+        if n&gt;=cnt:
+            break
+        try:
+            if n &gt; 1:            
+                print(&quot;第%s次请求开始%s&quot;%(n, url))
+            if Method == &quot;POST&quot;:
+                if data_dic == None:
+                    print(&quot;data_dic is empty !&quot;)
+                    break
+                if encodel == None:
+                    encodel = &quot;utf-8&quot;
+                formdata = urlParse.urlencode(data_dic).encode(encodel)
+                response = UR.Request(url=url, headers=headers, method=Method)
+                pre_data = UR.urlopen(response, formdata, timeout=out_time)   #POST
+                charset = pre_data.info().get_param(&quot;charset&quot;)
+                if charset != None:
+                    decodel = charset
+            elif Method == &quot;GET&quot;:
+                request  = UR.Request(url=url, headers=headers, method=Method)  #GET
+                pre_data = UR.urlopen(request, timeout=out_time)
+                charset = pre_data.info().get_param(&quot;charset&quot;)
+                if charset != None:
+                    decodel = charset
+            else:
+                print(&quot;目前只支持GET和POST这两种方式&quot;)
+                break
+            data = pre_data.read().decode(decodel,&quot;ignore&quot;) #
+        except Exception as error:
+            print(error)
+        #循环判断
+        if data != None:
+            break
+        else:
+            out_time += 2
+            n += 1
+            delay(1)
+    return data
+
+def html_lxml(data, xpath):
+    if data != None:
+        node = etree.HTML(data)
+        item = node.xpath(xpath)
+        return item
+    else:
+        return None
+
+def html_re(data, pattern, isList, num=0):
+    info = re.compile(pattern, re.S)
+    if data == None:
+        return None
+    if isList:
+        item = info.findall(data)
+        return item
+    else:
+        item = info.search(data)
+        if item != None:
+            return item.group(num)
+
+def File_IO(file,Mode,content=None,encodel=None):
+    if os.path.isfile(file) == False:
+        return
+    if encodel == None:
+        encodel = &quot;utf-8&quot;
+    if Mode == &quot;r&quot; or Mode==&quot;R&quot;:
+        with open(file,Mode,encoding=encodel) as rfile:
+            content = rfile.read()
+        rfile.close()
+        return content
+    else:
+        if content == None:
+            print(&quot;数据为空！&quot;)
+            return
+        with open(file,Mode,encoding=encodel) as ofile:
+            ofile.write(content)
+        ofile.close()
+        return
+
+def view_source(base_url,url, Method, decodel, encodel, cnt=2):
+    data = None
+    headers = random_headers(True)
+    data1 = get_htmlData(base_url, &quot;GET&quot;, decodel=decodel, headers=headers, encodel=encodel, cnt=cnt)
+    xpath = '//input[@id=&quot;vps_token&quot;]/@value'
+    if data1 == None:
+        return
+    req1 = html_lxml(data1, xpath)
+    if req1 == None:
+        return
+    data_dic = {&quot;vps_token&quot;:req1[0], &quot;uri&quot;: url}
+    pre_data = get_htmlData(base_url, Method, decodel, headers, encodel, data_dic,cnt=cnt)
+    xpath_data = '//textarea[@id=&quot;rawcode&quot;]/text()'
+    lst_data = html_lxml(pre_data, xpath_data)
+    try:
+        data  = lst_data[0].replace(&quot;&amp;lt;&quot;, &quot;&lt;&quot;).replace(&quot;&amp;gt;&quot;, &quot;&gt;&quot;)
+    except Exception as err:
+        data = None
+        print(err,base_url)
+    return data
+
+def view_source2(base_url, url,Method,decodel,encodel, cnt=2):
+    data = None
+    data_dic = {&quot;url&quot;:url}
+    headers = random_headers(True)
+    pre_data = get_htmlData(base_url,Method,decodel,headers,encodel,data_dic,cnt=cnt)
+    xpath_data = '//body/pre/code/text()'
+    try:
+        data_lst = html_lxml(pre_data,xpath_data)
+        data = data_lst[0].replace(&quot;&amp;lt;&quot;,&quot;&lt;&quot;).replace(&quot;&amp;gt;&quot;,&quot;&gt;&quot;)
+    except Exception as err:
+        data = None
+        print(err,base_url)
+    return data
+
+# https://www.codebeautify.com/URLService
+def view_source3(base_url, url, Method, decodel, encodel, cnt=2):
+    data = None
+    data_dic = {&quot;path&quot;:url}
+    headers1 = random_headers(True)
+    headers = {
+        # &quot;:authority&quot;:&quot;www.codebeautify.com&quot;,
+        # &quot;:method&quot;: &quot;POST&quot;,
+        # &quot;:path&quot;:&quot;/URLService&quot;,
+        # &quot;:scheme&quot;: &quot;https&quot;,
+        # &quot;accept&quot;: &quot;*/*&quot;,
+        # &quot;accept-encoding&quot;: &quot;gzip, deflate, br&quot;,
+        # &quot;accept-language&quot;: &quot;zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6&quot;,
+        # &quot;content-length&quot;: &quot;28&quot;,
+        # &quot;content-type&quot;: &quot;application/x-www-form-urlencoded&quot;,
+        &quot;origin&quot;: &quot;https://codebeautify.org&quot;,
+        &quot;referer&quot;: &quot;https://codebeautify.org/&quot;,
+        # &quot;sec-ch-ua&quot;: '&quot;Not?A_Brand&quot;;v=&quot;8&quot;, &quot;Chromium&quot;;v=&quot;108&quot;, &quot;Microsoft Edge&quot;;v=&quot;108&quot;',
+        # &quot;sec-ch-ua-mobile&quot;: &quot;?0&quot;,
+        # &quot;sec-ch-ua-platform&quot;: &quot;Windows&quot;,
+        # &quot;sec-fetch-dest&quot;: &quot;empty&quot;,
+        # &quot;sec-fetch-mode&quot;: &quot;cors&quot;,
+        # &quot;sec-fetch-site&quot;: &quot;cross-site&quot;,
+        &quot;user-agent&quot;:headers1[&quot;User-Agent&quot;]
+    }
+
+    data = get_htmlData(base_url, Method, decodel, headers, encodel, data_dic, cnt=cnt)
+    return data
+
+def all_viewSource(url,Method,decodel,encodel,cnt=2):
+    base_url  = [&quot;https://www.view-page-source.com/&quot;,&quot;https://neatnik.net/view-source/&quot;,&quot;https://www.codebeautify.com/URLService&quot;]
+    data = None
+    n = 1
+    while True:
+        n += 1
+        if n &gt;cnt:
+            break
+        if Method == &quot;POST&quot;:
+            num = random.random()
+            if num &lt;= 0.4:
+                data = view_source(base_url[0],url,Method,decodel,encodel,cnt)
+            elif num &lt;= 0.6:
+                data = view_source2(base_url[1],url,Method,decodel,encodel,cnt)
+            elif num &lt;= 1.0:
+                data = view_source3(base_url[2],url,Method,decodel,encodel,cnt)
+            else:
+                pass
+        else:
+            headers = random_headers(False)
+            data = get_htmlData(url, Method, decodel, headers, encodel, cnt=cnt)
+        if data != None:
+            break
+    return data
+
+</code></pre>
+<h3 id="_3">利用</h3>
+<p>上面的程序是基于三个位于国外的网站: <a href="https://www.view-page-source.com/">1</a>、<a href="https://neatnik.net/view-source/">2</a>、<a href="https://www.codebeautify.com/">3</a></p>
+<p>位于国外，那么就可以用于获取外部信息了，找一些资料就很方便了。先利用谷歌搜索信息链接，再利用该Python程序下载下来。</p>
+<h3 id="_4">谷歌镜像链接分享：</h3>
+<p>https://googe.fun/<br>https://googlehnzyc.azurewebsites.net/<br>https://www.qinai.ml/<br>https://xn--flw351e.ml/<br>https://note.cm/<br>https://search.ahau.cf/<br>https://search.aust.cf/<br>https://search.ahau.cf/<br>https://gogogle.cf/<br>https://s.iit.xyz/<br>https://goo.xbzxs.org/<br>https://ge1.azurewebsites.net/</p>
+<p>推特镜像：https://www.sotwe.com</p> 
+			</div>
+				<p><span>category:&nbsp;life</span></p>
+
+		</div>
+		<div id="side">
+			<div id="recent_posts"></div>
+			<div id="friend_link">	</div>
+			<script>
+			  $(function(){
+					$("#recent_posts").load("/extra/recent_posts.html");
+					$("#friend_link").load("/extra/friend_link.html");
+			    });
+			</script>
+			
+		</div>
+		<hr>
+		<nav>
+		    <p><span style="float:left">上一篇：<a href="source/2022-12-02-program-share-jiami.html">基于Python3的加密程序分享</a></span>
+			   <span style="float:right">下一篇：没有了</span>
+			</p>
+	    <nav>
+		<hr>
+			<p style="text-align:center">
+				&copy;2016-2023<span>月牙博客</span><span style="display:none"><a href="/sitemap.txt">站点地图</a></span> 
+			</p>
+		<script type="text/javascript" src="/extra/js/img.js"></script>
+		<script>
+			var _hmt = _hmt || [];
+			(function() {
+			  var hm = document.createElement("script");
+			  hm.src = "https://hm.baidu.com/hm.js?3ff9d8eddf09cd222676889e6d8e0ea7";
+			  var s = document.getElementsByTagName("script")[0]; 
+			  s.parentNode.insertBefore(hm, s);
+			})();
+		</script>
+	</body>
+
+</html>

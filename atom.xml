@@ -3,8 +3,16 @@
 <title>月牙博客</title>
 <link href="/atom.xml" rel="self"/>
 <link href="http://blog.jtjiang.top"/>
-<updated>2022-12-02 18:16:00</updated>
+<updated>2022-12-15 13:55:00</updated>
 <id>http://blog.jtjiang.top</id><author><name>jiang</name></author><generator uri="https://python.org">Python</generator>
+<entry>
+<title>viewsource查看网页程序</title>
+<link href="http://blog.jtjiang.top/posts/2022-12-15-program-share-view_posts.html"/>
+<id>http://blog.jtjiang.top/posts/2022-12-15-program-share-view_posts.html</id>
+<published>2022-12-15 13:55:00</published>
+<content type="html"><![CDATA[程序分享]]>
+</content>
+</entry>
 <entry>
 <title>基于Python3的加密程序分享</title>
 <link href="http://blog.jtjiang.top/posts/2022-12-02-program-share-jiami.html"/>
