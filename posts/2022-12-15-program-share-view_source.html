@@ -1,30 +1,42 @@
-<!DOCTYPE html>
-<html lang="zh-Hans">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="icon" href="/extra/favicon.ico">
-		<meta name="keywords" content="viewsource,程序,外网"> <!-- 关键词 -->
-		<meta name="description" content="程序分享"> <!-- 内容摘要 -->
-        <title>viewsource查看网页程序</title>
-		<link rel="stylesheet" type="text/css" href="/extra/css/mini.css">
-		<script  src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
-	</head>
-	<body>
-		<div id="logo">月牙博客</div>
-		<div id="menu-top" ><!-- {{menu}} --></div>
-				<script>
-					 $(function(){
-					   $("#menu-top").load("/extra/menu.html");
-					   });
-				</script>
-	<hr>
-		<div class="main">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>viewsource查看网页程序</title>
+<meta name="keywords" content="viewsource,程序,外网" />
+<meta name="description" content="程序分享" />
+<link rel="icon" href="/extra/favicon.ico">
+<link href="/extra/templatemo_style.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+</head>
+<body>
+<div id="templatemo_container">
+	<div id="bulb"></div>
+	<div id="templatemo_site_title_bar">	
+        <div id="site_title">
+            <h1>
+				<a href="#" target="_blank">月牙博客</a>
+				<span>专注于“胡说八道”。</span>
+            </h1>
+        </div>
+    </div> <!-- templatemo_site_title_bar -->
+    
+     <div id="templatemo_menu">
 
-				<h2>viewsource查看网页程序</h2>
-				<p>写于2022-12-15 13:55:00</p>
+     </div> <!-- end of menu -->
+	 <script>
+		$(function(){
+		$("#templatemo_menu").load("/extra/menu.html");
+		});
+	 </script>
 
-            <div id="content">
+    <div id="templatemo_content"> 
+		
+       <div class="section_w670">
+        	<h2>viewsource查看网页程序</h2>
+			<p>发布时间：2022-12-15 13:55:00&nbsp;&nbsp;类别：life<p>
+            <div id="main">
+				
 				<div class="toc">
 <ul>
 <li><a href="#_1">前言</a></li>
@@ -242,33 +254,65 @@ def all_viewSource(url,Method,decodel,encodel,cnt=2):
 <p>位于国外，那么就可以用于获取外部信息了，找一些资料就很方便了。先利用谷歌搜索信息链接，再利用该Python程序下载下来。</p>
 <h3 id="_4">谷歌镜像链接分享：</h3>
 <p>https://googe.fun/<br>https://googlehnzyc.azurewebsites.net/<br>https://www.qinai.ml/<br>https://xn--flw351e.ml/<br>https://note.cm/<br>https://search.ahau.cf/<br>https://search.aust.cf/<br>https://search.ahau.cf/<br>https://gogogle.cf/<br>https://s.iit.xyz/<br>https://goo.xbzxs.org/<br>https://ge1.azurewebsites.net/</p>
-<p>推特镜像：https://www.sotwe.com</p> 
-			</div>
-				<p><span>category:&nbsp;life</span></p>
+<p>推特镜像：https://www.sotwe.com</p>
 
-		</div>
-		<div id="side">
-			<div id="recent_posts"></div>
-			<div id="friend_link">	</div>
-			<script>
-			  $(function(){
-					$("#recent_posts").load("/extra/recent_posts.html");
-					$("#friend_link").load("/extra/friend_link.html");
-			    });
-			</script>
-			
-		</div>
-		<hr>
-		<nav>
-		    <p><span style="float:left">上一篇：<a href="/posts/2022-12-02-program-share-jiami.html">基于Python3的加密程序分享</a></span>
+			</div>
+			<div class="cleaner"></div>
+      </div>
+        
+        <div class="cleaner_h40">
+			<p>
+			   <span style="float:left">上一篇：<a href="/posts/2022-12-02-program-share-jiami.html">基于Python3的加密程序分享</a></span>
 			   <span style="float:right">下一篇：<a href="/posts/2023-01-10-mks-jinshenyapian.html">[转]驳马克思阶级斗争论：经济与政治的自由精神</a></span>
 			</p>
-	    <nav>
-		<hr>
-			<p style="text-align:center">
-				&copy;2016-2023<span>月牙博客</span><span style="display:none"><a href="/sitemap.txt">站点地图</a></span> 
-			</p>
-		<script type="text/javascript" src="/extra/js/img.js"></script>
-	</body>
+		</div>
+        
+<!-- 		====================================最近文章和联系======================================= -->        
+        <div class="section_w670">
+        	
+            <div class="section_w330 fl">
+            	
+                <div class="section_w330_content">
 
+					<div id="recent_posts">
+
+					</div>
+					<script>
+						$(function(){
+						$("#recent_posts").load("/extra/recent_posts.html");
+						});
+					</script>
+	
+                </div>
+                
+            </div>
+            
+            <div class="section_w330 contact_section fr">
+                <h2>Contact Info.</h2>
+          		<p>
+ 
+                    留言: <a href="https://jiang.123guestbook.com/" target="_blank" rel="nofollow">123guestbook</a><br />                  
+                </p>
+            </div>
+            	
+        </div>
+		<div class="cleaner"></div>
+  </div> <!-- end of templatemo_content -->
+  
+  <div id="content_bottom"></div>
+    <div id="templatemo_footer">
+  		<!-- <ul class="footer_menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Blog</a></li>
+            <li class="last_menu"><a href="#">Contact</a></li>
+        </ul> -->
+        
+        &copy;2023&nbsp;&nbsp;月牙博客
+	</div> <!-- end of footer -->
+	<div class="cleaner"></div>
+</div> <!-- end of container -->
+<script type="text/javascript" src="/extra/js/img.js"></script>
+</body>
 </html>
