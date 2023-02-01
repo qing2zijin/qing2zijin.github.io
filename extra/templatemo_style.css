@@ -9,7 +9,7 @@ body {
 	font-family: "宋体", Georgia, "Times New Roman", Times, serif;
 	font-size: 12px;
 	color: #494234;
-	background: url(images/templatemo_body_bg.png);
+	background: url(/extra/images/templatemo_body_bg.png);
 }
 		
 a:link, a:visited { color: #191815; text-decoration: none; font-weight: normal; font-style: italic;} 
@@ -32,7 +32,7 @@ img { margin: 0px; padding: 0px; border: none; }
 	clear: both;
 	padding-bottom: 15px;
 	margin-bottom: 30px;
-	background: url(images/templatemo_horizontal_divider.jpg) bottom repeat-x;
+	/*background: url(/extra/images/templatemo_horizontal_divider.jpg) bottom repeat-x;*/
 }
 
 .fl { float: left; }
@@ -45,7 +45,7 @@ img { margin: 0px; padding: 0px; border: none; }
 	width: 120px;
 	height: 22px;
 	padding: 4px 0 0 0;
-	background: url(images/templatemo_button_01.jpg) no-repeat;
+	/*background: url(/extra/images/templatemo_button_01.jpg) no-repeat;*/
 	
 	color: #dcc673;
 	font-size: 11px;
@@ -96,7 +96,7 @@ h5 {
 	font-weight: normal;
 	text-align: center;
 	letter-spacing: 2px;
-	background: url(images/templatemo_footer_box_top.jpg) no-repeat;
+	/*background: url(/extra/images/templatemo_footer_box_top.jpg) no-repeat;*/
 }
 
 .image_wrapper {
@@ -122,7 +122,7 @@ h5 {
 .list_01 li {
 	margin: 0;
 	padding: 0 0 15px 0;
-	list-style-image: url(images/templatemo_list_icon.png);
+	list-style-image: url(/extra/images/templatemo_list_icon.png);
 	text-decoration: underline;	
 }
 
@@ -135,7 +135,7 @@ h5 {
 	position: relative;
 	width: 900px;
 	margin: 0 auto;
-	background: url(images/templatemo_container_top.jpg) top left no-repeat;
+	background: url(/extra/images/templatemo_container_top.jpg) top left no-repeat;
 }
 
 #templatemo_container #container_bottom { 
@@ -144,7 +144,7 @@ h5 {
 	height: 460px;
 	bottom: 0px;
 	left: 0px;
-	background: url(images/templatemo_container_bottom.jpg) no-repeat;
+	/*background: url(/extra/images/templatemo_container_bottom.jpg) no-repeat;*/
 }
 
 #templatemo_container #bulb {
@@ -153,11 +153,11 @@ h5 {
 	top: 0px;
 	width: 337px;
 	height: 273px;
-	background: url(images/templatemo_light_off.png) no-repeat;
+	background: url(/extra/images/templatemo_light_off.png) no-repeat;
 }
 
 #templatemo_container #bulb:hover {
-	background: url(images/templatemo_light_on.png) no-repeat;
+	background: url(/extra/images/templatemo_light_on.png) no-repeat;
 }
 
 /* site title bar */
@@ -166,7 +166,8 @@ h5 {
 	width: 960px;
 	height: 150px;
 	padding: 0 10px;
-	background: url(images/templatemo_top_bar.jpg) no-repeat;
+	/*background: url(/extra/images/templatemo_top_bar.jpg) no-repeat;
+*/
 }
 
 #templatemo_site_title_bar  #site_title {
@@ -212,7 +213,7 @@ h5 {
 	width: 750px;
 	height: 128px;
 	padding: 0 65px 0 85px;
-	background: url(images/templatemo_menu_bg.png) no-repeat;
+	/*background: url(/extra/images/templatemo_menu_bg.png) no-repeat;*/
 }
 
 #templatemo_menu ul {
@@ -252,14 +253,14 @@ h5 {
 	position: relative;
 	width: 670px;
 	padding: 0 105px 0 125px;
-	background: url(images/templatemo_content_bg.png) repeat-y;
+	background: url(/extra/images/templatemo_content_bg.png) repeat-y;
 }
 
 #content_bottom {
 	clear: both;
 	width: 900px;
 	height: 105px;
-	background: url(images/templatemo_content_bottom.png) no-repeat;
+	background: url(/extra/images/templatemo_content_bottom.png) no-repeat;
 }
 
 #templatemo_content .section_w670 {
@@ -289,7 +290,7 @@ h5 {
 	width: 230px;
 	height: 150px;
 	padding: 60px 50px 0 50px;
-	background: url(images/templatemo_contact_bg.png) no-repeat;
+	background: url(/extra/images/templatemo_contact_bg.png) no-repeat;
 }
 
 /* end of content */
@@ -301,7 +302,7 @@ h5 {
 	height: 41px;
 	padding: 15px 65px 15px 85px;
 	text-align: center;
-	background: url(images/templatemo_footer_bg.png) no-repeat;
+	background: url(/extra/images/templatemo_footer_bg.png) no-repeat;
 	color: #ac9058;
 }
 
