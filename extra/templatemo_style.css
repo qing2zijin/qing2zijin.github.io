@@ -351,7 +351,13 @@ h5 {
 	background-color:#f1ecec; 	
 	color:black	
 }
-#main img{margin:0;padding:0;margin-bottom:2em;border:0;}
+
+#main img{
+    margin:0 1em 2em 1em;
+    padding:0;
+    border:0;
+    border-radius:3px;
+}
 
 #main blockquote{
 	margin:10px 0 10px 0;
@@ -364,12 +370,12 @@ h5 {
 }
 
 #main p img{
-	max-width:500px;
+	max-width:300px;
 	min-width:200px;
 }
 
 #main img{
-	max-width:500px;
+	max-width:300px;
 	min-width:200px;
 }
 
@@ -381,4 +387,11 @@ h5 {
 	background-color:floralwhite; 
 	font-size:80%;
 	/*border-radius:10px*/
+}
+
+#main video,iframe{
+    padding:0;
+    margin:1em 0 1em 0;
+    max-width:630px;
+    max-height:500px;
 }
