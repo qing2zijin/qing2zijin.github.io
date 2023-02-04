@@ -1,10 +1,15 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <title>月牙博客</title>
-<link rel="icon" href="/extra/favicon.ico">
-<link href="/extra/templatemo_style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+    var targetProtocol = "https:";
+    if (window.location.protocol !=targetProtocol)
+        window.location.href = targetProtocol + window.location.href.substring(window.location.protocol.length);
+</script>
+<link rel="icon" href="/extra/favicon.ico"/>
+<link href="/extra/css/NEW2023_style.css" rel="stylesheet" type="text/css"/>
 <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
 </head>
 <body>
@@ -22,11 +27,6 @@
      <div id="templatemo_menu">
 
      </div> <!-- end of menu -->
-	 <script>
-		$(function(){
-		$("#templatemo_menu").load("/extra/menu.html");
-		});
-	 </script>
 
     <div id="templatemo_content"> 
 		
@@ -48,13 +48,20 @@
 		<p>2021-08-26&nbsp;<a href="../posts/2021-08-26-hongloumeng_ren_wu_guan_xi_tu.html" >红楼梦人物关系图</a></p>
 		<p>2021-06-30&nbsp;<a href="../posts/2021-06-30-aboutblogui.html" >关于本博客界面的一些想法</a></p>
 		<p>2021-04-23&nbsp;<a href="../posts/2021-04-23-markdown-yu-fa-back-up.html" >Markdown文档书写方式备忘录</a></p>
+		<p>2021-04-17&nbsp;<a href="../posts/2021-04-17-er_ji_jian.html" >一次耳机购买记录</a></p>
+		<p>2021-04-05&nbsp;<a href="../posts/2021-04-05-reading-responses_of_the-narrative-history-of-ming-dynasty.html" >《明朝那些事儿》读后感</a></p>
+		<p>2021-02-15&nbsp;<a href="../posts/2021-02-15-trip_qibugou_the-spring-festival.html" >七步沟风景</a></p>
+		<p>2021-02-08&nbsp;<a href="../posts/2021-02-08-zi-ji-zuo-yi-ge-md-parser.html" >网页生成器</a></p>
+		<p>2018-06-13&nbsp;<a href="../posts/2018-06-13-da-xue-biye-le.html" >毕业了</a></p>
+		<p>2017-06-10&nbsp;<a href="../posts/2017-06-10-old-poem.html" >写给远方的你</a></p>
+		<p>2016-06-28&nbsp;<a href="../posts/2016-06-28-real-study.html" >学习</a></p>
 
 			</div>
 			<div class="cleaner"></div>
       </div>
         
         <div class="cleaner_h40">
-			<p><a  href="2.html"><span style="float:right">Next</span></a></p>
+			<p></p>
 		</div>
         
 <!-- 		====================================最近文章和联系======================================= -->        
@@ -65,13 +72,7 @@
                 <div class="section_w330_content">
 
 					<div id="recent_posts">
-
 					</div>
-					<script>
-						$(function(){
-						$("#recent_posts").load("/extra/recent_posts.html");
-						});
-					</script>
 	
                 </div>
                 
@@ -81,7 +82,7 @@
                 <h2>Contact Info.</h2>
           		<p>
                     
-                    留言: <a href="https://jiang.123guestbook.com/" target="_blank" rel="nofollow">123guestbook</a><br />                  
+                    留言: <a href="https://jiang.123guestbook.com/" target="_blank" rel="nofollow">123guestbook</a><br >                  
                 </p>
             </div>
             	
@@ -91,18 +92,15 @@
   
   <div id="content_bottom"></div>
     <div id="templatemo_footer">
-  		<!-- <ul class="footer_menu">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Gallery</a></li>
-            <li><a href="#">Blog</a></li>
-            <li class="last_menu"><a href="#">Contact</a></li>
-        </ul> -->
-        
         &copy;2023&nbsp;&nbsp;月牙博客
 	</div> <!-- end of footer -->
 	<div class="cleaner"></div>
 </div> <!-- end of container -->
-
+	<script>
+		$(function(){
+		    $("#templatemo_menu").load("/extra/menu.html");
+			$("#recent_posts").load("/extra/recent_posts.html");
+		});
+	</script>
 </body>
 </html>

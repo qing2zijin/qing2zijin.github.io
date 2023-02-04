@@ -1,12 +1,17 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <title>月牙博客</title>
-<meta name="keywords" content="月牙博客,blog,博客" />
-<meta name="description" content="一个专注于“胡说八道”的博主。" />
-<link rel="icon" href="/extra/favicon.ico">
-<link href="extra/templatemo_style.css" rel="stylesheet" type="text/css" />
+<meta name="keywords" content="月牙博客,blog,博客"/>
+<meta name="description" content="一个专注于“胡说八道”的博主。"/>
+<script type="text/javascript">
+    var targetProtocol = "https:";
+    if (window.location.protocol !=targetProtocol)
+        window.location.href = targetProtocol + window.location.href.substring(window.location.protocol.length);
+</script>
+<link rel="icon" href="/extra/favicon.ico"/>
+<link href="/extra/css/NEW2023_style.css" rel="stylesheet" type="text/css"/>
 <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
 </head>
 <body>
@@ -24,11 +29,6 @@
      <div id="templatemo_menu">
 		
     </div> <!-- end of menu -->
-   	<script>
-		$(function(){
-		$("#templatemo_menu").load("/extra/menu.html");
-		});
-	</script>
 
     <div id="templatemo_content"> 
 
@@ -42,12 +42,10 @@
        <div class="section_w670">
         	<h2>最近计划</h2>
             <div id="main">
-					<!-- <a href="images/templatemo_image_01.png" target="_parent"> -->
-						<img class="image_wrapper fl_image" src="extra/images/index_picture.png" alt="Image One" width="294px"/>
-					<!-- </a> -->
-					<p>1.英语雅思过6<br>英语真的很重要，对个人成长帮助很大，可以拥有很多机会。</p>
+					<img class="image_wrapper fl_image" src="extra/images/index_picture.png" alt="Image One" width="294px">
+					<p>1.英语雅思过6（4个6以上）<br>英语真的很重要，对个人成长帮助很大，可以拥有很多机会。</p>
 					<p>2.个人存款过25w</p>
-					<p>3.一年3-4次TRIP</p>
+					<p>3.一年3-4次Travel</p>
 					<p>4.找个女朋友<br>很多原因。</p>
 			</div>
 			<div class="cleaner"></div>
@@ -64,12 +62,7 @@
 					<div id="recent_posts">
 
 					</div>
-					<script>
-						$(function(){
-						$("#recent_posts").load("/extra/recent_posts.html");
-						});
-					</script>
-	
+
                 </div>
                 
             </div>
@@ -78,7 +71,7 @@
                 <h2>Contact Info.</h2>
           		<p>
 
-                    留言: <a href="https://jiang.123guestbook.com/" target="_blank" rel="nofollow">123guestbook</a><br />                  
+                    留言: <a href="https://jiang.123guestbook.com/" target="_blank" rel="nofollow">123guestbook</a><br >                  
                 </p>
             </div>
             	
@@ -88,18 +81,15 @@
   
 <div id="content_bottom"></div>
     <div id="templatemo_footer">
-  		<!-- <ul class="footer_menu">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Gallery</a></li>
-            <li><a href="#">Blog</a></li>
-            <li class="last_menu"><a href="#">Contact</a></li>
-        </ul> -->
-        
         &copy;2023 
 	</div> <!-- end of footer -->
 	<div class="cleaner"></div>
 </div> <!-- end of container -->
-
+	<script>
+		$(function(){
+		    $("#templatemo_menu").load("/extra/menu.html");
+			$("#recent_posts").load("/extra/recent_posts.html");
+		});
+	</script>
 </body>
 </html>
