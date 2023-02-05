@@ -268,7 +268,6 @@ h5 {
 	width: 670px;
 }
 
-#main{min-height:400px;}
 
 .section_w670 p {
 	margin-bottom: 15px;	
@@ -338,28 +337,32 @@ h5 {
 
 
 /* 自定义 */
-#main pre{	
+.main{
+    min-height:300px;
+}
+
+.main pre{	
 	margin:0; 	
 	padding:0.5em; 	
 	border:1px dashed; 	
 	overflow:auto
 }
-#main code{	font-size:1.1em	}
+.main code{	font-size:1.1em	}
 
-#main pre, code{	
+.main pre, code{	
 	border-radius:10px;	
 	background-color:#f1ecec; 	
 	color:black	
 }
 
-#main img{
+.main img{
     margin:0 1em 2em 1em;
     padding:0;
     border:0;
     border-radius:3px;
 }
 
-#main blockquote{
+.main blockquote{
 	margin:10px 0 10px 0;
 	padding:0 1em 0 1em; 
 	border-top:1px dashed;
@@ -369,12 +372,12 @@ h5 {
 	/*border-radius:10px*/
 }
 
-#main p img{
+.main p img{
 	max-width:300px;
 	min-width:200px;
 }
 
-#main img{
+.main img{
 	max-width:300px;
 	min-width:200px;
 }
@@ -389,7 +392,7 @@ h5 {
 	/*border-radius:10px*/
 }
 
-#main video,iframe{
+.main video,iframe{
     padding:0;
     margin:1em 0 1em 0;
     max-width:630px;
