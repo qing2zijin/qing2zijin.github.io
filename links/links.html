@@ -3,6 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="text/javascript">
+    var targetProtocol = "https:";
+    if (window.location.protocol !=targetProtocol)
+        window.location.href = targetProtocol + window.location.href.substring(window.location.protocol.length);
+</script>
 <title>一些链接</title>
 <link rel="icon" href="/extra/favicon.ico">
 <style>
