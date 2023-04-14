@@ -1,11 +1,12 @@
 	body{
 	    width:1000px;
-		height:100vh;
+		min-height:100vh;
 		margin:0 auto;
 		background-color:orange;;
 		font-family:"宋体", Georgia, "Times New Roman", Times, serif;
 		font-weight: normal;
 		font-size:14px;
+		overflow:auto;
 	}
     h1{font-size:21px}
 	h2{font-size:18px}
@@ -32,7 +33,7 @@
 	}
 	.top{height:170px;}
 	.center{
-		min-height:80vh;
+		min-height:40vh;
 	    overflow:auto;
 	}
 	.page_nav{
@@ -65,12 +66,12 @@
 		width:630px; 
 		margin:10px 10px 10px 150px;
 		padding:10px;
-		min-height:80vh;/*952px*/
+		min-height:40vh;/*952px*/
 	}
 	.links{
 		width:150px; 
 		margin:10px 10px 10px 0;
-		min-height:80vh;/*972px*/
+		min-height:40vh;/*972px*/
 	}
 	.main_content, .links{float:left;}
 	
