@@ -2,41 +2,32 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-<title>阅读记录</title>
-<script type="text/javascript">
-    var targetProtocol = "https:";
-    if (window.location.protocol !=targetProtocol)
-        window.location.href = targetProtocol + window.location.href.substring(window.location.protocol.length);
-</script>
+<title>阅读</title>
+<link href="../extra/css/style_2023413.css" rel="stylesheet" type="text/css" />
 <link rel="icon" href="/extra/favicon.ico"/>
-<link href="/extra/css/NEW2023_style.css" rel="stylesheet" type="text/css"/>
 <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+
 </head>
 <body>
-<div id="templatemo_container">
-	<div id="bulb"></div>
-	<div id="templatemo_site_title_bar">	
-        <div id="site_title">
-            <h1>
-				<a href="#" target="_blank">月牙博客</a>
-				<span>专注于“胡说八道”。</span>
-            </h1>
-        </div>
-    </div> <!-- templatemo_site_title_bar -->
+<div class="top">
+    <div id="logo"><img src="/extra/images/index_picture.png" alt="one" /></div>
     
-     <div id="templatemo_menu">
-
-     </div> <!-- end of menu -->
-
-    <div id="templatemo_content"> 
-		
-       <div class="section_w670">
-        	<h2>阅读记录</h2>
-
-            <div class="main">
-			
-			<h3>2023</h3>
+	<div id="title">
+		<h1>阅读</h1>
+		<p>But man is not made for defeat, a man can be destroyed but not defeated.</p>
+	</div>
+	
+	<!-- 图片轮播 -->
+    <div id="show_images">
+	    
+	</div>
+</div>
+<div class="center">
+    <div class="main_content">
+	  
+       <h3>2023</h3>
 			<ol>
+			    <li>霍乱时期的爱情</li>
 			    <li>走出帝制 从晚清到民国的历史回望</li>
 			</ol>
 			
@@ -47,52 +38,29 @@
 			    <li>Immanuel Chung-Yueh Hsü_ 徐中約 - 中國近代史 (2001, Chinese University Press)</li>
 			    <li>老人与海英文版</li>
 			</ol>
-			  
-			</div>
-			<div class="cleaner"></div>
-      </div>
-        
-        <div class="cleaner_h40">
-			<p></p>
-		</div>
-        
-<!-- 		====================================最近文章和联系======================================= -->        
-        <div class="section_w670">
-        	
-            <div class="section_w330 fl">
-            	
-                <div class="section_w330_content">
 
-					<div id="recent_posts">
-					</div>
+	</div>
+	<div class="links">
+		
+	</div>
+</div>
+<div class="bottom">
+    <div class="introduce">
 	
-                </div>
-                
-            </div>
-            
-            <div class="section_w330 contact_section fr">
-                <h2>Contact Info.</h2>
-          		<p>
-                    
-                    留言: <a href="https://jiang.123guestbook.com/" target="_blank" rel="nofollow">123guestbook</a><br >                  
-                </p>
-            </div>
-            	
-        </div>
-		<div class="cleaner"></div>
-  </div> <!-- end of templatemo_content -->
-  
-  <div id="content_bottom"></div>
-    <div id="templatemo_footer">
-        &copy;2023&nbsp;&nbsp;月牙博客
-	</div> <!-- end of footer -->
-	<div class="cleaner"></div>
-</div> <!-- end of container -->
-	<script>
-		$(function(){
-		    $("#templatemo_menu").load("/extra/menu.html");
-			$("#recent_posts").load("/extra/recent_posts.html");
-		});
-	</script>
+	
+	</li>
+	</div>
+<div>
+
+
+<script>
+	$(function(){
+		$("#show_images").load("/extra/show_images.html");
+		$(".links").load("/extra/menu.html");
+		$(".introduce").load("/extra/me.html");
+	});
+</script>
+
+<script type="text/javascript" src="/extra/js/img.js"></script>
 </body>
 </html>
