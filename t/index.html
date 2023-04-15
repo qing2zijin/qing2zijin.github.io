@@ -3,12 +3,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <title>第1页 | 微语</title>
-<link href="/extra/css/style_2023413.css" rel="stylesheet" type="text/css" />
+<link href="/extra/css/style_2023415.css" rel="stylesheet" type="text/css" />
 <link rel="icon" href="/extra/favicon.ico"/>
-<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script> 
 <style>
 	.tt{
-	    max-width:500px;
+		max-width:500px;
 		margin:1em 0 0 1em;
 		padding:1em;
 		border:1px dashed; 
@@ -16,23 +16,29 @@
 </style>
 </head>
 <body>
-<div class="top">
-    <div id="logo"><img src="/extra/images/index_picture.png" alt="one" /></div>
-    
-	<div id="title">
-		<h1>第1页 | 微语</h1>
-		<p>But man is not made for defeat, a man can be destroyed but not defeated.</p>
+	<div class="BigBox">
+	<div class="left_Box">
+		<div class="lef_top_box">
+			 <div class="media_show">
+				<div id="show_images">
+					
+				</div>
+			 </div>
+			 <div class="menu">
+			   
+			 </div>
+		</div>
+		<div class="lef_bottom_box">
+		   <div id="briefly">
+			   
+		   </div>
+		</div>
 	</div>
-	
-	<!-- 图片轮播 -->
-    <div id="show_images">
-	    
-	</div>
-</div>
-<div class="center">
-    <div class="main_content">
-	    <p>最新发布时间：2023-04-10，合计发布48条。</p>
-		
+	<div class="right_Box">
+		<div class="title"><h1>第1页 | 微语</h1></div>
+		<div class="main_content">
+			<p>最新发布时间：2023-04-10，合计发布48条。</p>
+		    
 		<div class="tt"><i>2023-04-10</i><br>前天发生的事情，现在回想起来还有点害怕，虽说没有肉体伤害，但是精神伤害不小。打电话知道对方后，就立即删除了一些信息，到地方就是直接强制查阅手机，浏览器里面的信息没删除，就直接导致我理亏，写保证书，也不知道会不会留下“污”点。<br/>对于个人信息，注意保护。浏览器用完就要清空，不要留历史痕迹，不靠谱的软件不要使用，小心泄露个人隐私，被钓鱼。</div>
 		<div class="tt"><i>2023-03-24</i><br>下个月9号考试，积极准备中，<br/>对于我而言，这条路真的是最好的选择，这个选择可以一直到35岁；当然也有其他选择，但是要花更多的时间。</div>
 		<div class="tt"><i>2023-02-24</i><br><!--偌大个中国却要跟小国寡民的日本、韩国、新加坡做比较，专家们无耻到这种地步，中国的发展潜力就只有这么高？时至今日，80&nbsp;90应该醒悟了吧-->。</div>
@@ -81,31 +87,20 @@
 		<div class="tt"><i>2022-6-11</i><br>要考试了。绵阳的，也要出成绩了。</div>
 		<div class="tt"><i>2022-6-10</i><br>今天，仿效emlog，设置微语专栏，发“小博客”。</div>
 		<div class="tt"><i>2022-05-01</i><br><a href="/t/pages/log_201903~202003.html" target="_blank" rel="nofollow">2019.3~2020.3</a>的只言片语。</div>
-		
+		</div>
+		<div class="page_nav">
+			<div id="prepage"></div>
+			<div id="nextpage"></div>
+		</div>
 	</div>
-	<div class="links">
-		
-	</div>
-</div>
-<div class="page_nav">
-	<div id="prepage"></div>
-	<div id="nextpage"></div>
-</div>
-<div class="bottom">
-    <div class="introduce">
-
-	</div>
-<div>
-
-<script>
+	<div>
+   
+	<script>
 	$(function(){
 		$("#show_images").load("/extra/show_images.html");
-		$(".links").load("/extra/menu.html");
-		$(".introduce").load("/extra/me.html");
+		$(".menu").load("/extra/menu.html");
+		$("#briefly").load("/extra/me.html");
 	});
-</script>
-
-
-
+	</script>
 </body>
 </html>

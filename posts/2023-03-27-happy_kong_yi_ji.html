@@ -3,32 +3,45 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <title>阳光快乐孔乙己</title>
-<link href="/extra/css/style_2023413.css" rel="stylesheet" type="text/css" />
 <meta name="keywords" content="孔乙己,底层的呐喊"/>
 <meta name="description" content="月牙博客:阳光快乐孔乙己"/>
+<link href="/extra/css/style_2023415.css" rel="stylesheet" type="text/css" />
 <link rel="icon" href="/extra/favicon.ico"/>
-<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
-
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script> 
+<style>
+	#first{
+		margin:0 0 1em 0;
+		padding:0;
+		width:100%;
+		float:left;
+	}
+</style>
 </head>
 <body>
-<div class="top">
-    <div id="logo"><img src="/extra/images/index_picture.png" alt="one" /></div>
-    
-	<div id="title">
-		<h1>阳光快乐孔乙己</h1>
-		<p>But man is not made for defeat, a man can be destroyed but not defeated.</p>
+	<div class="BigBox">
+	<div class="left_Box">
+		<div class="lef_top_box">
+			 <div class="media_show">
+				<div id="show_images">
+					
+				</div>
+				
+			 </div>
+			 <div class="menu">
+			   
+			 </div>
+		</div>
+		<div class="lef_bottom_box">
+		   <div id="briefly">
+			   
+		   </div>
+		</div>
 	</div>
-	
-	<!-- 图片轮播 -->
-    <div id="show_images">
-	    
-	</div>
-</div>
-<div class="center">
-    <div class="main_content">
-	   <div id="first">发布时间：2023-03-27 18:10:00&nbsp;&nbsp;类别：society</div>
-
-		<p>孔乙己是鲁迅作品里的一个人物，有文化，有学历，但是却和时代格格不入。</p>
+	<div class="right_Box">
+		<div class="title"><h1>阳光快乐孔乙己</h1></div>
+		<div class="main_content">
+		    <div id="first">发布时间：2023-03-27 18:10:00&nbsp;&nbsp;类别：society</div>
+			<p>孔乙己是鲁迅作品里的一个人物，有文化，有学历，但是却和时代格格不入。</p>
 <p>视频很火，Bilibili上面被删除了，YouTube上面找到的。</p>
 <iframe width="600px" height="400px" src="https://www.youtube-nocookie.com/embed/7oPsBbjtuLE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>YouTube视频</iframe>
 
@@ -47,29 +60,20 @@
 <!-- B站视频引用 
 <iframe src="https://player.bilibili.com/player.html?aid={}&cid={}&page=1&danmaku=0" allowfullscreen="allowfullscreen" width="600px" height="400px" scrolling="no" frameborder="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe>
 -->
-
+		</div>
+<!-- 		<div class="page_nav">
+			<div id="prepage">{{previous_page}}</div>
+			<div id="nextpage">{{next_page}}</div>
+		</div> -->
 	</div>
-	<div class="links">
-		
-	</div>
-</div>
-<div class="bottom">
-    <div class="introduce">
-	
-	
-	</li>
-	</div>
-<div>
-
-
-<script>
+	<div>
+   
+	<script>
 	$(function(){
 		$("#show_images").load("/extra/show_images.html");
-		$(".links").load("/extra/menu.html");
-		$(".introduce").load("/extra/me.html");
+		$(".menu").load("/extra/menu.html");
+		$("#briefly").load("/extra/me.html");
 	});
-</script>
-
-<script type="text/javascript" src="/extra/js/img.js"></script>
+	</script>
 </body>
 </html>

@@ -3,32 +3,45 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <title>基于Python3的加密程序分享</title>
-<link href="/extra/css/style_2023413.css" rel="stylesheet" type="text/css" />
 <meta name="keywords" content="Python,私密,加密,程序"/>
 <meta name="description" content="基于Python3的加密程序分享"/>
+<link href="/extra/css/style_2023415.css" rel="stylesheet" type="text/css" />
 <link rel="icon" href="/extra/favicon.ico"/>
-<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
-
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script> 
+<style>
+	#first{
+		margin:0 0 1em 0;
+		padding:0;
+		width:100%;
+		float:left;
+	}
+</style>
 </head>
 <body>
-<div class="top">
-    <div id="logo"><img src="/extra/images/index_picture.png" alt="one" /></div>
-    
-	<div id="title">
-		<h1>基于Python3的加密程序分享</h1>
-		<p>But man is not made for defeat, a man can be destroyed but not defeated.</p>
+	<div class="BigBox">
+	<div class="left_Box">
+		<div class="lef_top_box">
+			 <div class="media_show">
+				<div id="show_images">
+					
+				</div>
+				
+			 </div>
+			 <div class="menu">
+			   
+			 </div>
+		</div>
+		<div class="lef_bottom_box">
+		   <div id="briefly">
+			   
+		   </div>
+		</div>
 	</div>
-	
-	<!-- 图片轮播 -->
-    <div id="show_images">
-	    
-	</div>
-</div>
-<div class="center">
-    <div class="main_content">
-	   <div id="first">发布时间：2022-12-02 18:16:00&nbsp;&nbsp;类别：life</div>
-
-		<p>运行环境：Python3.0以上</p>
+	<div class="right_Box">
+		<div class="title"><h1>基于Python3的加密程序分享</h1></div>
+		<div class="main_content">
+		    <div id="first">发布时间：2022-12-02 18:16:00&nbsp;&nbsp;类别：life</div>
+			<p>运行环境：Python3.0以上</p>
 <p>初始创建文件：rawFile 和 outPath 作为输入文件，输出文件。</p>
 <pre><code>import base64, sys, os
 import hashlib
@@ -161,29 +174,20 @@ if __name__ == &quot;__main__&quot;:
     else:
         pass
 </code></pre>
-
+		</div>
+<!-- 		<div class="page_nav">
+			<div id="prepage">{{previous_page}}</div>
+			<div id="nextpage">{{next_page}}</div>
+		</div> -->
 	</div>
-	<div class="links">
-		
-	</div>
-</div>
-<div class="bottom">
-    <div class="introduce">
-	
-	
-	</li>
-	</div>
-<div>
-
-
-<script>
+	<div>
+   
+	<script>
 	$(function(){
 		$("#show_images").load("/extra/show_images.html");
-		$(".links").load("/extra/menu.html");
-		$(".introduce").load("/extra/me.html");
+		$(".menu").load("/extra/menu.html");
+		$("#briefly").load("/extra/me.html");
 	});
-</script>
-
-<script type="text/javascript" src="/extra/js/img.js"></script>
+	</script>
 </body>
 </html>

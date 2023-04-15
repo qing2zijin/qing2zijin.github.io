@@ -3,32 +3,45 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <title>写给远方的你</title>
-<link href="/extra/css/style_2023413.css" rel="stylesheet" type="text/css" />
 <meta name="keywords" content="远方的你,秋色,青春"/>
 <meta name="description" content="写给远方的你"/>
+<link href="/extra/css/style_2023415.css" rel="stylesheet" type="text/css" />
 <link rel="icon" href="/extra/favicon.ico"/>
-<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
-
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script> 
+<style>
+	#first{
+		margin:0 0 1em 0;
+		padding:0;
+		width:100%;
+		float:left;
+	}
+</style>
 </head>
 <body>
-<div class="top">
-    <div id="logo"><img src="/extra/images/index_picture.png" alt="one" /></div>
-    
-	<div id="title">
-		<h1>写给远方的你</h1>
-		<p>But man is not made for defeat, a man can be destroyed but not defeated.</p>
+	<div class="BigBox">
+	<div class="left_Box">
+		<div class="lef_top_box">
+			 <div class="media_show">
+				<div id="show_images">
+					
+				</div>
+				
+			 </div>
+			 <div class="menu">
+			   
+			 </div>
+		</div>
+		<div class="lef_bottom_box">
+		   <div id="briefly">
+			   
+		   </div>
+		</div>
 	</div>
-	
-	<!-- 图片轮播 -->
-    <div id="show_images">
-	    
-	</div>
-</div>
-<div class="center">
-    <div class="main_content">
-	   <div id="first">发布时间： 2017-06-10 14:20:05&nbsp;&nbsp;类别：life</div>
-
-		<p>写给远方的你写给远方的你，过去的你，我一无所知；</p>
+	<div class="right_Box">
+		<div class="title"><h1>写给远方的你</h1></div>
+		<div class="main_content">
+		    <div id="first">发布时间： 2017-06-10 14:20:05&nbsp;&nbsp;类别：life</div>
+			<p>写给远方的你写给远方的你，过去的你，我一无所知；</p>
 <p>现在的你，我也不想明白；</p>
 <p>将来的你，我也不想知道。</p>
 <p>任凭时间流逝，将你我内心洗涤。写给远方的你，</p>
@@ -39,29 +52,20 @@
 <p>就让时间来淘洗我们的内心。</p>
 <p>而你已不是曾经的你，我也不是现在的我；</p>
 <p>我们都是青春。写给远方的你； 你离去，我走开</p>
-
+		</div>
+<!-- 		<div class="page_nav">
+			<div id="prepage">{{previous_page}}</div>
+			<div id="nextpage">{{next_page}}</div>
+		</div> -->
 	</div>
-	<div class="links">
-		
-	</div>
-</div>
-<div class="bottom">
-    <div class="introduce">
-	
-	
-	</li>
-	</div>
-<div>
-
-
-<script>
+	<div>
+   
+	<script>
 	$(function(){
 		$("#show_images").load("/extra/show_images.html");
-		$(".links").load("/extra/menu.html");
-		$(".introduce").load("/extra/me.html");
+		$(".menu").load("/extra/menu.html");
+		$("#briefly").load("/extra/me.html");
 	});
-</script>
-
-<script type="text/javascript" src="/extra/js/img.js"></script>
+	</script>
 </body>
 </html>
