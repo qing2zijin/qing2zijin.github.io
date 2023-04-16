@@ -4,7 +4,7 @@
 <meta name="viewport" content="width=device-width">
 <meta charset="utf-8">
 <title>阅读</title>
-<link href="/extra/css/style_2023415.css" rel="stylesheet" type="text/css" />
+<link href="/extra/css/style_2023416.css" rel="stylesheet" type="text/css" />
 <link rel="icon" href="/extra/favicon.ico"/>
 <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script> 
 <style>
@@ -18,63 +18,60 @@
 </head>
 <body>
 	<div class="BigBox">
-	<div class="left_Box">
-		<div class="left_top_box">
-			 <div class="media_show">
-				<div id="show_images">
+	     <div class="top_left_box">
+		 
+		    <div class="show_images">
+			     
+			</div>  
+		 </div>
+		 <div class="top_righ_box">
+		     <div class="briefly">
+			    
+			 </div>
+		 </div>
+		 <div class="bottom_left_box">
+		    
+		 </div>
+		 <div class="bottom_right_box">
+		    <div class="title"><h1>阅读</h1></div>
+			<div class="main_content">
+				<h3>2023</h3>
+					<ol>
+						<li>霍乱时期的爱情</li>
+						<li>走出帝制 从晚清到民国的历史回望</li>
+						<li>权力论 罗素</li>
+						<li>家庭-私有制和国家的起源 恩格斯</li>
+						<li>就业-利息和货币通论 凯恩斯</li>
+					</ol>
 					
-				</div>
-				
-			 </div>
-			 <div class="menu">
-			   
-			 </div>
-		</div>
-		<div class="left_bottom_box">
-		   <div id="briefly">
-			   
-		   </div>
-		</div>
+				<h3>2022</h3>	
+					<ol>
+						<li>通往奴役之路 哈耶克</li>
+						<li>致命的自负 哈耶克</li>
+						<li>中國近代史 徐中約</li>
+						<li>老人与海</li>
+						<li>复活 列夫·托尔斯泰 (Leo Tolstoy)</li>
+					</ol>
+				<h3>2021</h3>
+					<ol>
+						<li>明朝那些事儿</li>
+					</ol>
+			</div>
+			<!-- <div class="page_nav">
+			     <div id="prepage">上一页</div>
+				 <div id="nextpage">下一页</div>
+			</div> -->
+		 
+		 </div>
 	</div>
-	<div class="right_Box">
-		<div class="title"><h1>阅读</h1></div>
-		<div class="main_content">
-		    <h3>2023</h3>
-			<ol>
-			    <li>霍乱时期的爱情</li>
-			    <li>走出帝制 从晚清到民国的历史回望</li>
-			    <li>权力论 罗素</li>
-			    <li>家庭-私有制和国家的起源 恩格斯</li>
-			    <li>就业-利息和货币通论 凯恩斯</li>
-			</ol>
-			
-		<h3>2022</h3>	
-			<ol>
-			    <li>通往奴役之路 哈耶克</li>
-			    <li>致命的自负 哈耶克</li>
-			    <li>中國近代史 徐中約</li>
-			    <li>老人与海</li>
-			    <li>复活 列夫·托尔斯泰 (Leo Tolstoy)</li>
-			</ol>
-		<h3>2021</h3>
-			<ol>
-			    <li>明朝那些事儿</li>
-            </ol>
-		</div>
-<!-- 		<div class="page_nav">
-			<div id="prepage">{{previous_page}}</div>
-			<div id="nextpage">{{next_page}}</div>
-		</div> -->
-	</div>
-	<div>
    
 	<script>
 	$(function(){
-		$("#show_images").load("/extra/show_images.html");
-		$(".menu").load("/extra/menu.html");
-		$("#briefly").load("/extra/me.html");
+		$(".show_images").load("/extra/show_images.html");
+		$(".bottom_left_box").load("/extra/menu.html");
+		$(".briefly").load("/extra/me.html");
 	});
 	</script>
-	<script type="text/javascript" src="/extra/js/img.js"></script>
-</body>
+<!-- 	<script type="text/javascript" src="/extra/js/img.js"></script>
+ --></body>
 </html>

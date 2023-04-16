@@ -6,7 +6,7 @@
 <title>Markdown文档书写方式备忘录</title>
 <meta name="keywords" content="markdown,备忘录,图片,链接,标题,引用"/>
 <meta name="description" content="Markdown文档书写方式备忘录"/>
-<link href="/extra/css/style_2023415.css" rel="stylesheet" type="text/css" />
+<link href="/extra/css/style_2023416.css" rel="stylesheet" type="text/css" />
 <link rel="icon" href="/extra/favicon.ico"/>
 <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script> 
 <style>
@@ -20,29 +20,25 @@
 </head>
 <body>
 	<div class="BigBox">
-	<div class="left_Box">
-		<div class="left_top_box">
-			 <div class="media_show">
-				<div id="show_images">
-					
-				</div>
-				
+	     <div class="top_left_box">
+		 
+		    <div class="show_images">
+			     
+			</div>  
+		 </div>
+		 <div class="top_righ_box">
+		     <div class="briefly">
+			    
 			 </div>
-			 <div class="menu">
-			   
-			 </div>
-		</div>
-		<div class="left_bottom_box">
-		   <div id="briefly">
-			   
-		   </div>
-		</div>
-	</div>
-	<div class="right_Box">
-		<div class="title"><h1>Markdown文档书写方式备忘录</h1></div>
-		<div class="main_content">
-		    <div id="first">发布时间：2021-04-23 11:21:00&nbsp;&nbsp;类别：life</div>
-			<p>1.链接：</p>
+		 </div>
+		 <div class="bottom_left_box">
+		    
+		 </div>
+		 <div class="bottom_right_box">
+		    <div class="title"><h1>Markdown文档书写方式备忘录</h1></div>
+			<div class="main_content">
+			   <div id="first">发布时间：2021-04-23 11:21:00&nbsp;&nbsp;类别：life</div>
+				<p>1.链接：</p>
 <pre><code>[text](links)
 &lt;links&gt;
 </code></pre>
@@ -61,19 +57,20 @@
 </code></pre>
 <p>...</p>
 <p>想到再写</p>
-		</div>
-<!-- 		<div class="page_nav">
-			<div id="prepage">{{previous_page}}</div>
-			<div id="nextpage">{{next_page}}</div>
-		</div> -->
+			</div>
+			<!-- <div class="page_nav">
+			     <div id="prepage">上一页</div>
+				 <div id="nextpage">下一页</div>
+			</div> -->
+		 
+		 </div>
 	</div>
-	<div>
    
 	<script>
 	$(function(){
-		$("#show_images").load("/extra/show_images.html");
-		$(".menu").load("/extra/menu.html");
-		$("#briefly").load("/extra/me.html");
+		$(".show_images").load("/extra/show_images.html");
+		$(".bottom_left_box").load("/extra/menu.html");
+		$(".briefly").load("/extra/me.html");
 	});
 	</script>
 	<script type="text/javascript" src="/extra/js/img.js"></script>
