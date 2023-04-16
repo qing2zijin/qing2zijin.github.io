@@ -120,7 +120,7 @@ body{
 			   padding:0px;
 			   height:14px;
 			   width:auto;
-			   background-color:gray;
+			   /* background-color:gray; */
 			}
 				#prepage, #nextpage{
 					width:150px;
@@ -131,11 +131,11 @@ body{
 				}
 				#prepage{
 					margin:0px 0px 0px 122px;
-					background-color:black;
+					/* background-color:black; */
 				}
 				#nextpage{
 					margin:0px 122px 0px 244px;
-					background-color:white;
+					/* background-color:white; */
 				}
 
 	            /*----------------------------------------*/
