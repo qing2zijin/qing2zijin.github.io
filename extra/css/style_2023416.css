@@ -29,7 +29,7 @@ body{
 	   width:1300px;
 	   min-height:1238px;
 	   margin:30px auto;
-	   padding:0px;
+	   padding:0px 0px 140px 0px;
 	   overflow:auto;
 	   background-color:#FAEBD7;
 	   border-radius:5px;
@@ -158,6 +158,7 @@ body{
 					padding:0px;
 					line-height:1.5em;
 					float:left;
+					width:100%;
 				}
 				.main_content pre{	
 					width:95%;
@@ -179,8 +180,7 @@ body{
 					padding:0px;
 					border:0px;
 					border-radius:3px;
-					
-					/*float:right;*/
+					float:left;
 				}
 				
 				.main_content blockquote{
@@ -205,3 +205,5 @@ body{
 					max-width:550px;
 					max-height:550px;
 				}
+				
+				
