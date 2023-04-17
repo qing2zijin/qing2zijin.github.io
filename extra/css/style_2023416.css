@@ -16,6 +16,8 @@ body{
 	h2,h3,h4{
 		margin:0.5em 0em 0.5em 0em;
 		padding:0px;
+		width:100%;
+		float:left;
 	}
 	a:link{
 		color:black;
@@ -139,18 +141,18 @@ body{
 				}
 
 	            /*----------------------------------------*/
-				.main_content ul,.main_content ul ol{
+				.main_content > ul,.main_content > ol{
 					margin:0px auto;
 					padding:10px;
 					float:left;
 				}
-				.main_content ul li{
+				.main_content > ul li{
 					list-style:none;
 					margin:0px;
 					padding:10px;
 					
 				}
-				.main_content ol li{
+				.main_content > ol li{
 					list-style:none;
 					margin:0px;
 					padding:10px;
@@ -190,13 +192,21 @@ body{
 					line-height:2em;
 					float:left;
 				}
-				.main_content .toc{
-					margin:0px;
-					padding:0px 1em 0px 1em; 
+				.toc{
+					margin:30px 10px 10px 10px;
+					padding:10px; 
 					max-width:400px;
-					float:right;
 					background-color:floralwhite; 
-					font-size:80%;
+					font-size:110%;
+				}
+				.toc ul, .toc ol{
+					margin:0px;
+					padding:0px;
+				}
+				.toc li{
+					margin:0px 0px 0px 20px;
+					padding:5px;
+					list-style:upper-latin;
 				}
 				.main_content video,.main_content iframe{
 					padding:0px;
