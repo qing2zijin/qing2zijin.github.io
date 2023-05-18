@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta name="viewport" content="width=device-width">
+<meta charset="utf-8">
+<title>绕过GWF获取网页</title>
+<meta name="keywords" content="viewsource,程序,外网"/>
+<meta name="description" content="程序分享"/>
+<link href="/extra/css/style_2023416.css" rel="stylesheet" type="text/css" />
+<link rel="icon" href="/extra/favicon.ico"/>
+<!-- <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>  -->
+<style>
+	#first{
+		margin:0 0 1em 0;
+		padding:0;
+		width:100%;
+		float:left;
+	}
+</style>
+</head>
+<body>
+	<div class="BigBox">
+	     <div class="top_left_box">
+		 
+		    <div class="show_images">
+			     
+			</div>  
+		 </div>
+		 <div class="top_righ_box">
+		     <div class="briefly">
+			    
+			 </div>
+		 </div>
+		 <div class="bottom_left_box">
+		    
+		 </div>
+		 <div class="bottom_right_box">
+		    <div class="title"><h1>绕过GWF获取网页</h1></div>
+			<div class="main_content">
+			   <div id="first">发布时间：2022-12-15 13:55:00&nbsp;&nbsp;类别：life</div>
+				<div class="toc">
+<ul>
+<li><a href="#_1">前言</a></li>
+<li><a href="#_2">开始</a><ul>
+<li><a href="#_3">库</a></li>
+<li><a href="#_4">延迟设计</a></li>
+<li><a href="#_5">请求标头的设计</a></li>
+<li><a href="#_6">请求数据函数设计</a></li>
+<li><a href="#_7">字符选择匹配</a></li>
+<li><a href="#_8">文件输入和输出</a></li>
+<li><a href="#_9">突破防火墙的四个网站</a></li>
+</ul>
+</li>
+<li><a href="#_10">最后</a></li>
+</ul>
+</div>
+<h3 id="_1">前言</h3>
+<p>有感于中<!-- 39298jajwue -->国大<!-- 76920nsbsjqjw -->陆的互联网环境，很多真实的声音听不到，长期处在信息茧房里面对自己的认知是有害的，于是设计出了这款python脚本程序，可以下载并浏览bbc、voa、dw、nitter（twitter镜像）等被屏蔽的网页。</p>
+<p>需要知道python程序语法。</p>
+<h3 id="_2">开始</h3>
+<p>这里就不使用很复杂的设计，就使用类似c语言的流程设计即可。</p>
+<h4 id="_3">库</h4>
+<p>用到的库有：<code>urllib</code>、<code>random</code>、<code>time</code>、<code>re</code>、<code>sys</code>、<code>os</code>，这些都是python自带的，除此之外还有：<code>lxml</code>。</p>
+<p>导入库，代码示范：</p>
+<pre><code>import urllib.request as UR
+import random, time, re
+from lxml import etree
+import urllib.parse as urlParse
+import sys
+#import json
+import os
+</code></pre>
+<h4 id="_4">延迟设计</h4>
+<p>需要使用<code>random</code>和<code>time</code>库</p>
+<p>代码：</p>
+<pre><code>def delay(n=1):
+   time.sleep(random.random()*n)
+   return
+</code></pre>
+<h4 id="_5">请求标头的设计</h4>
+<p>需要使用<code>random</code>库，初步设定两种模式：pc端和手机端，更加需要自行决定，需要说明代码里面的<code>isPc</code>是布尔类型，<code>cookie</code>是字符串类型。函数<code>random_headers</code>的返回值是字典类型。</p>
+<p>代码：</p>
+<pre><code>def random_headers(isPc,cookie=None): 
+    if isPc:
+        ua = [ &quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.84 Safari/537.36&quot;,                &quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36&quot;, &quot;Mozilla/5.0 (X11; Ubuntu; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2919.83 Safari/537.36&quot;, &quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 Edge/18.19582&quot;, &quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.164 Safari/537.36 OPR/77.0.4054.277&quot;] #5
+    else:
+        ua = [ &quot;Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1&quot;,&quot;Mozilla/5.0 (iPad; CPU OS 13_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/87.0.4280.77 Mobile/15E148 Safari/604.1&quot;,&quot;Mozilla/5.0 (Linux; Android 8.0.0; SM-G955U Build/R16NW) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Mobile Safari/537.36&quot;,&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1&quot;,&quot;Mozilla/5.0 (Linux; Android 10; HarmonyOS; FRL-AN00a; HMSCore 6.8.0.332) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.105 HuaweiBrowser/12.1.4.304 Mobile Safari/537.36&quot;]#5
+    if cookie == None:
+        headers = {&quot;User-Agent&quot;: random.choice(ua)}
+    else:
+        headers = {&quot;User-Agent&quot;: random.choice(ua), &quot;cookie&quot;:cookie}
+
+    return headers
+</code></pre>
+<h4 id="_6">请求数据函数设计</h4>
+<p>设计有两种请求模式：<code>GET</code>、<code>POST</code>，根据需要自行决定，<code>Method</code>有<code>GET</code>和<code>POST</code>两种选择。<code>decodel</code>和<code>encodel</code>编码格式设置，<code>data_dic</code>是<code>POST</code>模式下的请求负载，数据格式为字典。<code>cnt</code>为请求失败的情况下的最大访问次数。</p>
+<p>代码：</p>
+<pre><code>def get_htmlData(url, Method, decodel=None, headers=None, encodel=None, data_dic=None, cnt=None):
+    if cnt == None:
+        cnt = 3
+    if decodel == None:
+        decodel = &quot;utf-8&quot;
+    data = None
+    out_time = 5
+    n = 1
+    while True:
+        if n&gt;=cnt:
+            break
+        try:
+            if n &gt; 1:            
+                print(&quot;第%s次请求开始%s&quot;%(n, url))
+            if Method == &quot;POST&quot;:
+                if data_dic == None:
+                    print(&quot;data_dic is empty !&quot;)
+                    break
+                if encodel == None:
+                    encodel = &quot;utf-8&quot;
+                formdata = urlParse.urlencode(data_dic).encode(encodel,&quot;ignore&quot;)
+                response = UR.Request(url=url, headers=headers, method=Method)
+                pre_data = UR.urlopen(response, formdata, timeout=out_time)   #POST
+                charset = pre_data.info().get_param(&quot;charset&quot;)
+                if charset != None:
+                    decodel = charset
+            elif Method == &quot;GET&quot;:
+                request  = UR.Request(url=url, headers=headers, method=Method)  #GET
+                pre_data = UR.urlopen(request, timeout=out_time)
+                charset = pre_data.info().get_param(&quot;charset&quot;)
+                if charset != None:
+                    decodel = charset
+            else:
+                print(&quot;目前只支持GET和POST这两种方式&quot;)
+                break
+            data = pre_data.read().decode(decodel,&quot;ignore&quot;) #
+        except Exception as error:
+            print(error)
+        #循环判断
+        if data != None:
+            break
+        else:
+            out_time += 2
+            n += 1
+            delay(1)
+    return data
+</code></pre>
+<h4 id="_7">字符选择匹配</h4>
+<p>这里设置了两个函数：<code>html_lxml</code> 、<code>html_re</code>，前一种函数采用xpath选择器，后一种函数采取正则表达式，需要特别说明的是<code>html_re</code>函数的参数<code>isList</code>是布尔类型，表示是否返回列表类型数据；<code>num</code>表示在不返回列表的前提下返回元组成员。</p>
+<p>代码：</p>
+<pre><code>def html_lxml(data, xpath):
+    if data != None:
+        node = etree.HTML(data)
+        item = node.xpath(xpath)
+        return item
+    else:
+        return None
+
+def html_re(data, pattern, isList, num=0):
+    info = re.compile(pattern, re.S)
+    if data == None:
+        return None
+    if isList:
+        item = info.findall(data)
+        return item
+    else:
+        item = info.search(data)
+        if item != None:
+            return item.group(num)
+</code></pre>
+<h4 id="_8">文件输入和输出</h4>
+<p>这里使用<code>os</code>库，<code>file</code>指具体的文件；<code>Mode</code>表示是只读还是写入；<code>content</code>指在写入模式下的写入的数据，类型为字符串；<code>encodel</code>指编码格式。</p>
+<p>代码：</p>
+<pre><code>def File_IO(file,Mode,content=None,encodel=None):
+    if encodel == None:
+        encodel = &quot;utf-8&quot;
+    if Mode == &quot;r&quot; or Mode==&quot;R&quot;:
+        if os.path.isfile(file) == False:
+            return
+        with open(file,Mode,encoding=encodel) as rfile:
+            content = rfile.read()
+        rfile.close()
+        return content
+    else:
+        if content == None:
+            print(&quot;数据为空！&quot;)
+            return
+        with open(file,Mode,encoding=encodel) as ofile:
+            ofile.write(content)
+        ofile.close()
+        return
+</code></pre>
+<h4 id="_9">突破防火墙的四个网站</h4>
+<p>https://www.view-page-source.com/、https://neatnik.net/view-source/、https://www.codebeautify.com/URLService、https://viewsourcepage.com/wp-admin/admin-ajax.php</p>
+<p>通过以上四个网站做桥接，<code>POST</code>方式获取目标网站的网页源代码。</p>
+<p>代码：</p>
+<pre><code>signal_vps_token = None
+Headers = None
+use_num = 1
+def view_source(base_url,url, Method, decodel, encodel, cnt=2):
+    global signal_vps_token, Headers, use_num
+    print(&quot;use: &quot;,base_url)
+    data = None
+    if signal_vps_token == None and use_num &lt;= 3:
+        Headers = random_headers(True)
+        data1 = get_htmlData(base_url, &quot;GET&quot;, decodel=decodel, headers=Headers, encodel=encodel, cnt=cnt)
+        xpath = '//input[@id=&quot;vps_token&quot;]/@value'
+        if data1 == None:
+            return
+        req1 = html_lxml(data1, xpath)
+        if req1 == None:
+            return
+        signal_vps_token = req1[0]
+    delay(1)
+    print(signal_vps_token)
+    data_dic = {&quot;vps_token&quot;:signal_vps_token, &quot;uri&quot;: url}
+    pre_data = get_htmlData(base_url, Method, decodel, Headers, encodel, data_dic,cnt=cnt)
+    if pre_data == None:
+        return
+    xpath_data = '//textarea[@id=&quot;rawcode&quot;]/text()'
+    lst_data = html_lxml(pre_data, xpath_data)
+    try:
+        data  = lst_data[0].replace(&quot;&amp;lt;&quot;, &quot;&lt;&quot;).replace(&quot;&amp;gt;&quot;, &quot;&gt;&quot;)
+    except Exception as err:
+        data = None
+        print(err,base_url)
+    use_num += 1
+    return data
+
+def view_source2(base_url, url,Method,decodel,encodel, cnt=2):
+    print(&quot;use: &quot;,base_url)
+    data = None
+    data_dic = {&quot;url&quot;:url}
+    headers = random_headers(True)
+    pre_data = get_htmlData(base_url,Method,decodel,headers,encodel,data_dic,cnt=cnt)
+    xpath_data = '//body/pre/code/text()'
+    try:
+        data_lst = html_lxml(pre_data,xpath_data)
+        data = data_lst[0].replace(&quot;&amp;lt;&quot;,&quot;&lt;&quot;).replace(&quot;&amp;gt;&quot;,&quot;&gt;&quot;)
+    except Exception as err:
+        data = None
+        print(err,base_url)
+    return data
+
+def view_source3(base_url, url, Method, decodel, encodel, cnt=2):
+    print(&quot;use: &quot;, base_url)
+    data = None
+    data_dic = {&quot;path&quot;:url}
+    headers1 = random_headers(True)
+    headers = {
+        &quot;origin&quot;: &quot;https://codebeautify.org&quot;,
+        &quot;referer&quot;: &quot;https://codebeautify.org/&quot;,
+        &quot;user-agent&quot;:headers1[&quot;User-Agent&quot;]
+    }
+
+    data = get_htmlData(base_url, Method, decodel, headers, encodel, data_dic, cnt=cnt)
+    return data
+
+def view_source4(base_url, url, Method, decodel,encodel, cnt=2):
+    print(&quot;use: &quot;, base_url)
+    data = None
+    data_dic = {&quot;action&quot;:&quot;psvAjaxAction&quot;,&quot;url&quot;:url}
+    headers1 = random_headers(True)
+    headers = {
+        &quot;cookie&quot;:&quot;__gads=ID=7673bab312079855-228bb56953d900f2:T=1674057573:RT=1674057573:S=ALNI_MbqUqV2Y4HtNusI82dL0OMjH_Pd3A; __gpi=UID=00000ba79c854e97:T=1674057573:RT=1674057573:S=ALNI_MbzbQBCZ1R3r3oEnLJhXtbs59zL6w&quot;,
+        &quot;origin&quot;:&quot;https://viewsourcepage.com&quot;,
+        &quot;referer&quot;:&quot;https://viewsourcepage.com/&quot;,
+        &quot;user-agent&quot;:headers1[&quot;User-Agent&quot;],
+        &quot;x-requested-with&quot;: &quot;XMLHttpRequest&quot;
+    }
+    data = get_htmlData(base_url, Method, decodel, headers, encodel, data_dic, cnt=cnt)
+    return data
+</code></pre>
+<p>为了能随机利用这四个网站，于是设计了下面一个函数<code>all_viewSource</code>，不完全是以上四个，还包括<code>get_htmlData</code>函数。</p>
+<p>代码：</p>
+<pre><code>def all_viewSource(url,Method,decodel,encodel,cnt=2):
+    base_url  = [&quot;https://www.view-page-source.com/&quot;,&quot;https://neatnik.net/view-source/&quot;,&quot;https://www.codebeautify.com/URLService&quot;, &quot;https://viewsourcepage.com/wp-admin/admin-ajax.php&quot;
+                ]
+    data = None
+    n = 1
+    while True:
+        n += 1
+        if n &gt;cnt:
+            break
+        if Method == &quot;POST&quot;:
+            num = random.random()
+            if num &gt; 1.0:
+                num -= 0.25
+            if num &lt;= 0.25:
+                data = view_source(base_url[0],url,Method,decodel,encodel,cnt)
+            elif num &lt;= 0.5:
+                data = view_source2(base_url[1],url,Method,decodel,encodel,cnt)
+            elif num &lt;= 0.75:
+                data = view_source3(base_url[2],url,Method,decodel,encodel,cnt)
+            elif num &lt;= 1.0:
+                data = view_source4(base_url[3],url,Method,decodel,encodel,cnt)
+            else:
+                pass
+        else:
+            headers = random_headers(True)
+            data = get_htmlData(url, Method, decodel, headers, encodel, cnt=cnt)
+        if data != None:
+            break
+    return data
+</code></pre>
+<h3 id="_10">最后</h3>
+<p>将以后代码集合到一个<code>.py</code>文件中，设定请求URL，请求标头，连上网就可以下载并查看被GWF屏蔽的网站的网页了。同时也可以用作简单的爬虫程序。</p>
+			</div>
+			<!-- <div class="page_nav">
+			     <div id="prepage">上一页</div>
+				 <div id="nextpage">下一页</div>
+			</div> -->
+		 
+		 </div>
+	</div>
+   
+	<!-- <script>
+	$(function(){
+		$(".show_images").load("/extra/show_images.html");
+		$(".bottom_left_box").load("/extra/menu.html");
+		$(".briefly").load("/extra/me.html");
+	});
+	</script> -->
+	<script>
+		function loadDoc(url, str) {
+			  var xhttp;
+			  xhttp=new XMLHttpRequest();
+			  xhttp.onreadystatechange = function() {
+				if (this.readyState == 4 && this.status == 200) {
+					try{
+						document.getElementById(str).innerHTML = xhttp.responseText; 
+					}catch (err){
+						console.log(err);
+					}finally{
+						document.getElementsByClassName(str)[0].innerHTML = xhttp.responseText;
+					}
+				}
+			  };
+			  xhttp.open("GET", url, true);
+			  xhttp.send();
+			}
+
+		loadDoc("/extra/me.html?t=" + Math.random(), "briefly");
+		loadDoc("/extra/menu.html?t=" + Math.random(), "bottom_left_box");
+		loadDoc("/extra/show_images.html?t=" + Math.random(), "show_images");
+		
+		console.log("月牙博客：自由万岁，和平万岁！")
+    </script>
+	<script type="text/javascript" src="/extra/js/img.js"></script>
+</body>
+</html>
