@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta name="viewport" content="width=device-width">
+<meta charset="utf-8">
+<title>几种思维方式和实验方法</title>
+<meta name="keywords" content="思维方式,实验方法"/>
+<meta name="description" content="月牙博客:几种思维方式和实验方法"/>
+<link href="/extra/css/style_2023416.css" rel="stylesheet" type="text/css" />
+<link rel="icon" href="/extra/favicon.ico"/>
+<!-- <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>  -->
+<style>
+	#first{
+		margin:0 0 1em 0;
+		padding:0;
+		width:100%;
+		float:left;
+	}
+</style>
+</head>
+<body>
+	<div class="BigBox">
+	     <div class="top_left_box">
+		 
+		    <div class="show_images">
+			     
+			</div>  
+		 </div>
+		 <div class="top_righ_box">
+		     <div class="briefly">
+			    
+			 </div>
+		 </div>
+		 <div class="bottom_left_box">
+		    
+		 </div>
+		 <div class="bottom_right_box">
+		    <div class="title"><h1>几种思维方式和实验方法</h1></div>
+			<div class="main_content">
+			   <div id="first">发布时间：2023-09-04 16:51:00&nbsp;&nbsp;类别：life</div>
+				<h3 id="_1">思维方法</h3>
+<p><strong>辩证法</strong>的实质，是一种认知事物的方法论。它的核心要义，在于质疑、否定和反思。也就是对既有认知提出挑战，也就是“辩”，进行认知的回溯，以抵达更深层次的认知，亦即是“证”。这种回溯，可以视为一种无止境的操作。</p>
+<p><strong>形式逻辑</strong>就是将逻辑思维抽象成公式，然后通过公式计算最终得到答案。</p>
+<h3 id="_2">实验方法</h3>
+<p><strong>控制变量法</strong>，就是在研究和解决问题的过程中，对影响事物变化规律的因素或条件加以人为控制，使其中的一些条件按照特定的要求发生变化或不发生变化，最终解决所研究的问题。</p>
+<p><strong>转换法</strong>，一些比较抽象的看不见、摸不着的物质要研究它们的规律，可转化为学生熟知的看得见、摸得着的宏观现象来认识它们。</p>
+<p><strong>放大法</strong>，在有些实验中，实验的现象我们是能看到的，但是不容易观察。我们就将产生的效果进行放大再进行研究。</p>
+<p><strong>累计法</strong>，在测量微小量的时候，我们常常将微小的量积累成一个比较大的量</p>
+<p><strong>类比法</strong>，在我们学习一些十分抽象的，看不见、摸不着的物理量时，由于不易理解我们就拿出一个大家能看见的与之很相似的量来进行对照学习</p>
+<p><strong>理想化物理模型</strong>，实际现象和过程一般都十分复杂的，涉及到众多的因素，采用模型方法对学习和研究起到了简化和纯化的作用。</p>
+<p><strong>科学推理法</strong>，一切发声体都在振动结论的得出，在实验中对多种结论进行分析整理并得出最后结论时，都要用到这一方法。</p>
+<p><strong>比较法（对比法）</strong>，当你想寻找两件事物的相同和不同之处，就需要用到比较法，可以进行比较的事物和物理量很多，对不同或有联系的两个对象进行比较，我们主要从中寻找它们的不同点和相同点，从而进一步揭示事物的本质属性。</p>
+<p><strong>分类法</strong>，把固体分为晶体和非晶体两类、导体和绝缘体。</p>
+<p><strong>观察法</strong>，物理是一门以观察、实验为基础的学科。人们的许多物理知识是通过观察和实验认真地总结和思索得来的。</p>
+<p><strong>比值定义法</strong>，如密度、压强、功率、电流等概念公式采取的都是这样的方法。</p>
+<p><strong>多因式乘积法</strong>，如电功、电热、热量等概念公式采取的都是这样的方法。</p>
+<p><strong>逆向思维法</strong>，如由电生磁想到磁生电</p>
+			</div>
+			<!-- <div class="page_nav">
+			     <div id="prepage">上一页</div>
+				 <div id="nextpage">下一页</div>
+			</div> -->
+		 
+		 </div>
+	</div>
+   
+	<!-- <script>
+	$(function(){
+		$(".show_images").load("/extra/show_images.html");
+		$(".bottom_left_box").load("/extra/menu.html");
+		$(".briefly").load("/extra/me.html");
+	});
+	</script> -->
+	<script>
+		function loadDoc(url, str) {
+			  var xhttp;
+			  xhttp=new XMLHttpRequest();
+			  xhttp.onreadystatechange = function() {
+				if (this.readyState == 4 && this.status == 200) {
+					try{
+						document.getElementById(str).innerHTML = xhttp.responseText; 
+					}catch (err){
+						console.log(err);
+					}finally{
+						document.getElementsByClassName(str)[0].innerHTML = xhttp.responseText;
+					}
+				}
+			  };
+			  xhttp.open("GET", url, true);
+			  xhttp.send();
+			}
+
+		loadDoc("/extra/me.html", "briefly");
+		loadDoc("/extra/menu.html", "bottom_left_box");
+		loadDoc("/extra/show_images.html", "show_images");
+		
+		console.log("月牙博客：自由万岁，和平万岁！")
+    </script>
+	<script type="text/javascript" src="/extra/js/img.js"></script>
+</body>
+</html>
