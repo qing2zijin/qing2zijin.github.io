@@ -3,65 +3,139 @@
 <head>
 <meta name="viewport" content="width=device-width">
 <meta charset="utf-8">
-<title>3|月牙博客</title>
-<link href="/extra/css/archive.css" rel="stylesheet" type="text/css" />
+<title>第3页 | 月牙博客</title>
+<link href="/extra/css/style2023129.css" rel="stylesheet" type="text/css" />
 <link rel="icon" href="/extra/favicon.ico"/>
-<!-- <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>  -->
 </head>
 <body>
-<div class="BigBox">
-	<div class="left_Box">
-		<div class="show_images"></div>
-		<div class="menu"></div>
-		<div class="briefly"></div>
-	</div>
-	<div class="right_Box">
-		<div class="title"><h1>3|月牙博客</h1></div>
-		<div class="main_content">
-			<ul>
-				
-				<li>2017-06-10&nbsp;<a href="../posts/2017/06-10-old-poem.html" >写给远方的你</a></li>
-				<li>2016-06-28&nbsp;<a href="../posts/2016/06-28-real-study.html" >学习</a></li>
-			</ul>
+  <div id="main">
+		<div id="blog-title">
+			<span id="logo">月牙博客</span>
+			<span id="subtitle">记录所思所想</span>
 		</div>
-		<div class="page_nav">
-			<div id="prepage"><a  href="2.html">上一页</a></div>
-			<div id="nextpage">&nbsp;</div>
-		</div>
-	</div>
-</div>
-   
-	<!-- <script>
-	$(function(){
-		$(".show_images").load("/extra/show_images.html");
-		$(".menu").load("/extra/menu.html");
-		$(".briefly").load("/extra/me.html");
-	});
-	</script> -->
-	<script>
-		function loadDoc(url, str) {
-			  var xhttp;
-			  xhttp=new XMLHttpRequest();
-			  xhttp.onreadystatechange = function() {
-				if (this.readyState == 4 && this.status == 200) {
-					try{
-						document.getElementById(str).innerHTML = xhttp.responseText; 
-					}catch (err){
-						console.log(err);
-					}finally{
-						document.getElementsByClassName(str)[0].innerHTML = xhttp.responseText;
-					}
-				}
-			  };
-			  xhttp.open("GET", url, true);
-			  xhttp.send();
-			}
+		<div id="navi">
 
-		loadDoc("/extra/me.html", "briefly");
-		loadDoc("/extra/menu.html", "menu");
-		loadDoc("/extra/show_images.html", "show_images");
-		
-		console.log("月牙博客：自由万岁，和平万岁！")
-    </script>
+		</div>
+
+		<div id="container">
+			
+			<div class="post-entry">
+				<div class="post-time">2022-6-10</div>
+				<div class="post-desc">今天，仿效emlog，设置微语专栏，发“小博客”。</div>
+			</div>
+            <div class="post-entry">
+                <div class="post-title">
+					<a href="/posts/2022/05-19-yi-xie-xiao-ji-qiao-bei-wang-lu.html"><h2>关于电脑的一些小操作备忘录-关闭自动维护/关闭某软件联网</h2></a>
+				</div>
+				<div class="post-time">2022-05-19</div>
+				<div class="post-desc"></div>
+			</div>
+            <div class="post-entry">
+                <div class="post-title">
+					<a href="/t/pages/log_201903~202003.html"><h2>2019.3~2020.3的只言片语</h2></a>
+				</div>
+				<div class="post-time">2022-05-01</div>
+				<div class="post-desc"></div>
+			</div>
+            <div class="post-entry">
+                <div class="post-title">
+					<a href="/posts/2021/08-26-hongloumeng_ren_wu_guan_xi_tu.html"><h2>红楼梦人物关系图</h2></a>
+				</div>
+				<div class="post-time">2021-08-26</div>
+				<div class="post-desc"></div>
+			</div>
+            <div class="post-entry">
+                <div class="post-title">
+					<a href="/posts/2021/04-23-markdown-yu-fa-back-up.html"><h2>Markdown文档书写方式备忘录</h2></a>
+				</div>
+				<div class="post-time">2021-04-23</div>
+				<div class="post-desc"></div>
+			</div>
+            <div class="post-entry">
+                <div class="post-title">
+					<a href="/posts/2021/04-17-er_ji_jian.html"><h2>一次耳机购买记录</h2></a>
+				</div>
+				<div class="post-time">2021-04-17</div>
+				<div class="post-desc"></div>
+			</div>
+            <div class="post-entry">
+                <div class="post-title">
+					<a href="/posts/2021/04-05-reading-responses_of_the-narrative-history-of-ming-dynasty.html"><h2>《明朝那些事儿》读后感</h2></a>
+				</div>
+				<div class="post-time">2021-04-05</div>
+				<div class="post-desc"></div>
+			</div>
+            <div class="post-entry">
+                <div class="post-title">
+					<a href="/posts/2021/02-15-trip_qibugou_the-spring-festival.html"><h2>七步沟风景</h2></a>
+				</div>
+				<div class="post-time">2021-02-15</div>
+				<div class="post-desc"></div>
+			</div>
+            <div class="post-entry">
+                <div class="post-title">
+					<a href="/posts/2021/02-08-zi-ji-zuo-yi-ge-md-parser.html"><h2>网页生成器</h2></a>
+				</div>
+				<div class="post-time">2021-02-08</div>
+				<div class="post-desc"></div>
+			</div>
+            <div class="post-entry">
+                <div class="post-title">
+					<a href="/posts/2018/06-13-da-xue-biye-le.html"><h2>毕业了</h2></a>
+				</div>
+				<div class="post-time">2018-06-13</div>
+				<div class="post-desc"></div>
+			</div>
+            <div class="post-entry">
+                <div class="post-title">
+					<a href="/posts/2017/06-10-old-poem.html"><h2>写给远方的你</h2></a>
+				</div>
+				<div class="post-time">2017-06-10</div>
+				<div class="post-desc"></div>
+			</div>
+            <div class="post-entry">
+                <div class="post-title">
+					<a href="/posts/2016/06-28-real-study.html"><h2>学习</h2></a>
+				</div>
+				<div class="post-time">2016-06-28</div>
+				<div class="post-desc"></div>
+			</div>
+            
+			
+		</div> 
+		<div id="page-navigator">
+		<span id="page-prev"><a href="2.html">上一页</a></span>
+		<span id="page-next"></span>
+		</div>
+
+		<div id="footer">
+		<div id="social">
+			<a href="#">哔哩哔哩</a><a href="#">微博</a>
+		</div>
+		<div id="footer-content">© 2023</div>
+		</div>
+	  
+  </div>
+<script>
+	function loadDoc(url, str) {
+		  var xhttp;
+		  xhttp=new XMLHttpRequest();
+		  xhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+				try{
+					document.getElementById(str).innerHTML = xhttp.responseText; 
+				}catch (err){
+					console.log(err);
+				}finally{
+					document.getElementsByClassName(str)[0].innerHTML = xhttp.responseText;
+				}
+			}
+		  };
+		  xhttp.open("GET", url, true);
+		  xhttp.send();
+		}
+
+	loadDoc("/extra/menu.html", "#navi");
+</script>
 </body>
 </html>

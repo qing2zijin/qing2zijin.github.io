@@ -6,38 +6,21 @@
 <title>几种思维方式和实验方法</title>
 <meta name="keywords" content="思维方式,实验方法"/>
 <meta name="description" content="月牙博客:几种思维方式和实验方法"/>
-<link href="/extra/css/style_2023416.css" rel="stylesheet" type="text/css" />
+<link href="/extra/css/style2023129.css" rel="stylesheet" type="text/css" />
 <link rel="icon" href="/extra/favicon.ico"/>
-<!-- <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>  -->
-<style>
-	#first{
-		margin:0 0 1em 0;
-		padding:0;
-		width:100%;
-		float:left;
-	}
-</style>
 </head>
 <body>
-	<div class="BigBox">
-	     <div class="top_left_box">
-		 
-		    <div class="show_images">
-			     
-			</div>  
-		 </div>
-		 <div class="top_righ_box">
-		     <div class="briefly">
-			    
-			 </div>
-		 </div>
-		 <div class="bottom_left_box">
-		    
-		 </div>
-		 <div class="bottom_right_box">
-		    <div class="title"><h1>几种思维方式和实验方法</h1></div>
-			<div class="main_content">
-			   <div id="first">发布时间：2023-09-04 16:51:00&nbsp;&nbsp;类别：life</div>
+  <div id="main">
+		<div id="blog-title">
+			<span id="logo">月牙博客</span>
+			<span id="subtitle">记录所思所想</span>
+		</div>
+		<div id="navi">
+			
+		</div>
+
+		<div id="container">
+			<div class="post-entry">
 				<h3 id="_1">思维方法</h3>
 <p><strong>辩证法</strong>的实质，是一种认知事物的方法论。它的核心要义，在于质疑、否定和反思。也就是对既有认知提出挑战，也就是“辩”，进行认知的回溯，以抵达更深层次的认知，亦即是“证”。这种回溯，可以视为一种无止境的操作。</p>
 <p><strong>形式逻辑</strong>就是将逻辑思维抽象成公式，然后通过公式计算最终得到答案。</p>
@@ -56,46 +39,41 @@
 <p><strong>多因式乘积法</strong>，如电功、电热、热量等概念公式采取的都是这样的方法。</p>
 <p><strong>逆向思维法</strong>，如由电生磁想到磁生电</p>
 			</div>
-			<!-- <div class="page_nav">
-			     <div id="prepage">上一页</div>
-				 <div id="nextpage">下一页</div>
-			</div> -->
-		 
-		 </div>
-	</div>
-   
-	<!-- <script>
-	$(function(){
-		$(".show_images").load("/extra/show_images.html");
-		$(".bottom_left_box").load("/extra/menu.html");
-		$(".briefly").load("/extra/me.html");
-	});
-	</script> -->
-	<script>
-		function loadDoc(url, str) {
-			  var xhttp;
-			  xhttp=new XMLHttpRequest();
-			  xhttp.onreadystatechange = function() {
-				if (this.readyState == 4 && this.status == 200) {
-					try{
-						document.getElementById(str).innerHTML = xhttp.responseText; 
-					}catch (err){
-						console.log(err);
-					}finally{
-						document.getElementsByClassName(str)[0].innerHTML = xhttp.responseText;
-					}
-				}
-			  };
-			  xhttp.open("GET", url, true);
-			  xhttp.send();
-			}
+		</div> 
+		<div id="page-navigator">
+			<!-- <span id="page-prev">{{previous_page}}</span> -->
+			<!-- <span id="page-next">{{next_page}}</span> -->
+		</div>
 
-		loadDoc("/extra/me.html", "briefly");
-		loadDoc("/extra/menu.html", "bottom_left_box");
-		loadDoc("/extra/show_images.html", "show_images");
-		
-		console.log("月牙博客：自由万岁，和平万岁！")
-    </script>
-	<script type="text/javascript" src="/extra/js/img.js"></script>
+		<div id="footer">
+		<div id="social">
+			<a href="#">哔哩哔哩</a><a href="#">微博</a>
+		</div>
+		<div id="footer-content">© 2023</div>
+		</div>
+	  
+  </div>
+<script>
+	function loadDoc(url, str) {
+		  var xhttp;
+		  xhttp=new XMLHttpRequest();
+		  xhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+				try{
+					document.getElementById(str).innerHTML = xhttp.responseText; 
+				}catch (err){
+					console.log(err);
+				}finally{
+					document.getElementsByClassName(str)[0].innerHTML = xhttp.responseText;
+				}
+			}
+		  };
+		  xhttp.open("GET", url, true);
+		  xhttp.send();
+		}
+
+	loadDoc("/extra/menu.html", "#navi");
+</script>
+<script type="text/javascript" src="/extra/js/img.js"></script>
 </body>
 </html>

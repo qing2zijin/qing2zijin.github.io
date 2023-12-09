@@ -4,39 +4,25 @@
 <meta name="viewport" content="width=device-width">
 <meta charset="utf-8">
 <title>阅读</title>
-<link href="/extra/css/style_2023416.css" rel="stylesheet" type="text/css" />
+<link href="/extra/css/style2023129.css" rel="stylesheet" type="text/css" />
 <link rel="icon" href="/extra/favicon.ico"/>
-<!-- <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>  -->
-<style>
-	#first{
-		margin:0 0 1em 0;
-		padding:0;
-		width:100%;
-		float:left;
-	}
-</style>
 </head>
 <body>
-	<div class="BigBox">
-	     <div class="top_left_box">
-		 
-		    <div class="show_images">
-			     
-			</div>  
-		 </div>
-		 <div class="top_righ_box">
-		     <div class="briefly">
-			    
-			 </div>
-		 </div>
-		 <div class="bottom_left_box">
-		    
-		 </div>
-		 <div class="bottom_right_box">
-		    <div class="title"><h1>阅读</h1></div>
-			<div class="main_content">
+  <div id="main">
+		<div id="blog-title">
+			<span id="logo">月牙博客</span>
+			<span id="subtitle">记录所思所想</span>
+		</div>
+		<div id="navi">
+			
+		</div>
+
+		<div id="container">
+			<div class="post-entry">
 				<h3>2023</h3>
 					<ol>
+					    <li>道德理想国的覆灭-从卢梭到罗伯斯庇尔</li>
+					    <li>易中天中华史</li>
 						<li>霍乱时期的爱情</li>
 						<li>走出帝制 从晚清到民国的历史回望</li>
 						<li>权力论 罗素</li>
@@ -57,46 +43,40 @@
 						<li>明朝那些事儿</li>
 					</ol>
 			</div>
-			<!-- <div class="page_nav">
-			     <div id="prepage">上一页</div>
-				 <div id="nextpage">下一页</div>
-			</div> -->
-		 
-		 </div>
-	</div>
-   
-	<!-- <script>
-	$(function(){
-		$(".show_images").load("/extra/show_images.html");
-		$(".bottom_left_box").load("/extra/menu.html");
-		$(".briefly").load("/extra/me.html");
-	});
-	</script> -->
-	<script>
-		function loadDoc(url, str) {
-			  var xhttp;
-			  xhttp=new XMLHttpRequest();
-			  xhttp.onreadystatechange = function() {
-				if (this.readyState == 4 && this.status == 200) {
-					try{
-						document.getElementById(str).innerHTML = xhttp.responseText; 
-					}catch (err){
-						console.log(err);
-					}finally{
-						document.getElementsByClassName(str)[0].innerHTML = xhttp.responseText;
-					}
-				}
-			  };
-			  xhttp.open("GET", url, true);
-			  xhttp.send();
-			}
+		</div> 
+		<div id="page-navigator">
+			<!-- <span id="page-prev">{{previous_page}}</span> -->
+			<!-- <span id="page-next">{{next_page}}</span> -->
+		</div>
 
-		loadDoc("/extra/me.html", "briefly");
-		loadDoc("/extra/menu.html", "bottom_left_box");
-		loadDoc("/extra/show_images.html", "show_images");
-		
-		console.log("月牙博客：自由万岁，和平万岁！")
-    </script>
-	<!-- <script type="text/javascript" src="/extra/js/img.js"></script> -->
+		<div id="footer">
+		<div id="social">
+			<a href="#">哔哩哔哩</a><a href="#">微博</a>
+		</div>
+		<div id="footer-content">© 2023</div>
+		</div>
+	  
+  </div>
+<script>
+	function loadDoc(url, str) {
+		  var xhttp;
+		  xhttp=new XMLHttpRequest();
+		  xhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+				try{
+					document.getElementById(str).innerHTML = xhttp.responseText; 
+				}catch (err){
+					console.log(err);
+				}finally{
+					document.getElementsByClassName(str)[0].innerHTML = xhttp.responseText;
+				}
+			}
+		  };
+		  xhttp.open("GET", url, true);
+		  xhttp.send();
+		}
+
+	loadDoc("/extra/menu.html", "#navi");
+</script>
 </body>
 </html>

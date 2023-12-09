@@ -3,41 +3,24 @@
 <head>
 <meta name="viewport" content="width=device-width">
 <meta charset="utf-8">
-<title>绕过GWF获取网页</title>
+<title>绕过GFW获取网页</title>
 <meta name="keywords" content="viewsource,程序,外网"/>
 <meta name="description" content="程序分享"/>
-<link href="/extra/css/style_2023416.css" rel="stylesheet" type="text/css" />
+<link href="/extra/css/style2023129.css" rel="stylesheet" type="text/css" />
 <link rel="icon" href="/extra/favicon.ico"/>
-<!-- <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>  -->
-<style>
-	#first{
-		margin:0 0 1em 0;
-		padding:0;
-		width:100%;
-		float:left;
-	}
-</style>
 </head>
 <body>
-	<div class="BigBox">
-	     <div class="top_left_box">
-		 
-		    <div class="show_images">
-			     
-			</div>  
-		 </div>
-		 <div class="top_righ_box">
-		     <div class="briefly">
-			    
-			 </div>
-		 </div>
-		 <div class="bottom_left_box">
-		    
-		 </div>
-		 <div class="bottom_right_box">
-		    <div class="title"><h1>绕过GWF获取网页</h1></div>
-			<div class="main_content">
-			   <div id="first">发布时间：2022-12-15 13:55:00&nbsp;&nbsp;类别：life</div>
+  <div id="main">
+		<div id="blog-title">
+			<span id="logo">月牙博客</span>
+			<span id="subtitle">记录所思所想</span>
+		</div>
+		<div id="navi">
+			
+		</div>
+
+		<div id="container">
+			<div class="post-entry">
 				<div class="toc">
 <ul>
 <li><a href="#_1">前言</a></li>
@@ -55,7 +38,7 @@
 </ul>
 </div>
 <h3 id="_1">前言</h3>
-<p>有感于中<!-- 39298jajwue -->国大<!-- 76920nsbsjqjw -->陆的互联网环境，很多真实的声音听不到，长期处在信息茧房里面对自己的认知是有害的，于是设计出了这款python脚本程序，可以下载并浏览bbc、voa、dw、nitter（twitter镜像）等被屏蔽的网页。</p>
+<p>有感于中国大陆的互联网环境，很多真实的声音听不到，长期处在信息茧房里面对自己的认知是有害的，于是设计出了这款python脚本程序，可以下载并浏览bbc、voa、dw、nitter（twitter镜像）等被屏蔽的网页。</p>
 <p>需要知道python程序语法。</p>
 <h3 id="_2">开始</h3>
 <p>这里就不使用很复杂的设计，就使用类似c语言的流程设计即可。</p>
@@ -301,48 +284,43 @@ def view_source4(base_url, url, Method, decodel,encodel, cnt=2):
     return data
 </code></pre>
 <h3 id="_10">最后</h3>
-<p>将以后代码集合到一个<code>.py</code>文件中，设定请求URL，请求标头，连上网就可以下载并查看被GWF屏蔽的网站的网页了。同时也可以用作简单的爬虫程序。</p>
+<p>将以后代码集合到一个<code>.py</code>文件中，设定请求URL，请求标头，连上网就可以下载并查看被GFW屏蔽的网站的网页了。同时也可以用作简单的爬虫程序。</p>
 			</div>
-			<!-- <div class="page_nav">
-			     <div id="prepage">上一页</div>
-				 <div id="nextpage">下一页</div>
-			</div> -->
-		 
-		 </div>
-	</div>
-   
-	<!-- <script>
-	$(function(){
-		$(".show_images").load("/extra/show_images.html");
-		$(".bottom_left_box").load("/extra/menu.html");
-		$(".briefly").load("/extra/me.html");
-	});
-	</script> -->
-	<script>
-		function loadDoc(url, str) {
-			  var xhttp;
-			  xhttp=new XMLHttpRequest();
-			  xhttp.onreadystatechange = function() {
-				if (this.readyState == 4 && this.status == 200) {
-					try{
-						document.getElementById(str).innerHTML = xhttp.responseText; 
-					}catch (err){
-						console.log(err);
-					}finally{
-						document.getElementsByClassName(str)[0].innerHTML = xhttp.responseText;
-					}
-				}
-			  };
-			  xhttp.open("GET", url, true);
-			  xhttp.send();
-			}
+		</div> 
+		<div id="page-navigator">
+			<!-- <span id="page-prev">{{previous_page}}</span> -->
+			<!-- <span id="page-next">{{next_page}}</span> -->
+		</div>
 
-		loadDoc("/extra/me.html?t=" + Math.random(), "briefly");
-		loadDoc("/extra/menu.html?t=" + Math.random(), "bottom_left_box");
-		loadDoc("/extra/show_images.html?t=" + Math.random(), "show_images");
-		
-		console.log("月牙博客：自由万岁，和平万岁！")
-    </script>
-	<script type="text/javascript" src="/extra/js/img.js"></script>
+		<div id="footer">
+		<div id="social">
+			<a href="#">哔哩哔哩</a><a href="#">微博</a>
+		</div>
+		<div id="footer-content">© 2023</div>
+		</div>
+	  
+  </div>
+<script>
+	function loadDoc(url, str) {
+		  var xhttp;
+		  xhttp=new XMLHttpRequest();
+		  xhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+				try{
+					document.getElementById(str).innerHTML = xhttp.responseText; 
+				}catch (err){
+					console.log(err);
+				}finally{
+					document.getElementsByClassName(str)[0].innerHTML = xhttp.responseText;
+				}
+			}
+		  };
+		  xhttp.open("GET", url, true);
+		  xhttp.send();
+		}
+
+	loadDoc("/extra/menu.html", "#navi");
+</script>
+<script type="text/javascript" src="/extra/js/img.js"></script>
 </body>
 </html>

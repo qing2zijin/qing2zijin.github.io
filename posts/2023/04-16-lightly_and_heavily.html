@@ -6,38 +6,21 @@
 <title>轻装上阵和重装上阵</title>
 <meta name="keywords" content="日本,工作,孔乙己,长衫,资源"/>
 <meta name="description" content="月牙博客:轻装上阵和重装上阵"/>
-<link href="/extra/css/style_2023416.css" rel="stylesheet" type="text/css" />
+<link href="/extra/css/style2023129.css" rel="stylesheet" type="text/css" />
 <link rel="icon" href="/extra/favicon.ico"/>
-<!-- <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>  -->
-<style>
-	#first{
-		margin:0 0 1em 0;
-		padding:0;
-		width:100%;
-		float:left;
-	}
-</style>
 </head>
 <body>
-	<div class="BigBox">
-	     <div class="top_left_box">
-		 
-		    <div class="show_images">
-			     
-			</div>  
-		 </div>
-		 <div class="top_righ_box">
-		     <div class="briefly">
-			    
-			 </div>
-		 </div>
-		 <div class="bottom_left_box">
-		    
-		 </div>
-		 <div class="bottom_right_box">
-		    <div class="title"><h1>轻装上阵和重装上阵</h1></div>
-			<div class="main_content">
-			   <div id="first">发布时间：2023-04-16 12:26:00&nbsp;&nbsp;类别：life</div>
+  <div id="main">
+		<div id="blog-title">
+			<span id="logo">月牙博客</span>
+			<span id="subtitle">记录所思所想</span>
+		</div>
+		<div id="navi">
+			
+		</div>
+
+		<div id="container">
+			<div class="post-entry">
 				<p>最近在网上看到这条消息：</p>
 <blockquote class="twitter-tweet"><p lang="zh" dir="ltr">日本东京会社需要6名装修男生（不要求经验）正社员，不是派遣社员。42岁以下，会开车，无日语要求。3-5个月成手后，收入30-45万日元/每月（工资单），可以带家属 。要求专科建筑相关专业，本科不限制专业。面试成功后学习3-4个月日语。装修工作很辛苦，没有做过基层工作和家属不支持的出国，请慎重。 <a href="https://t.co/xlHPzq3arc">pic.twitter.com/xlHPzq3arc</a></p>&mdash; 老李海外工作 (@sekay2016) <a href="https://twitter.com/sekay2016/status/1646353612346621953?ref_src=twsrc%5Etfw">April 13, 2023</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -46,46 +29,41 @@
 <p>最近网上孔乙己文学很新盛，很多时候，觉得自己就是不愿意脱去“长衫”的“孔乙己”。</p>
 <p>佛家讲要学会放下，看来自己真的要学会放下，积极拥抱市场经济。</p>
 			</div>
-			<!-- <div class="page_nav">
-			     <div id="prepage">上一页</div>
-				 <div id="nextpage">下一页</div>
-			</div> -->
-		 
-		 </div>
-	</div>
-   
-	<!-- <script>
-	$(function(){
-		$(".show_images").load("/extra/show_images.html");
-		$(".bottom_left_box").load("/extra/menu.html");
-		$(".briefly").load("/extra/me.html");
-	});
-	</script> -->
-	<script>
-		function loadDoc(url, str) {
-			  var xhttp;
-			  xhttp=new XMLHttpRequest();
-			  xhttp.onreadystatechange = function() {
-				if (this.readyState == 4 && this.status == 200) {
-					try{
-						document.getElementById(str).innerHTML = xhttp.responseText; 
-					}catch (err){
-						console.log(err);
-					}finally{
-						document.getElementsByClassName(str)[0].innerHTML = xhttp.responseText;
-					}
-				}
-			  };
-			  xhttp.open("GET", url, true);
-			  xhttp.send();
-			}
+		</div> 
+		<div id="page-navigator">
+			<!-- <span id="page-prev">{{previous_page}}</span> -->
+			<!-- <span id="page-next">{{next_page}}</span> -->
+		</div>
 
-		loadDoc("/extra/me.html?t=" + Math.random(), "briefly");
-		loadDoc("/extra/menu.html?t=" + Math.random(), "bottom_left_box");
-		loadDoc("/extra/show_images.html?t=" + Math.random(), "show_images");
-		
-		console.log("月牙博客：自由万岁，和平万岁！")
-    </script>
-	<script type="text/javascript" src="/extra/js/img.js"></script>
+		<div id="footer">
+		<div id="social">
+			<a href="#">哔哩哔哩</a><a href="#">微博</a>
+		</div>
+		<div id="footer-content">© 2023</div>
+		</div>
+	  
+  </div>
+<script>
+	function loadDoc(url, str) {
+		  var xhttp;
+		  xhttp=new XMLHttpRequest();
+		  xhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+				try{
+					document.getElementById(str).innerHTML = xhttp.responseText; 
+				}catch (err){
+					console.log(err);
+				}finally{
+					document.getElementsByClassName(str)[0].innerHTML = xhttp.responseText;
+				}
+			}
+		  };
+		  xhttp.open("GET", url, true);
+		  xhttp.send();
+		}
+
+	loadDoc("/extra/menu.html", "#navi");
+</script>
+<script type="text/javascript" src="/extra/js/img.js"></script>
 </body>
 </html>

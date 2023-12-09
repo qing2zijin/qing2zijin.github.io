@@ -6,38 +6,21 @@
 <title>网页生成器</title>
 <meta name="keywords" content="网页,生成器,电脑内存,python,顺序,分页,文件目录,文件夹,网页生成器,nodejs,hexo,算法,数据结构,读取markdown,staticblog"/>
 <meta name="description" content="网页生成器"/>
-<link href="/extra/css/style_2023416.css" rel="stylesheet" type="text/css" />
+<link href="/extra/css/style2023129.css" rel="stylesheet" type="text/css" />
 <link rel="icon" href="/extra/favicon.ico"/>
-<!-- <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>  -->
-<style>
-	#first{
-		margin:0 0 1em 0;
-		padding:0;
-		width:100%;
-		float:left;
-	}
-</style>
 </head>
 <body>
-	<div class="BigBox">
-	     <div class="top_left_box">
-		 
-		    <div class="show_images">
-			     
-			</div>  
-		 </div>
-		 <div class="top_righ_box">
-		     <div class="briefly">
-			    
-			 </div>
-		 </div>
-		 <div class="bottom_left_box">
-		    
-		 </div>
-		 <div class="bottom_right_box">
-		    <div class="title"><h1>网页生成器</h1></div>
-			<div class="main_content">
-			   <div id="first">发布时间： 2021-02-08 13:26:56&nbsp;&nbsp;类别：life</div>
+  <div id="main">
+		<div id="blog-title">
+			<span id="logo">月牙博客</span>
+			<span id="subtitle">记录所思所想</span>
+		</div>
+		<div id="navi">
+			
+		</div>
+
+		<div id="container">
+			<div class="post-entry">
 				<p>一直在使用hexo（基于nodejs）作为html生成器，有点复杂，占用电脑内存太多，便萌生了使用python制作一个html生成器的概念，查了一些资料，还真有这方面的资料，目前做出了一个雏形，还有很多东西需要修改。<br />
 1. html标签解析不完整，达不到理想的效果。<br />
 2. 速度还可以。<br />
@@ -79,46 +62,41 @@ create.py //程序
 <p>应该算是最终版本，以后不会在程序方面下功夫了，毕竟也没那个精力了。</p>
 <p><strong>项目地址</strong>：<a href="https://github.com/qing2zijin/staticblog">staticblog</a></p>
 			</div>
-			<!-- <div class="page_nav">
-			     <div id="prepage">上一页</div>
-				 <div id="nextpage">下一页</div>
-			</div> -->
-		 
-		 </div>
-	</div>
-   
-	<!-- <script>
-	$(function(){
-		$(".show_images").load("/extra/show_images.html");
-		$(".bottom_left_box").load("/extra/menu.html");
-		$(".briefly").load("/extra/me.html");
-	});
-	</script> -->
-	<script>
-		function loadDoc(url, str) {
-			  var xhttp;
-			  xhttp=new XMLHttpRequest();
-			  xhttp.onreadystatechange = function() {
-				if (this.readyState == 4 && this.status == 200) {
-					try{
-						document.getElementById(str).innerHTML = xhttp.responseText; 
-					}catch (err){
-						console.log(err);
-					}finally{
-						document.getElementsByClassName(str)[0].innerHTML = xhttp.responseText;
-					}
-				}
-			  };
-			  xhttp.open("GET", url, true);
-			  xhttp.send();
-			}
+		</div> 
+		<div id="page-navigator">
+			<!-- <span id="page-prev">{{previous_page}}</span> -->
+			<!-- <span id="page-next">{{next_page}}</span> -->
+		</div>
 
-		loadDoc("/extra/me.html?t=" + Math.random(), "briefly");
-		loadDoc("/extra/menu.html?t=" + Math.random(), "bottom_left_box");
-		loadDoc("/extra/show_images.html?t=" + Math.random(), "show_images");
-		
-		console.log("月牙博客：自由万岁，和平万岁！")
-    </script>
-	<script type="text/javascript" src="/extra/js/img.js"></script>
+		<div id="footer">
+		<div id="social">
+			<a href="#">哔哩哔哩</a><a href="#">微博</a>
+		</div>
+		<div id="footer-content">© 2023</div>
+		</div>
+	  
+  </div>
+<script>
+	function loadDoc(url, str) {
+		  var xhttp;
+		  xhttp=new XMLHttpRequest();
+		  xhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+				try{
+					document.getElementById(str).innerHTML = xhttp.responseText; 
+				}catch (err){
+					console.log(err);
+				}finally{
+					document.getElementsByClassName(str)[0].innerHTML = xhttp.responseText;
+				}
+			}
+		  };
+		  xhttp.open("GET", url, true);
+		  xhttp.send();
+		}
+
+	loadDoc("/extra/menu.html", "#navi");
+</script>
+<script type="text/javascript" src="/extra/js/img.js"></script>
 </body>
 </html>
