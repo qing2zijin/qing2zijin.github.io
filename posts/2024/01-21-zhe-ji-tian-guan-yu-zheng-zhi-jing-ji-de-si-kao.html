@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta name="viewport" content="width=device-width">
+<meta charset="utf-8">
+<title>这几天关于政治&经济的一些思考</title>
+<meta name="keywords" content="政治,经济,文化,中国"/>
+<meta name="description" content="这几天关于政治&经济的一些思考"/>
+<link href="/extra/css/style2023129.css" rel="stylesheet" type="text/css" />
+<link rel="icon" href="/extra/favicon.ico"/>
+</head>
+<body>
+  <div id="main">
+		<div id="blog-title">
+			<span id="logo">月牙博客</span>
+			<span id="subtitle">记录所思所想</span>
+		</div>
+		<div id="navi">
+			
+		</div>
+
+		<div id="container">
+			<div class="post-entry">
+				<p><strong>2024-01-19</strong></p>
+<p>1.要么彻底私有制，要么彻底公有制；半公半私最无耻，左右互博术的嘛。</p>
+<p>2.社会的脊梁不是老油条，不是没有经验的学生，反而是那些经历社会毒打几年后又刚褪去学生气的青年。</p>
+<p><strong>2024-01-13</strong></p>
+<p>1.如何看待民主？</p>
+<p>民主是一种理想，与平等类似，要求参与决策的决策者拥有相对应的决策能力，能够在短期内达成共识，否者只会制造混乱。</p>
+<p>在一个阶级矛盾十分尖锐的国家，鼓吹民主其实一种不明智的做法，因为，在当今世界的绝大多数国家实行的是资本主义生产模式，多数人并没有掌握资源调度的权利，这本身就容易制造阶级矛盾。<br/>PS:美国实行的是共和制，共和制可以是专制的，也可以是偏向于民主的，具体要看各阶级间的矛盾状况。<a href="https://dirtysalt.github.io/html/republic-and-democracy.html">共和和民主的区别有哪些？</a>。</p>
+<p>2.如何看待六四？</p>
+<p>在我看来六四就是一场瞎胡闹，除了制造官民紧张气氛之外，什么也没做到，多少有点书生误国；改革是缓慢的，不能一蹴而就，中国的问题只有等到中国的农业问题能解决，人均资源占有量达到发达国家水平再说。</p>
+<p><strong>2023-12-29</strong></p>
+<p>文革会回来吗？从现在经济现状来看不可能出现，即便要出现也是要先要有对私企的绝对掌控权，以战争、自然灾害为幌子掌控私企就有可能了，那么台海战争有可能发生吗？</p>
+<p>如果文革真的要来，作为普通人最好是出国，没有个人职业选择权还是人吗？如今中国的乱象，究其原因还不是文化、制度引起的吗？打铁还需自身硬，要有内生动力，单靠贸易保护是不行的，养出来的也是温室里的花朵。</p>
+<p><strong>2023-12-11</strong></p>
+<p>中国企业的路径依赖很严重</p>
+<p>最近闲下来就在思考中国的社会问题；通过社会观察得到了一些感受，或许中国的问题并不完全就是政治问题，很多在于中国文化问题和经济发展方式问题。</p>
+<p>文化问题：中国尚处在从农业社会向工商业社会转型中，前时代的文化或多或少地在影响我们的社会，独立意识和自由意识不强，这里面官方的错误引导也占一个成分。</p>
+<p>经济问题：加入世界贸易的时间太晚，还没有培养一批有独立能力的企业，多数企业还是需要“娘养”，路径依赖严重。</p>
+<p>政治问题：家长式政治制度，搞贸易保护，在做蛋糕（企业）和分蛋糕（工人）中犹豫，手心手背都是肉。</p>
+			</div>
+		</div> 
+		<div id="page-navigator">
+			<!-- <span id="page-prev">{{previous_page}}</span> -->
+			<!-- <span id="page-next">{{next_page}}</span> -->
+		</div>
+
+		<div id="footer">
+		<div id="social">
+			<a href="#">哔哩哔哩</a><a href="#">微博</a>
+		</div>
+		<div id="footer-content">© 2023</div>
+		</div>
+	  
+  </div>
+<script>
+	function loadDoc(url, str) {
+		  var xhttp;
+		  xhttp=new XMLHttpRequest();
+		  xhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+				try{
+					document.getElementById(str).innerHTML = xhttp.responseText; 
+				}catch (err){
+					console.log(err);
+				}finally{
+					document.getElementsByClassName(str)[0].innerHTML = xhttp.responseText;
+				}
+			}
+		  };
+		  xhttp.open("GET", url, true);
+		  xhttp.send();
+		}
+
+	loadDoc("/extra/menu.html", "navi");
+</script>
+<script type="text/javascript" src="/extra/js/img.js"></script>
+</body>
+</html>
