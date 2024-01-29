@@ -9,7 +9,7 @@ body{
     font-size:14px;
     overflow:auto;
 }
-h1{font-size:21px}
+    h1{font-size:21px}
 	h2{font-size:18px}
 	h3{font-size:16px}
 	h4{font-size:14px}
@@ -27,12 +27,13 @@ h1{font-size:21px}
 	a:visited{color:gray;font-size:80%;text-decoration:underline}
 #main{
     max-width:900px;
-    margin:20px auto;
-    padding:60px;
+    margin:0px auto;
+    /*padding:60px;*/
     overflow:auto;
     background-color:#FAEBD7;
     border-radius:5px;
 }
+
 #blog-title{
 	max-width:300px;
 	max-height:50px;
@@ -50,9 +51,10 @@ h1{font-size:21px}
 	#subtitle{
 		padding-left:0.5em;
 	}
+	
 #navi{
 	max-width:400px;
-	max-height:50px;
+	/*max-height:50px;*/
 	float:right;
 	margin:0 4px;
 	/*background-color:red;*/
@@ -78,6 +80,7 @@ h1{font-size:21px}
 	background-color:white;
 	border-radius:5px;
 }
+
 #page-navigator{
 	height:50px;
 	width:100%;
@@ -87,12 +90,12 @@ h1{font-size:21px}
     background-color:white;
 }
 #page-navigator #page-prev{
-    max-width:50px;
+    max-width:70px;
 	padding:20px;
     float:left;
 }
 #page-navigator #page-next{
-	max-width:50px;
+	max-width:70px;
 	padding:20px;
 	float:right;	
 }
@@ -118,6 +121,22 @@ h1{font-size:21px}
 	margin:10px 0 0 0;
 	padding:3px;
 	float:right;
+}
+
+/* -------------------------------------------- */
+@media screen and (max-width:600px){
+	#main{padding:5px}
+	#blog-title{display:none}
+	#navi{float:left}
+}
+@media screen and (min-width:600px) and (max-width:750px){
+	#main{padding:20px}
+}
+@media screen and (min-width:750px) and (max-width:960px){
+	#main{padding:45px}
+}
+@media screen and (min-width:960px){
+	#main{padding:60px;margin:20px auto}
 }
 /*---------------------------------------------*/
 .post-entry > ul,.post-entry > ol{

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta name="viewport" content="width=device-width">
+<meta charset="utf-8">
+<title>四川省考报考分数低位区</title>
+<meta name="keywords" content="四川省考,分数,低位区,土木类,专业,三不限,进面分数,2022年上半年,2021年上半年"/>
+<meta name="description" content="四川省考报考分数低位区"/>
+<link href="/extra/css/style2023129.css" rel="stylesheet" type="text/css" />
+<link rel="icon" href="/extra/favicon.ico"/>
+</head>
+<body>
+  <div id="main">
+		<div id="blog-title">
+			<span id="logo">月牙博客</span>
+			<span id="subtitle">记录所思所想</span>
+		</div>
+		<div id="navi">
+			
+		</div>
+
+		<div id="container">
+			<div class="post-entry">
+				<p>遂宁、南充、绵阳分数偏高，忌报，至于成都分数肯定是不低的。<br>
+2022年上半年雅安进面分数：131限制土木类石棉县【2】、107限制土木类宝兴县【1】，不会超过134分<br>
+2022年上半年内江市进面分数：123只限制土木类隆昌市乡镇【1】、其余三不限不超过137分<br>
+2022年上半年乐山市进面分数：官方未公布<br>
+2022年上半年眉山市进面分数：135限制能源类青神县【1】、131.5冷门类专业+环材仁寿县【3】，121.5限制土木类洪雅县【1】，其余三不限在137分<br>
+2022年上半年德阳市进面分数：官方未公布。<br></p>
+<p>2021年上半年雅安进面分数：126.5限制土木类石棉县【1】、130.3限制土木类汉源县【4】，不会超过134分<br>
+2021年上半年内江市进面分数：130限制土木类威远县【1】、131限制土木类资中县【2】，不会超过138分<br>
+2021年上半年乐山市进面分数：133限制土木类井研县【1】、部分乡镇三不限128.3分左右<br>
+2021年上半年眉山市进面分数：135限制土木类青神县【1】专业类别多。部分乡镇三不限137分左右。<br>
+2021年上半年德阳市进面分数：官方未公布。</p>
+			</div>
+		</div> 
+		<div id="page-navigator">
+			<!-- <span id="page-prev">{{previous_page}}</span> -->
+			<!-- <span id="page-next">{{next_page}}</span> -->
+		</div>
+
+		<div id="footer">
+		<div id="social">
+			<a href="#">哔哩哔哩</a><a href="#">微博</a>
+		</div>
+		<div id="footer-content">© 2023</div>
+		</div>
+	  
+  </div>
+<script>
+	function loadDoc(url, str) {
+		  var xhttp;
+		  xhttp=new XMLHttpRequest();
+		  xhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+				try{
+					document.getElementById(str).innerHTML = xhttp.responseText; 
+				}catch (err){
+					console.log(err);
+				}finally{
+					document.getElementsByClassName(str)[0].innerHTML = xhttp.responseText;
+				}
+			}
+		  };
+		  xhttp.open("GET", url, true);
+		  xhttp.send();
+		}
+
+	loadDoc("/extra/menu.html", "navi");
+</script>
+<script type="text/javascript" src="/extra/js/img.js"></script>
+</body>
+</html>

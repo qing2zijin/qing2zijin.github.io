@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta name="viewport" content="width=device-width">
+<meta charset="utf-8">
+<title>未来三个月计划</title>
+<meta name="keywords" content="笔试排名,面试,公务员考试,企业,一个坑,加班,常态,核心任务,考公考编制,晚年无忧"/>
+<meta name="description" content="未来三个月计划"/>
+<link href="/extra/css/style2023129.css" rel="stylesheet" type="text/css" />
+<link rel="icon" href="/extra/favicon.ico"/>
+</head>
+<body>
+  <div id="main">
+		<div id="blog-title">
+			<span id="logo">月牙博客</span>
+			<span id="subtitle">记录所思所想</span>
+		</div>
+		<div id="navi">
+			
+		</div>
+
+		<div id="container">
+			<div class="post-entry">
+				<p><em>2022.1.2</em></p>
+<p>1.不管笔试排名如何， <strong>准备面试</strong> 。</p>
+<p>2.公务员考试- <strong>申论，行测(数量关系、资料分析)</strong> 的学习。</p>
+<p>3.看几本书。</p>
+<p><em>2022.1.10更新</em></p>
+<p>坚持考公，查漏补缺，不留遗憾，彻底告别企业。试想：企业的核心任务是 <strong>盈利</strong> ，加上工人和资本家天然的矛盾，无非是从一个坑跳到另一个坑而已；即便自己喜欢
+<strong>编程</strong> ，实际到现场，也不过编写一些无聊的业务代码而已，加班更是常态，加上软件业更新快，哪有时间学习充电，慢慢的也会被淘汰，中年堪忧。</p>
+<p>所以，一劳永逸便是考公考编制，中年、晚年无忧。</p>
+<p>恶补：<br />
+1. 申论 素材 （平时多积累）<br />
+2. 资料分析 （精算部分）<br />
+3. 数量关系<br />
+4. 逻辑推理 （图形推理）<br />
+5. 字 多练一练</p>
+			</div>
+		</div> 
+		<div id="page-navigator">
+			<!-- <span id="page-prev">{{previous_page}}</span> -->
+			<!-- <span id="page-next">{{next_page}}</span> -->
+		</div>
+
+		<div id="footer">
+		<div id="social">
+			<a href="#">哔哩哔哩</a><a href="#">微博</a>
+		</div>
+		<div id="footer-content">© 2023</div>
+		</div>
+	  
+  </div>
+<script>
+	function loadDoc(url, str) {
+		  var xhttp;
+		  xhttp=new XMLHttpRequest();
+		  xhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+				try{
+					document.getElementById(str).innerHTML = xhttp.responseText; 
+				}catch (err){
+					console.log(err);
+				}finally{
+					document.getElementsByClassName(str)[0].innerHTML = xhttp.responseText;
+				}
+			}
+		  };
+		  xhttp.open("GET", url, true);
+		  xhttp.send();
+		}
+
+	loadDoc("/extra/menu.html", "navi");
+</script>
+<script type="text/javascript" src="/extra/js/img.js"></script>
+</body>
+</html>
