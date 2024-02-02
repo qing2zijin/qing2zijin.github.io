@@ -2,4 +2,4 @@
 User-agent: *
 Disallow: /links
 Disallow: /pics
-Sitemap: http://blog.jtjiang.top/sitemap.txt
+# Sitemap: http://blog.jtjiang.top/sitemap.txt

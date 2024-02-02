@@ -4,20 +4,23 @@
 <meta name="viewport" content="width=device-width">
 <meta charset="utf-8">
 <title>个人日志_2024</title>
-<link href="/extra/css/style2023129.css" rel="stylesheet" type="text/css" />
+<link href="/extra/css/style20240202.css" rel="stylesheet" type="text/css" />
 <link rel="icon" href="/extra/favicon.ico"/>
 </head>
 <body>
-  <div id="main">
-		<div id="blog-title">
-			<span id="logo">月牙博客</span>
+	<div id="container">
+		<div id="hdr">
+		    <span id="logo">月牙博客</span>
 			<span id="subtitle">记录所思所想</span>
 		</div>
-		<div id="navi">
+		<div id="navbar">
 			
 		</div>
-
-		<div id="container">
+		<div id="content">
+			<div id="lftcol">
+				<p>忧思逢苦雨，人世叹徒然。<br>春色无暇赏，奈何花已残。</p><p style="text-align:right">—— 小野小町</p><p>《犬夜叉》 神无之死</p>
+			</div>
+			<div id="rgtcol">
 				<div class="post-time">2024-01-31</div>
             <div class="post-entry">
 				<div class="post-title"></div>
@@ -39,40 +42,34 @@
 				<div class="post-desc"><p><b>微博转载</b></p><p>#专家建议别花几十万回乡盖房子#国内的专家是最没有良知，最没有道德的一群人，把他们比喻成狗，都是对狗的侮辱。</p><p>几代农民工为城市发展贡献了自己的血汗，结果呢？依然只是这个城市的流民，没有任何合法的身份，让几代农民工既不是城里人，又不是农村人，就这么飘着，拿着全世界最低廉的工资，干着最苦最脏最累的活，但是却无法享受这个城市的福利待遇，教育资源和医疗服务，这是对农民工最无耻的歧视，为什么专家们不呼吁废除户籍制度，把福利待遇，教育资源和医疗服务从户籍中剥离出来，让全国人不分地域，不分身份的可以享受普惠的平等的福利待遇，教育资源和医疗服务，难道城市居民，宁有种乎？</p><p>农民工只有一个月只有一百多块钱的养老金，留在城市就是要没日没夜的干活，回到乡下，自己种田，自给自足，勉强苟活，但好过在城市做牛做马。</p><p>现在农民工不陪你们玩了，开始返乡，城市的房子没有人接盘了，苦活脏活累活没有人干了，用工成本开始上升了，这才急了，这才是呼吁农民工留下来，继续为城市贡献自己的血汗。</p><p>接下来，肯定会严厉阻止农民工返乡建房，违者一律严厉打击，就是要继续驱赶农民工到城里做接盘侠，以维持城市既得利益阶层的资产不缩水，维持他们的生活水平不下降，这是呼吁农民工接盘的真实目的。 </p></div>
 			</div>
             
-		</div> 
-		<div id="page-navigator">
-
+			</div>
+			<div id="page-navigator">
+			</div>
 		</div>
-
 		<div id="footer">
-		<div id="social">
-			<a href="#">哔哩哔哩</a><a href="#">微博</a>
+			<span>© 2023</span>
 		</div>
-		<div id="footer-content">© 2023</div>
-		</div>
-	  
-  </div>
-<script>
-	function loadDoc(url, str) {
-		  var xhttp;
-		  xhttp=new XMLHttpRequest();
-		  xhttp.onreadystatechange = function() {
-			if (this.readyState == 4 && this.status == 200) {
-				try{
-					document.getElementById(str).innerHTML = xhttp.responseText; 
-				}catch (err){
-					console.log(err);
-				}finally{
-					document.getElementsByClassName(str)[0].innerHTML = xhttp.responseText;
+	</div>
+	<script>
+		function loadDoc(url, str) {
+			  var xhttp;
+			  xhttp=new XMLHttpRequest();
+			  xhttp.onreadystatechange = function() {
+				if (this.readyState == 4 && this.status == 200) {
+					try{
+						document.getElementById(str).innerHTML = xhttp.responseText; 
+					}catch (err){
+						console.log(err);
+					}finally{
+						document.getElementsByClassName(str)[0].innerHTML = xhttp.responseText;
+					}
 				}
+			  };
+			  xhttp.open("GET", url, true);
+			  xhttp.send();
 			}
-		  };
-		  xhttp.open("GET", url, true);
-		  xhttp.send();
-		}
 
-	loadDoc("/extra/menu.html", "navi");
-</script>
-<!-- <script type="text/javascript" src="/extra/js/img.js"></script> -->
- </body>
+		loadDoc("/extra/menu.html", "navbar");
+	</script>
+</body>
 </html>

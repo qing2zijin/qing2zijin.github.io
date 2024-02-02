@@ -1,33 +1,33 @@
+
 <!DOCTYPE html>
 <html lang="zh">
 <head>
 <meta name="viewport" content="width=device-width">
 <meta charset="utf-8">
 <title>阅读</title>
-<link href="/extra/css/style2023129.css" rel="stylesheet" type="text/css" />
+<link href="/extra/css/style20240202.css" rel="stylesheet" type="text/css" />
 <link rel="icon" href="/extra/favicon.ico"/>
 </head>
 <body>
-  <div id="main">
-		<div id="blog-title">
-			<span id="logo">月牙博客</span>
+	<div id="container">
+		<div id="hdr">
+		    <span id="logo">月牙博客</span>
 			<span id="subtitle">记录所思所想</span>
 		</div>
-		<div id="navi">
+		<div id="navbar">
 			
 		</div>
-
-		<div id="container">
-			<div class="post-time">2024-01-28</div>
-			<div class="post-entry">
-				<p>2024：</p>
-			        <ol>
+		<div id="content">
+			<div id="lftcol">
+				<p>忧思逢苦雨，人世叹徒然。<br>春色无暇赏，奈何花已残。</p><p style="text-align:right">—— 小野小町</p><p>《犬夜叉》 神无之死</p>
+			</div>
+			<div id="rgtcol">
+			        <ol>2024:
 					    <li>西方哲学史</li>
 					    <li>东周列国志 明 冯梦龙</li>
 					</ol>
-					
-				<p>2023：</p>
-					<ol>
+
+					<ol>2023:
 					    <li>道德理想国的覆灭-从卢梭到罗伯斯庇尔</li>
 					    <li>易中天中华史</li>
 						<li>霍乱时期的爱情</li>
@@ -36,36 +36,27 @@
 						<li>家庭-私有制和国家的起源 恩格斯</li>
 						<li>就业-利息和货币通论 凯恩斯</li>
 					</ol>
-					
-				<p>2022：</p>	
-					<ol>
+
+					<ol>2022:
 						<li>通往奴役之路 哈耶克</li>
 						<li>致命的自负 哈耶克</li>
 						<li>中国近代史 徐中约</li>
 						<li>老人与海</li>
 						<li>复活 列夫·托尔斯泰 (Leo Tolstoy)</li>
 					</ol>
-					
-				<p>2021：</p>
-					<ol>
+
+					<ol>2021:
 						<li>明朝那些事儿</li>
 					</ol>
 			</div>
-		</div> 
-		<div id="page-navigator">
-			<!-- <span id="page-prev">{{previous_page}}</span> -->
-			<!-- <span id="page-next">{{next_page}}</span> -->
+			<div id="page-navigator">
+			</div>
 		</div>
-
 		<div id="footer">
-		<div id="social">
-			<a href="#">哔哩哔哩</a><a href="#">微博</a>
+			<span>© 2023</span>
 		</div>
-		<div id="footer-content">© 2023</div>
-		</div>
-	  
-  </div>
-<script>
+	</div>
+	<script>
 	function loadDoc(url, str) {
 		  var xhttp;
 		  xhttp=new XMLHttpRequest();
@@ -84,7 +75,8 @@
 		  xhttp.send();
 		}
 
-	loadDoc("/extra/menu.html", "navi");
-</script>
+	loadDoc("/extra/menu.html", "navbar");
+	</script>
+	<script type="text/javascript" src="/extra/js/img.js"></script>
 </body>
 </html>
