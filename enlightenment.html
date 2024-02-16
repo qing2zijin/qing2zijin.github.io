@@ -6,6 +6,7 @@
 <link rel="icon" href="/extra/favicon.ico">
 <title>启蒙</title>
 <style>
+	*{margin:0;padding:0;border:0}
 	body{
 		max-width:1000px;min-height:80vh; margin:20px auto;padding:50px;background-color:#FAEBD7;	
 		font-family:"瀹嬩綋", Times, serif, Georgia, "Times New Roman";
@@ -25,10 +26,11 @@
 		
 	#logo{font-size:30px; margin:10px 0 10px 0px;padding:5px;}
 	
-	#menu{margin:40px 0px 40px 0; padding:0; min-height:37px; /*border-bottom:1px solid;*/ background-color:white;overflow:auto}
+	#menu{display:none;margin:40px 0px 40px 0; padding:0; min-height:37px; /*border-bottom:1px solid;*/ background-color:white;overflow:auto}
 	#menu ul{margin:0; padding:0; min-height:37px; float:right;}
 	#menu ul li{margin:0 2em 0 1em; padding:10px; float:left; list-style:none; text-align:center}
 	
+	#content{margin:50px auto;}
 	#content ul,ol{margin:0px 0px 0px 14px; padding:10px;}
 	#content ul li{/*list-style:none;*/	margin:0px;	padding:10px;}
 	#content ol li{/*list-style:none;*/	margin:0px;	padding:10px;}		
@@ -41,9 +43,7 @@
 	<div id="menu" > 
 
 	</div>
-	
-	<!-- <h2>一些话</h2> -->
-	<!-- <p>写于2022.9.3</p> -->
+
 	<div id="content">
 		
 		<h2>自由：Liberty</h2>
@@ -60,7 +60,7 @@
 		
 		<h2>民主：Democracy</h2>
 		<ul>
-		  <li>以民为主。</li>
+		  <li>人民自己做主。</li>
 		  <li>民主的目的是<b>保护所有公民的权利</b>，保护个体财产权。</li>
 		</ul>
 		<br/>
@@ -78,7 +78,7 @@
 		  <li><b>分权的目的在于避免独裁者的产生</b>。</li>
 		  <li>国会具有立法权。司法具有审判权，可以对国会通过的法律是否违宪，违宪有权宣布无效。</li>
 		  <li>司法受行政、立法制约。法官的任命受总统提名，国会批准。</li>
-		  <li>在国会里面采用两院制，参议院和众议院，两院均负责立法，独立运作，相互制约。（起源于古罗马的元老院和平民大会）</li>
+		  <li>在国会里面采用两院制，参议院和众议院，两院均负责立法，独立运作，相互制约。<!-- （起源于古罗马的元老院和平民大会） --></li>
 		</ul>
 		
 		<hr/>
@@ -90,7 +90,7 @@
 		</ul>
 	</div>
 	
-	<script>
+<!-- 	<script>
 	function loadDoc(url, str) {
 		  var xhttp;
 		  xhttp=new XMLHttpRequest();
@@ -110,9 +110,7 @@
 		}
 
 	loadDoc("/extra/menu.html", "menu");
-
-	console.log("月牙博客：自由万岁，和平万岁！")
-	</script>
+	</script> -->
 </body>
 	
 

@@ -1,410 +1,218 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-<!--    
-<script type="text/javascript">
-    var targetProtocol = "https:";
-    if (window.location.protocol !=targetProtocol)
-        window.location.href = targetProtocol + window.location.href.substring(window.location.protocol.length);
-    </script>
--->
-    <title>快乐导航</title>
-    <link rel="icon" href="/extra/favicon.ico">
-      <style>
-        body{margin:0 auto; max-width:800px ;font-family:"宋体";font-size:14px}
-		h1{font-size:1.5em}
-		h2{font-size:1em}
-					
-		div{margin:0; padding:0;margin-left:1em;margin-right:1em;width:auto}
-		hr{padding:0; margin:0;margin-bottom:1em}
-		a{text-decoration:none}
-		a:visited{color:gray}
-		a:hover{color:green}
-		a:active{color:yellow} 
-		table{margin-bottom:1em;padding:0;}
-		tr, td{padding:0.5em; margin:0;}
-		table{border-collapse:collapse;text-align:center;}
-		#dictionary, .sontitle{text-align:left;}
-		.sontitle{font-size:1.15em;}
-      </style>
-  </head>
-  <body>
-    <div>
-      <h1>快乐导航</h1>
-      <table width="100%" border="1">
-        <!-- <tr><td colspan="6"><div align="right"><a href="../daohang.html">快乐导航</a></div></td> </tr> -->
-        <tr><td colspan="6" class="sontitle"><b>常用网址</b></td></tr>
-        <tr>
-          <td><a href="http://www.baidu.com" target="_blank">百度搜索</a></td>
-          <td><a href="http://www.sogou.com" target="_blank">搜狗搜索</a></td>
-          <td><a href="http://bing.com" target="_blank">必应搜索</a></td>
-          <td><a href="https://www.google.com" target="_blank">谷歌搜索</a></td>
-          <td><a href="https://yandex.com/" target="_blank">Yandex搜索</a></td>
-          <td><a href="https://duckduckgo.com/" target="_blank">DuckDuckGo搜索</a></td>
-        </tr>
-       
-        <tr>
-          <td><a href="https://tieba.baidu.com" target="_blank">百度贴吧</a></td>
-          
-          <td><a href="https://www.zhihu.com/explore" target="_blank">发现 - 知乎</a></td>
-          <td><a href="https://s.weibo.com/top/summary/" target="_blank">微博热点话题</a></td>
-          <td><a href="https://qzone.qq.com/" target="_blank">QQ空间</a></td>
-          <td><a href="https://wx.qq.com/" target="_blank">微信网页版</a></td>
-        </tr>
-        <tr>
-          <td><a href="https://twitter.com" target="_blank">推特</a></td>
-          <td><a href="https://www.facebook.com" target="_blank">Facebook</a></td>
-          <td><a href="https://www.instagram.com" target="_blank">Instagram</a><br/><a href="https://imginn.com" target="_blank">Imginn</a></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td><a href="http://search.bilibili.com" target="_blank">Bilibili</a></td>
-          <td><a href="https://youtube.com" target="_blank">YouTube</a></td>
-          <td><a href="https://youku.com" target="_blank">优酷</a></td>
-          <td><a href="https://www.kanjux.com" target="_blank">影视大全</a></td>
-          <td><a href="https://douyu.com" target="_blank">斗鱼直播</a></td>
-		  <td><a href="https://huya.com" target="_blank">虎牙直播</a></td>
-        </tr>
-         <tr>
-          <td><a href="https://pincong.rocks/" target="_blank">新·品葱</a></td>
-          <td><a href="https://mp3tesla.com/" target="_blank">youtube音频下载</a></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td><a href="https://www.taobao.com" target="_blank">淘宝</a></td>
-          <td><a href="https://www.jd.com" target="_blank">京东</a></td>
-          <td><a href="http://open.163.com" target="_blank">网易公开课</a></td>
-          <td><b><a href="https://www.kekenet.com/" target="_blank">可可英语</a></b></td>
-          <td></td>
-          <td></td>
-        </tr>
-      
-      </table>
-      
-      <!-- ------------------------------------------------------- -->
-      <table width="100%" border="1" id="dictionary">
-        <tr><td colspan="5" class="sontitle"><b>在线英语词典</b></td>
-        </tr>
-        <tr>
-          <td colspan="5"><a href="https://dictionary.cambridge.org" target="_blank">剑桥高阶英语学习词典</a>，收词量大，释义更加简洁准确，且准确性和可靠度都更高，提供语法查询。</td>
-        </tr>
-        <tr>
-          <td colspan="5"><a href="https://www.oxfordlearnersdictionaries.com" target="_blank">牛津高阶英语词典</a>
-            ，短语搭配以及文化背景知识的模块，语法查询。</td>
-        </tr>
-        <tr>
-          <td colspan="5"><a href="http://www.collinsdictionary.com" Jesus target="_blank">柯林斯词典在线版</a>，入门词典。</td>
-        </tr>
-        <tr>
-          <td colspan="5"><a href="https://www.macmillandictionary.com" target="_blank">麦克米伦词典</a>，英国老牌词典，贴近生活，纯正地道。</td>
-        </tr>
-        <tr>
-          <td colspan="5"><a href="https://learnersdictionary.com/" target="_blank">韦氏词典</a>，美式词典，学美音推荐。&nbsp;&nbsp;&nbsp;<a href="http://www.visualdictionaryonline.com/" target="_blank">韦氏图片词典</a>，强大的可视化图片词典。</td>
-        </tr>
-        <tr>
-          <td colspan="5"><a href="https://www.ldoceonline.com/" target="_blank">朗文当代高级英语辞典在线版</a></td>
-        </tr>
-        <tr>
-          <td colspan="5"><a href="https://www.etymonline.com/" target="_blank">一款词源学网站</a>，查词根。</td>
-        </tr>
-        <tr>
-          <td colspan="5"><a href="https://www.merriam-webster.com/" target="_blank">韦伯斯特辞典</a>，美式英语必备。</td>
-        </tr>
-        <tr>
-          <td colspan="5"><a href="https://www.urbandictionary.com" target="_blank">俚语辞典Urban Dictionary</a>，地道英语表达。</td>
-        </tr>
-        <tr>
-          <td colspan="5">来源<a href="https://zhuanlan.zhihu.com/p/103471175" target="_blank">知乎专栏…</a></td>
-        </tr>
-      </table>
+<html lang="zh">
+<head>
+<meta name="viewport" content="width=device-width">
+<meta charset="utf-8">
+<title>快乐导航</title>
+<link rel="icon" href="/extra/favicon.ico"/>
 
-      <!-- ------------------------------------------------------- -->
-       <table width="100%" border="1" id="dictionary">
-        <tr>
-          <td colspan="5" class="sontitle">图书下载</td>
-        </tr>
-        <tr>
-          <td colspan="5"><a href="https://zh.annas-archive.gs/" target="_blank">安娜的档案：zh.annas-archive.gs</a>，<del><a href="https://zh.annas-archive.org/" target="_blank">安娜的档案：zh.annas-archive.org</a></del></td>
-        </tr>
-      </table>
+<style>
+	*{margin:0; padding:0}
+	body{max-width:1000px; margin:20px auto; padding:20px; font-size:14px;
+		font-family:Times, serif, Georgia, "Times New Roman", "宋体"; background-color:#fff	}
+	h1{font-size:1.4em}
+	h2{font-size:1.2em}
+	h3{font-size:1em}
+	h1, h2, h3{margin-bottom:10px}
+	a:link{color:blue;	text-decoration:none}
+	a:hover{color:red}
+	a:active{background-color:green;}
+	a:visited{color:gray;font-size:80%;text-decoration:underline}
+	hr{border:dashed 1px; margin-bottom:1em}
+	
+	table{max-width:480px; margin:0 10px 10px 0; float:left;
+		border-collapse:collapse; text-align:center}
+	tr, td{padding:10px}
+	
+	.top_cell{max-width:10%; min-width:100px; height:33px;
+			padding:10px 0 10px 0;
+			border:dashed 1px; float:left; text-align:center}
+	
+	.bigbox{
+		max-width:45%; min-width:280px; border:dashed 1px; border-radius:3px; 
+		padding:10px; margin:10px; float:left}
 
-     <!-- ------------------------------------------------------- -->
-      <table width="100%" border="1">
-         <tr>
-          <td colspan="5" class="sontitle">各种网络工具</td>
-        </tr>
-        <tr>
-          <td><a href="/links/second/techlinks.html" target="_blank">无聊的链接</a></td>
-          <td><a href="https://bilibili.iiilab.com/" target="_blank">国内各平台视频解析下载小工具</a></td>
-          <td><a href="https://offmp3.com" target="_blank">MP4 Converter</a><br/><a href="https://9xbuddy.xyz/" target="_blank">在线视频下载</a></td>
-          <td><a href="https://ntool.chinaz.com/tools/nav" target="_blank">站长工具</a></td>
-          <td><a href="http://ico.hillcloud.net/" target="_blank">ICO图标制作</a></td>
-        </tr>
-        <tr>
-          <td><a href="http://tu.chacuo.net/imagetodataurl" target="_blank">图片转为DataURL\DataUri</a></td>
-          <td><a href="https://cn.apkshki.com" target="_blank">APKSHKI</a></td>
-          <td><a href="https://www.koutubang.com/" target="_blank">抠图帮_证件照换底色</a></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td><a href="links/links.html" target="_blank">其他链接</a></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-     </table>
+	p{line-height:1.2;margin-bottom:0.5em}
+	ol{margin-left:20px}
+	ul{margin-left:20px}
+	li{margin:0 0 10px 0; line-height:1.7}
 
+	@media screen and (max-width:700px){
+		.bigbox{width:auto; max-width:none; margin:10px 5px 10px 5px}
+		ol, ul{float:none}
+		.top_cell{max-width:5%;min-width:70px}
+	}
+	.subtitle{text-align:left}
+	.subtitle h2{margin:0; padding:0}
+	.other{padding:0; border:0}
+</style>
+</head>
+<body>
+	<h1>快乐导航</h1>
+	<hr>
+	<div class="bigbox other">
+		<div class="top_cell"><a href="http://www.baidu.com" target="_blank">百度搜索</a></div>
+		<div class="top_cell"><a href="http://www.sogou.com" target="_blank">搜狗搜索</a></div>
+		<div class="top_cell"><a href="http://bing.com" target="_blank">必应搜索</a></div>
+		<div class="top_cell"><a href="https://www.google.com" target="_blank">谷歌搜索</a></div>
+		<div class="top_cell"><a href="https://yandex.com/" target="_blank">Yandex搜索</a></div>
+		<div class="top_cell"><a href="https://duckduckgo.com/" target="_blank">DuckDuckGo</a></div>
+		<div class="top_cell"></div>
+		<div class="top_cell"></div>
+		
+		<div class="top_cell"><a href="https://tieba.baidu.com" target="_blank">百度贴吧</a></div>
+		<div class="top_cell"><a href="https://qzone.qq.com/" target="_blank">QQ空间</a></div>
+		<div class="top_cell"><a href="https://wx.qq.com/" target="_blank">微信网页版</a></div>
+		<div class="top_cell"></div>
 
-    <table width="100%" border="1" id="dictionary">
-        <tr> <td colspan="5"><b>Bilibili 订阅精选</b></td> </tr>
-        <tr> <td >名称</td>  <td >内容</td> </tr>
-        <tr>
-          <td><a href="https://space.bilibili.com/3493136191982208?spm_id_from=333.337.0.0" target="_blank">大浪英语</a></td>
-          <td>英语</td>
-        </tr>
+		<div class="top_cell"><a href="https://www.zhihu.com/explore" target="_blank">发现 - 知乎</a></div>
+		<div class="top_cell"><a href="https://s.weibo.com/top/summary/" target="_blank">微博热点话题</a></div>
+		<div class="top_cell"></div>
+		<div class="top_cell"></div>
 
-       <tr>
-          <td><a href="https://space.bilibili.com/13260671?spm_id_from=333.337.0.0" target="_blank">张烟囱</a></td>
-          <td>英语</td>
-        </tr>
-		
-		<tr>
-          <td><a href="https://space.bilibili.com/1589382178?spm_id_from=333.337.0.0" target="_blank">bigshot英语</a></td>
-          <td>英语</td>
-        </tr>
-		
-		<tr>
-          <td><a href="https://space.bilibili.com/1126073388?spm_id_from=333.337.0.0" target="_blank">快来学英语</a></td>
-          <td>英语</td>
-        </tr>
-		
-		<tr>
-          <td><a href=https://space.bilibili.com/687043 target="_blank">熊猫哨笛馆</a></td>
-          <td>乐器</td>
-        </tr>
-		
-		<!-- <tr>
-          <td><a href="" target="_blank"></td>
-          <td></td>
-        </tr> -->
-		
-		
-    </table>
+		<div class="top_cell"><a href="https://twitter.com" target="_blank">推特</a></div>
+		<div class="top_cell"><a href="https://www.facebook.com" target="_blank">Facebook</a></div>
+		<div class="top_cell"><a href="https://www.instagram.com" target="_blank">Instagram</a><br/><a href="https://imginn.com" target="_blank">Imginn</a></div>
+		<div class="top_cell"><a href="https://pincong.rocks/" target="_blank">新·品葱</a></div>
 
- <table width="100%" border="1" id="dictionary">
-        <tr> 
-			<td colspan="5"><b>B站的一些视频博主</b></td> 
-		</tr>
-        <tr> 
-		<td colspan="5">
-国外博主：
-			<a href="https://space.bilibili.com/176092096" target="_blank">哲哲在俄罗斯</a>&nbsp;&nbsp;
-			<a href="https://space.bilibili.com/25623760" target="_blank">韩国女生金正元</a>&nbsp;&nbsp;
-			<a href="https://space.bilibili.com/1556488733" target="_blank">鳄鱼老师娜娜</a>&nbsp;&nbsp;
-			<a href="https://space.bilibili.com/535598364" target="_blank">进化后的最强乐子人</a>（美国）&nbsp;&nbsp;
-		</td>
-		</tr>
-<!-- 	<tr> 
-			<td colspan="5">
-			游戏博主：
-				<a href="https://space.bilibili.com/259138413" target="_blank">a歆晓-菊长</a>&nbsp;&nbsp;
-				<a href="https://space.bilibili.com/11215569" target="_blank">粤语翠神</a>&nbsp;&nbsp;
-				<a href="https://space.bilibili.com/452048186" target="_blank">_李相赫_</a>&nbsp;&nbsp;
-				<a href="https://space.bilibili.com/449657673" target="_blank">李哥の日常</a>&nbsp;&nbsp;
-				<a href="https://space.bilibili.com/324309512" target="_blank">天言瑞兹</a>&nbsp;&nbsp;
-				<a href="https://space.bilibili.com/16110280" target="_blank">jojo瑞兹</a>&nbsp;&nbsp;
-				<a href="https://space.bilibili.com/258268642" target="_blank">天命瑞兹</a>&nbsp;&nbsp;&nbsp;&nbsp;
-				<a href="https://space.bilibili.com/1710078" target="_blank">茉郁小雏</a>&nbsp;&nbsp;
-			</td>
-		</tr>
--->    <tr> 
-			<td colspan="5">
-				宠物博主：
+		<div class="top_cell"><a href="http://search.bilibili.com" target="_blank">Bilibili</a></div>
+		<div class="top_cell"><a href="https://youtube.com" target="_blank">YouTube</a></div>
+		<div class="top_cell"><a href="https://youku.com" target="_blank">优酷</a></div>
+		<div class="top_cell"><a href="https://www.kanjux.com" target="_blank">影视大全</a></div>
+		
+		<div class="top_cell"><a href="https://douyu.com" target="_blank">斗鱼直播</a></div>
+		<div class="top_cell"><a href="https://huya.com" target="_blank">虎牙直播</a></div>
+		<div class="top_cell"></div>
+		<div class="top_cell"></div>
+
+		<div class="top_cell"><a href="https://www.taobao.com" target="_blank">淘宝</a></div>
+		<div class="top_cell"><a href="https://www.jd.com" target="_blank">京东</a></div>
+		<div class="top_cell"><a href="http://open.163.com" target="_blank">网易公开课</a></div>
+		<div class="top_cell"><b><a href="https://www.kekenet.com/" target="_blank">可可英语</a></b></div>
+		
+		<div class="top_cell"><a href="https://www.4399.com/h5xyx/" target="_blank">4399小游戏h5</a></div>
+		<div class="top_cell"></div>
+		<div class="top_cell"></div>
+		<div class="top_cell"></div>
+	</div>
+	
+	<div class="bigbox">
+		<h2>图书下载</h2>
+		<ol>
+			<li><a href="https://zh.annas-archive.gs/"  target="_blank">安娜的档案.gs</a>，<del><a href="https://zh.annas-archive.org/"  target="_blank">安娜的档案.org</a></del></li>
+			<li><a href="http://shu.ziyuandi.cn"  target="_blank">资源帝电子书导航_在这里发现更多好书...</a></li>
+		</ol>
+	</div>
+	
+	<div class="bigbox">
+		<h2>各种网络工具</h2>	
+		<ol>	
+			<li><a href="https://mp3tesla.com/"  target="_blank">youtube音频下载</a></li>
+			<li><a href="https://bilibili.iiilab.com/"  target="_blank">国内各平台视频解析下载小工具</a></li>
+			<li><a href="https://offmp3.com/"  target="_blank">MP4 Converter</a>，<a href="https://9xbuddy.xyz/"  target="_blank">在线视频下载</a></li>
+			<li><a href="https://cn.apkshki.com/"  target="_blank">APKSHKI</a>（安卓APP下载）</li>
+			<li><a href="https://ntool.chinaz.com/tools/nav"  target="_blank">站长工具</a></li>
+			 <li><a href="http://ico.hillcloud.net/"  target="_blank">ICO图标制作</a></li>
+			<li><a href="http://tu.chacuo.net/imagetodataurl"  target="_blank">图片转为DataURL\DataUri</a></li>
+			<li><a href="https://www.koutubang.com/"  target="_blank">抠图帮_证件照换底色</a></li>
+			<li><a href="http://www.dreamtemplate.com/" target="_blank">Website templates网页模板</a></li>
+			<li><a href="links/index.html"  target="_blank">其他链接</a></li>
+		</ol>
+	</div>
+	
+	<div class="bigbox">
+		<h2>在线英语词典</h2>
+		<ol>
+			<li><a href="https://dictionary.cambridge.org" target="_blank">剑桥高阶英语学习词典</a>，收词量大，释义更加简洁准确，且准确性和可靠度都更高，提供语法查询。</li>
+			<li><a href="https://www.oxfordlearnersdictionaries.com" target="_blank">牛津高阶英语词典</a>，短语搭配以及文化背景知识的模块，语法查询。</li>
+			<li><a href="http://www.collinsdictionary.com" Jesus target="_blank">柯林斯词典在线版</a>，入门词典。</li>
+			<li><a href="https://www.macmillandictionary.com" target="_blank">麦克米伦词典</a>，英国老牌词典，贴近生活，纯正地道。</li>
+			<li><a href="https://learnersdictionary.com/" target="_blank">韦氏词典</a>，美式词典，学美音推荐。&nbsp;&nbsp;&nbsp;<a href="http://www.visualdictionaryonline.com/" target="_blank">韦氏图片词典</a>，强大的可视化图片词典。</li>
+			<li><a href="https://www.ldoceonline.com/" target="_blank">朗文当代高级英语辞典在线版</a></li>
+			<li><a href="https://www.etymonline.com/" target="_blank">一款词源学网站</a>，查词根。</li>
+			<li><a href="https://www.merriam-webster.com/" target="_blank">韦伯斯特辞典</a>，美式英语必备。</li>
+			<li><a href="https://www.urbandictionary.com" target="_blank">俚语辞典Urban Dictionary</a>，地道英语表达。</li>
+			<li>来源<a href="https://zhuanlan.zhihu.com/p/103471175" target="_blank">知乎专栏…</a></li>
+		</ol>
+	</div>
+
+	<div class="bigbox">
+		<h2>Bilibili 订阅精选</h2>
+		<ol>
+	        <li><a href="https://space.bilibili.com/3493136191982208"  target="_blank">大浪英语</a>&nbsp;&nbsp;	英语</li>
+			<li><a href="https://space.bilibili.com/13260671"  target="_blank">张烟囱</a>&nbsp;&nbsp;英语</li>
+			<li><a href="https://space.bilibili.com/1589382178"  target="_blank">bigshot英语</a>&nbsp;&nbsp;英语</li>
+			<li><a href="https://space.bilibili.com/1126073388"  target="_blank">快来学英语</a>&nbsp;&nbsp;	英语</li>
+			<li><a href="https://space.bilibili.com/687043"  target="_blank">熊猫哨笛馆</a>&nbsp;&nbsp;乐器</li>
+		</ol>
+
+		<h2>B站的一些视频博主</h2>
+		<ol>
+			<li>国外博主：
+				<a href="https://space.bilibili.com/176092096" target="_blank">哲哲在俄罗斯</a>&nbsp;&nbsp;
+				<a href="https://space.bilibili.com/25623760" target="_blank">韩国女生金正元</a>&nbsp;&nbsp;
+				<a href="https://space.bilibili.com/1556488733" target="_blank">鳄鱼老师娜娜</a>&nbsp;&nbsp;
+				<a href="https://space.bilibili.com/535598364" target="_blank">进化后的最强乐子人</a>（美国）
+			</li>
+			<li>宠物博主：
 				<a href="https://space.bilibili.com/491954632" target="_blank">我和猪和你啊</a>（荷兰猪）&nbsp;&nbsp;
 				<a href="https://space.bilibili.com/8014168" target="_blank">狗狗是只小猪崽</a>（猫咪）&nbsp;&nbsp;
 				<a href="https://space.bilibili.com/381286950" target="_blank">徐艾伦</a>（荷兰猪_已过世）&nbsp;&nbsp;<br>
 				<a href="https://space.bilibili.com/1673183774" target="_blank">在秋天早起</a>（荷兰猪）&nbsp;&nbsp;
 				<a href="https://space.bilibili.com/2369509" target="_blank">Erlla</a>（马儿）
-			</td>
-		</tr>
-		<tr> 
-			<td colspan="5">
-			知识区博主：<ul>
-				<li>
-					<a href="https://space.bilibili.com/22111667" target="_blank">路遥说历史</a>（东西周历史）&nbsp;&nbsp;
-					<a href="https://space.bilibili.com/398615022" target="_blank">城城诚成</a>（国际热点）&nbsp;&nbsp;
-					<a href="https://space.bilibili.com/579691471" target="_blank">大地球小故事</a>&nbsp;&nbsp;
-					<a href="https://space.bilibili.com/3493111999237026" target="_blank">科普旅行者</a>（改开派）&nbsp;&nbsp;
-					<a href="https://space.bilibili.com/508253766" target="_blank">東风已至</a>（毛派）
-				</li>
-				<li>
-					<a href="https://space.bilibili.com/33987782" target="_blank">思维碰撞机</a>（介绍朝鲜）&nbsp;&nbsp;
-					<a href="https://space.bilibili.com/85585787" target="_blank">彝游志</a>（介绍彝族）&nbsp;&nbsp;
-					<a href="https://space.bilibili.com/3493080021863230" target="_blank">赛昂烤面包机</a>（理科回答文科）&nbsp;&nbsp;
-					<a href="https://space.bilibili.com/1575463543" target="_blank">通说人文</a>（自由派）&nbsp;&nbsp;
-					<a href="https://space.bilibili.com/391624812" target="_blank">悠乐主义</a>（心理学）
-				</li>
-				<li>
-					<a href="https://space.bilibili.com/1391512166" target="_blank">前进四科技实验室</a>（科技史）&nbsp;&nbsp;
-					<a href="https://space.bilibili.com/501237937" target="_blank">波普尔与哈耶克</a>（奥派）
-				</li>
-			</ul>
-			</td>
-		</tr>
-
-
-    </table>
-
-
-    <!-- ------------------------------------------------------- -->
-  
-    <table width="100%" border="1" id="dictionary">
-        <tr> <td colspan="5"><b>YouTube订阅精选</b></td> </tr>
-        <tr> <td >名称</td>  <td >内容</td> </tr>
-        
-<!-- 		<tr>
-          <td><a href="https://www.youtube.com/@ariannitalagringa" target="_blank">ariannitalagringa</a></td>
-          <td>YouTube 英语</td>
-        </tr>
+			</li>
+			<li>知识区博主：
+				<a href="https://space.bilibili.com/22111667" target="_blank">路遥说历史</a>（东西周历史）&nbsp;&nbsp;
+				<a href="https://space.bilibili.com/398615022" target="_blank">城城诚成</a>（国际热点）&nbsp;&nbsp;
+				<a href="https://space.bilibili.com/579691471" target="_blank">大地球小故事</a>&nbsp;&nbsp;
+				<a href="https://space.bilibili.com/3493111999237026" target="_blank">科普旅行者</a>（改开派）&nbsp;&nbsp;
+				<a href="https://space.bilibili.com/508253766" target="_blank">東风已至</a>（毛派）
+				<br>
+				<a href="https://space.bilibili.com/33987782" target="_blank">思维碰撞机</a>（介绍朝鲜）&nbsp;&nbsp;
+				<a href="https://space.bilibili.com/85585787" target="_blank">彝游志</a>（介绍彝族）&nbsp;&nbsp;
+				<a href="https://space.bilibili.com/3493080021863230" target="_blank">赛昂烤面包机</a>（理科回答文科）&nbsp;&nbsp;
+				<a href="https://space.bilibili.com/1575463543" target="_blank">通说人文</a>（自由派）&nbsp;&nbsp;
+				<a href="https://space.bilibili.com/391624812" target="_blank">悠乐主义</a>（心理学）
+				<br>
+				<a href="https://space.bilibili.com/1391512166" target="_blank">前进四科技实验室</a>（科技史）&nbsp;&nbsp;
+				<a href="https://space.bilibili.com/501237937" target="_blank">波普尔与哈耶克</a>（奥派）
+			</li>
+			<li>美食区博主：
+				<a href="https://space.bilibili.com/676061038" target="_blank">Chen不辣</a>
+			</li>
+		</ol>
+	</div>
 		
-		<tr>
-          <td><a href="https://www.youtube.com/@Speak-English" target="_blank">从零开始学英语</a></td>
-          <td>YouTube 英语</td>
-        </tr>
-		
-		<tr>
-          <td><a href="https://www.youtube.com/results?search_query=%E6%9D%83%E8%B4%B5" target="_blank">权贵</a></td>
-          <td>共产权贵，youtube搜索</td>
-        </tr>
-
-        <tr>
-          <td><a href="https://www.youtube.com/@WoYaoDangGuan/videos" target="_blank">官场</a></td>
-          <td>中国政治黑料、权力黑幕</td>
-        </tr>
-        
-        <tr>
-          <td><a href="https://www.youtube.com/@fangcun/videos" target="_blank">方寸亮</a></td>
-          <td>经济、政治</td>
-        </tr>
-        
-        <tr>
-          <td><a href="https://www.youtube.com/@cui_news/videos"  target="_blank">小翠時政財經</a></td>
-           <td>经济</td>
-        </tr>
- -->        
-      <!--   <tr>
-          <td><a href="https://www.youtube.com/@leecehao/videos"  target="_blank">李天豪</a></td>
-           <td>历史</td>
-        </tr> -->
-        
-<!--         <tr>
-          <td><a href="https://www.youtube.com/@user-bi4mt6gl3f/videos" target="_blank">左手墨迹</a></td>
-           <td>经济、政治</td>
-        </tr>
-        
-        <tr>
-          <td><u><a href="https://www.youtube.com/@Brute-channel/videos"  target="_blank">老蛮频道</a></u></td>
-           <td>经济</td>
-        </tr>
-        
-        <tr>
-          <td><a href="https://www.youtube.com/@Torontobigface/videos"  target="_blank">多伦多方脸</a></td>
-           <td>政治</td>
-        </tr>
-        
-        <tr>
-          <td><a href="https://www.youtube.com/@wangzhian/videos"  target="_blank">王志安</a></td>
-           <td>社会热点</td>
-        </tr>
-        
-        <tr>
-          <td><a href="https://www.youtube.com/@Tankman2020/videos"  target="_blank">二爷故事</a></td>
-           <td>政治、历史</td>
-        </tr>
-        
-        <tr>
-          <td><a href="https://www.youtube.com/@fangzhouzi-official/videos"  target="_blank">方舟子</a></td>
-           <td>社会热点</td>
-        </tr>
-		
-		<tr>
-          <td><a href="https://www.youtube.com/@NSTalk/videos"  target="_blank">凝思随聊</a></td>
-           <td>经济</td>
-        </tr>
-
-        <tr>
-          <td><a href="https://www.youtube.com/@user-iz1qr7vh6j/videos"  target="_blank">秦鹏观察</a></td>
-           <td>经济、政治、权贵</td>
-        </tr>
-
-       <tr>
-          <td><a href="https://www.youtube.com/@JiangFengTimes/videos"  target="_blank">江峰时刻</a></td>
-           <td>政治、经济、历史</td>
-        </tr>
-        
-		<tr>
-          <td><a href="https://www.youtube.com/@tvbssisysworldnews/videos"  target="_blank">TVBS 文茜的世界周報 TVBS Sisy's World News</a></td>
-           <td>政治、经济</td>
-        </tr>
- -->		
-		<tr>
-          <td><a href="https://www.youtube.com/@user-wh3dy9gw1h/videos"  target="_blank">寻衅滋事</a></td>
-           <td>一个关注中国社会的中国人</td>
-        </tr>
-		
-		<tr>
-          <td><b><a href="https://www.youtube.com/@PrecisionCooking/videos"  target="_blank">河水洋洋实验室PrecisionCooking</a></b></td>
-           <td>美食</td>
-        </tr>
-		
-		<tr>
-          <td><b><a href="https://www.youtube.com/@ouryemenikitchen/videos"  target="_blank">Our Yemeni Kitchen</a></b></td>
-           <td>中东美食</td>
-        </tr>
-		
-		<tr>
-          <td><b><a href="https://www.youtube.com/@WILDERNESSCOOKING/videos"  target="_blank">野生食品 WILDERNESS COOKING </a></b></td>
-           <td>格鲁吉亚美食</td>
-        </tr>
-		
-		<tr>
-          <td><a href="https://www.youtube.com/@EarlyAmerican/videos" target="_blank">Early American</a></td>
-		  <td>美国早期白人饮食</td>
-		</tr>
-		
-		
-		
-		
-		
-		<tr>
-          <td><b><a href="https://www.youtube.com/@binzhao3325/videos"  target="_blank">Bin Zhao</a></b></td>
-           <td>生态学</td>
-        </tr>
-		
-		
-		
-    </table>
-
-   
-
-
-   <div style="height:50vh">&nbsp;</div>
-    
-
-      <br>
-      <br>
-
-
-    </div>
-
-  </body>
+	<div class="bigbox">
+		<h2>YouTube订阅精选</h2>
+		<ol>
+			<li><a href="https://www.youtube.com/@ariannitalagringa" target="_blank">ariannitalagringa</a>&nbsp;&nbsp;YouTube 英语</li>
+			<li><a href="https://www.youtube.com/@Speak-English" target="_blank">从零开始学英语</a>&nbsp;&nbsp;YouTube 英语</li>
+			<br>
+			<li><a href="https://www.youtube.com/@user-wh3dy9gw1h/videos" target="_blank">寻衅滋事</a>&nbsp;&nbsp;一个关注中国社会的中国人</li>
+			<li><a href="https://www.youtube.com/@PrecisionCooking/videos" target="_blank">河水洋洋实验室PrecisionCooking</a>&nbsp;&nbsp;美食</li> 
+			<li><a href="https://www.youtube.com/@ouryemenikitchen/videos" target="_blank">Our Yemeni Kitchen</a>&nbsp;&nbsp;中东美食</li> 
+			<li><a href="https://www.youtube.com/@WILDERNESSCOOKING/videos" target="_blank">野生食品 WILDERNESS COOKING</a>&nbsp;&nbsp;	格鲁吉亚美食</li> 
+			<li><a href="https://www.youtube.com/@EarlyAmerican/videos" target="_blank">Early American</a>&nbsp;&nbsp;美国早期白人饮食</li> 
+			<li><a href="https://www.youtube.com/@binzhao3325/videos" target="_blank">Bin Zhao</a>&nbsp;&nbsp;生态学</li> 
+			<!-- -------------------------- -->
+			<li><a href="https://www.youtube.com/@leecehao/videos"  target="_blank">李天豪</a>&nbsp;&nbsp;历史</li>
+			 <li><a href="https://www.youtube.com/@user-bi4mt6gl3f/videos" target="_blank">左手墨迹</a>&nbsp;&nbsp;经济、政治</li>
+			<li><u><a href="https://www.youtube.com/@Brute-channel/videos"  target="_blank">老蛮频道</a>&nbsp;&nbsp;</u>经济，<a href="https://twitter.com/laomanpindao/with_replies" target="_blank">推特</a></li>
+			<li><a href="https://www.youtube.com/@Torontobigface/videos"  target="_blank">多伦多方脸</a>&nbsp;&nbsp;政治，<a href="https://twitter.com/torontobigface/with_replies" target="_blank">推特</a></li>
+			<li><a href="https://www.youtube.com/@wangzhian/videos"  target="_blank">王志安</a>&nbsp;&nbsp;社会热点，<a href="https://twitter.com/wangzhian8848/with_replies" target="_blank">推特</a></li>
+			<li><a href="https://www.youtube.com/@Tankman2020/videos"  target="_blank">二爷故事</a>&nbsp;&nbsp;政治、历史，<a href="https://twitter.com/Alex8282019/with_replies" target="_blank">推特</a></li>
+			<li><a href="https://www.youtube.com/@fangzhouzi-official/videos"  target="_blank">方舟子</a>&nbsp;&nbsp;社会热点，<a href="https://twitter.com/JohnEiks/with_replies" target="_blank">推特</a></li>
+			
+			<br>
+			<li><a href="https://www.youtube.com/results?search_query=%E6%9D%83%E8%B4%B5" target="_blank">权贵</a>&nbsp;&nbsp;共产权贵，youtube搜索</li>
+			<li><a href="https://www.youtube.com/@WoYaoDangGuan/videos" target="_blank">官场</a>&nbsp;&nbsp;中国政治黑料、权力黑幕</li>
+			<li><a href="https://www.youtube.com/@fangcun/videos" target="_blank">方寸亮</a>&nbsp;&nbsp;经济、政治</li>			
+			<li><a href="https://www.youtube.com/@NSTalk/videos"  target="_blank">凝思随聊</a>&nbsp;&nbsp;经济</li>
+			<li><a href="https://www.youtube.com/@JiangFengTimes/videos"  target="_blank">江峰时刻</a>&nbsp;&nbsp;政治、经济、历史</li>
+			<li><a href="https://www.youtube.com/@tvbssisysworldnews/videos"  target="_blank">TVBS 文茜的世界周報 TVBS Sisy's World News</a>&nbsp;&nbsp;政治、经济</li>
+		</ol>
+	</div>
+	
+</body>
 </html>

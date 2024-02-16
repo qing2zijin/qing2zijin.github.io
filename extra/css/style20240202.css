@@ -10,7 +10,7 @@ h4{font-size:16px}
 h5{font-size:14px}
 h2,h3,h4{
 	margin:1em 0em 1em 0em;
-	padding:0px;
+	padding:0px
 }
 a:link{
 	color:black;
@@ -32,25 +32,27 @@ body{
 	max-width:950px;
 	margin:0 auto;
 	overflow:auto;
-	background:#fff url(/extra/images/background.jpg) no-repeat bottom right;
+	background:#fff url(../images/background.jpg) no-repeat bottom right;
 	border-color:#e1efa2;
 	border-style:solid;
-	border-width:0 5px;
+	border-width:0 5px
 }
 
 #hdr{
-	margin:50px 0 0px 50px
+	margin:50px 0 0px 50px;
+	background:#fff url(../images/top_bg.gif) no-repeat top left
 }
 	#logo{
 		font-size:24px;
 		color:gray;
 		text-decoration:none;
-		letter-spacing:1px;	
+		letter-spacing:1px;
+		margin-left:50px
 	}
 	#subtitle{
 		padding-left:0.5em;
 		font-size:14px;
-		letter-spacing:1px;
+		letter-spacing:1px
 	}
 #navbar{
 	list-style:none;
@@ -62,7 +64,7 @@ body{
 	float:right
 }
 #navbar ul{
-	margin:0 20px 0 0;
+	margin:0 5% 0 0;
 	float:right
 }
 #navbar ul li{
@@ -70,7 +72,7 @@ body{
 	max-height:30px;
 	line-height:25px;
 	padding:0 10px;
-	position:relative;
+	position:relative
 }
 #navbar ul li ul{
 	margin:0;
@@ -87,30 +89,33 @@ body{
 #content{
 	overflow:auto;
 	width:100%;
-/* 	background:#fff url(bg.jpg) repeat
- */}
+}
 #lftcol{
-	max-width:20%;
+	max-width:25%;
 	float:left;
-	padding:0 20px 0 20px;
-	
+	padding:0 10px 0 10px;
 	overflow:auto;
-	min-height:100vh
+	min-height:60vh
 }
 #rgtcol{
-	max-width:80%;
+	max-width:75%;
+	min-height:60vh;
 	/* float:left; */
 	overflow:auto;
-	min-height:100vh;
 	border-left:1px solid #e1efa2;
+	padding:0 10px 10px 10px
+}
+#article_title{
+	margin:0 0 20px 0;
+	letter-spacing:2px;
+	text-align:center
 }
 #page-navigator{
 	max-height:50px;
 	width:100%;
 	margin:10px 0 10px 0;
 	padding:0;
-	float:left;
-    /* background-color:white; */
+	float:left
 }
 #page-navigator #page-prev{
     max-width:120px;
@@ -122,9 +127,8 @@ body{
 	max-width:120px;
 	margin:0 10% 0 0;
 	padding:16px;
-	float:right;	
+	float:right	
 }
-
 
 #footer{
 	text-align:center;
@@ -133,7 +137,7 @@ body{
 }
 #footer span{
 	background-color:#fff;
-	padding:1px 5px;
+	padding:1px 5px
 }
 /* --------------------------------------------------------- */
 @media screen and (max-width:960px){
@@ -151,53 +155,50 @@ body{
 		max-width:120px;
 		margin: 0 0 0 10px;
 		padding:16px;
-		float:left;
+		float:left
 	}
 	#page-navigator #page-next{
 		max-width:120px;
 		margin:0 10px 0 0;
 		padding:16px;
-		float:right;	
+		float:right	
 	}
 }
+
 
 /* ------------------------------------------------------------ */
 
 #rgtcol > ul,#rgtcol > ol{
-	margin:0px auto;
-	padding:10px;
-	/* float:left; */
+
 }
 #rgtcol > ul li{
-	list-style:none;
-	margin:0px;
-	padding:10px;
-	
+	/* list-style:arabic-indic; */
+	list-style:disc;
+	margin:0 0 0 10px;
+	padding:0 0 10px 0	
 }
 #rgtcol > ol li{
-	list-style:none;
-	margin:0px;
-	padding:10px;
+	list-style:inherit; 
+	margin:0 0 0 20px;
+	padding:0 0 10px 0
 }
 #rgtcol p{
-	margin:0em 0em 1em 0em;
-	padding:0 10px 0 10px;
-	/*line-height:1.7;*/
-	/* float:left; */
-	/* width:100%; */
+	margin-bottom:10px
 }
-#rgtcol pre{	
-	width:95%;
+#rgtcol pre{
 	margin:1em 0em 1em 0em; 	
-	padding:1em;	
 	overflow:auto;
-	background-color:#c9c9c354;
+	background-color:#c9c9c354
 }
 
 #rgtcol code{	
 	border-radius:10px;	
+	background-color:#e9e3e5
 }
 
+#rgtcol pre code{
+	background-color:#eeeeeb54
+}
 #rgtcol img{
 	max-width:333px;
 	margin:5px;
@@ -208,44 +209,38 @@ body{
 }
 
 #rgtcol blockquote{
-	margin:0px 10px 24px 0px;
-	padding:1em 1em 0em 1em;
+	margin:0px 0px 24px 0px;
 	border-bottom:1px solid; 
 	background-color:#c9c9c354;
-	line-height:2em;
-	/* float:left; */
+	line-height:2em
 }
 .toc{
-	/* margin:0px 10px 10px 10px; */
-	/* padding:10px;  */
 	max-width:400px;
 	background-color:floralwhite; 
 	font-size:90%;
 	border-radius:3px;
+	margin-bottom:14px
 }
 .toc ul, .toc ol{
 	margin:0px;
-	padding:0px;
+	padding:0px
 }
 .toc li{
 	margin:0px 0px 0px 20px;
 	padding:5px;
-	list-style:upper-latin;
+	list-style:none
 }
 #rgtcol video,#rgtcol iframe{
 	padding:0px;
 	margin:1em 0em 1em 0em;
 	max-width:450px;
-	max-height:450px;
+	max-height:450px
 }
 /* ----------------------------------------------- */
 .post-entry{
-    margin:33px 0 25px 0;
-	padding:20px;
-	overflow:auto;
-	/* background-color:white; */
-	border:dashed 1px;
-	border-radius:4px;
+    margin:0 0 25px 0;
+	padding:0;
+	overflow:auto
 }
 .post-title, .post-desc{
 	border:0;
@@ -256,8 +251,8 @@ body{
 	font-size:14px
 }
 .post-time{
-	margin:25px 0 -30px 15px;
+	margin:0px;
 	padding:0px;
 	font-weight:bold;
-	color:#c6b3b3;
+	color:#c6b3b3
 }

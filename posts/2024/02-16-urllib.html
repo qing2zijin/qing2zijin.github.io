@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta name="viewport" content="width=device-width">
+<meta charset="utf-8">
+<title>Python语言中urllib库的使用备份</title>
+<link href="/extra/css/style20240202.css" rel="stylesheet" type="text/css" />
+<link rel="icon" href="/extra/favicon.ico"/>
+<meta name="keywords" content="python,urllib">
+<meta name="description" content="月牙博客:Python语言中urllib库的使用备份">
+</head>
+<body>
+	<div id="container">
+		<div id="hdr">
+		    <span id="logo">月牙博客</span>
+			<span id="subtitle">记录所思所想</span>
+		</div>
+		<div id="navbar">
+			
+		</div>
+		<div id="content">
+			<div id="lftcol">
+			    <p>《犬夜叉》 神无之死</p>
+				<p>忧思逢苦雨，人世叹徒然。<br>春色无暇赏，奈何花已残。</p><p style="text-align:right">—— 小野小町</p>
+			</div>
+			<div id="rgtcol">
+				<div id="article_title">
+					<h1>Python语言中urllib库的使用备份</h1>
+				</div>
+				<div class="toc">
+<ul>
+<li><a href="#1urlopen">1.直接使用urlopen()的方法发起请求</a><ul>
+<li><a href="#11urlopen">1.1.urlopen返回对象提供方法</a></li>
+<li><a href="#12">1.2.设置请求超时</a></li>
+<li><a href="#13-data">1.3.使用 data 参数提交数据</a></li>
+</ul>
+</li>
+<li><a href="#2request">2.使用Request类包装发起请求</a><ul>
+<li><a href="#21request">2.1.使用Request类发起请求的四个个举例</a></li>
+<li><a href="#22request">2.2.Request的高级用法</a><ul>
+<li><a href="#221">2.2.1.使用代理</a></li>
+<li><a href="#222">2.2.2.认证登录</a></li>
+<li><a href="#223cookies">2.2.3.Cookies设置</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#3">3.错误解析</a></li>
+<li><a href="#4url-urllibparse">4.URL转义-urllib.parse的使用</a><ul>
+<li><a href="#41urllibparsequote">4.1.urllib.parse.quote（转义）</a></li>
+<li><a href="#42urllibparseurlencode">4.2.urllib.parse.urlencode（拼接参数）</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<p>为了避免遗忘，现做如下记录。</p>
+<p>urllib 是 Python 标准库中用于网络请求的库</p>
+<p>该库有四个模块，分别是：<strong><code>urllib.request</code></strong>、<strong><code>urllib.error</code></strong>、<strong><code>urllib.parse</code></strong>、<strong><code>urllib.robotparse</code></strong>。</p>
+<h2 id="1urlopen">1.直接使用urlopen()的方法发起请求</h2>
+<p><code>urllib.request.urlopen(url, data=None, [timeout, ]*, cafile=None, capath=None,context=None)</code></p>
+<p>1.<code>data</code>是bytes类型的内容，可以通过bytes()函数转为字节流。他是可选参数。使用data参数，使用<code>POST</code>方式提交表单。使用标准格式是<code>application/x-www-form-urlencoded</code>。<br>
+2. <code>timeout</code>参数是用于设置请求超时时间，单位是秒。<br>
+3. <code>cafile</code>和<code>capath</code>代表 CA 证书和 CA 证书的路径。如果使用<code>HTTPS</code>则需要用到。<br>
+4. <code>context</code>参数必须是<code>ssl.SSLContext</code>类型，用来指定<code>ssl</code>设置。<br>
+5. 该方法也可以单独传入<code>urllib.request.Request</code>对象。<br>
+6. 该函数返回结果是一个<code>http.client.HTTPResponse</code>对象。</p>
+<p>举例：</p>
+<pre><code>import urllib.request
+url = &quot;http://tieba.baidu.com&quot;
+response = urllib.request.urlopen(url)
+html = response.read()         # 获取到页面的源代码
+print(html.decode('utf-8'))    # 转化为 utf-8 编码
+</code></pre>
+<h3 id="11urlopen">1.1.urlopen返回对象提供方法</h3>
+<p><code>read()</code> , <code>readline()</code> , <code>readlines()</code> , <code>fileno()</code> , <code>close()</code> ：对<code>HTTPResponse</code>类型数据进行操作。<br>
+<code>info()</code>：返回<code>HTTPMessage</code>对象，表示远程服务器返回的头信息。<br>
+<code>getcode()</code>：返回Http状态码。如果是http请求，200请求成功完成;404网址未找到。<br>
+<code>geturl()</code>：返回请求的url。</p>
+<h3 id="12">1.2.设置请求超时</h3>
+<p>有些请求可能因为网络原因无法得到响应。因此，我们可以手动设置超时时间。当请求超时，我们可以采取进一步措施，例如选择直接丢弃该请求或者再请求一次。</p>
+<pre><code>import urllib.request
+url = &quot;http://tieba.baidu.com&quot;
+response = urllib.request.urlopen(url, timeout=1)
+print(response.read().decode('utf-8'))
+</code></pre>
+<h3 id="13-data">1.3.使用 data 参数提交数据</h3>
+<p>在请求某些网页时需要携带一些数据，我们就需要使用到 data 参数。</p>
+<pre><code>import urllib.parse
+import urllib.request
+url = &quot;http://www.baidu.com/&quot;
+params = {
+  'name':'TTT',
+  'author':'Miracle'
+}
+data = bytes(urllib.parse.urlencode(params), encoding='utf8')
+response = urllib.request.urlopen(url, data=data)
+print(response.read().decode('utf-8'))
+</code></pre>
+<p>params 需要被转码成字节流。而 params 是一个字典。我们需要使用 urllib.parse.urlencode() 将字典转化为字符串。再使用 bytes() 转为字节流。最后使用 urlopen() 发起请求，请求是模拟用 POST 方式提交表单数据。</p>
+<p>注意：当url地址含有中文或者“/”的时候，这是就需要用做urlencode一下编码转换。urlencode的参数是词典，它可以将key-value这样的键值对转换成我们想要的格式。</p>
+<h2 id="2request">2.使用Request类包装发起请求</h2>
+<p>由上我们知道利用 <code>urlopen()</code> 方法可以发起简单的请求。但这几个简单的参数并不足以构建一个完整的请求，如果请求中需要加入headers（请求头）、指定请求方式等信息，我们就可以利用更强大的Request类来构建一个请求。<br>
+按照国际惯例，先看下 Request 的构造方法：</p>
+<p><code>urllib.request.Request(url, data=None, headers={}, origin_req_host=None,
+unverifiable=False, method=None)</code></p>
+<p>1. <code>data 参数</code>跟 urlopen() 中的 data 参数用法相同。<br>
+2. <code>headers 参数</code>是指定发起的 HTTP 请求的头部信息。headers 是一个字典。它除了在 Request 中添加，还可以通过调用 Reques t实例的 add_header() 方法来添加请求头。<br>
+3. <code>origin_req_host 参数</code>指的是请求方的 host 名称或者 IP 地址。<br>
+4. <code>unverifiable</code>表示请求是否是无法验证的，默认False。意思就是说用户没有足够权限来选择接收这个请求的结果。例如我们请求一个HTML文档中的图片，但是我们没有自动抓取图像的权限，我们就要将 unverifiable 的值设置成 True。<br>
+5. <code>method 参数</code>指的是发起的 HTTP 请求的方式，有 GET、POST、DELETE、PUT等。</p>
+<h3 id="21request">2.1.使用Request类发起请求的四个个举例</h3>
+<p>例子1：</p>
+<p>使用 Request 伪装成浏览器发起 HTTP 请求。如果不设置 headers 中的 User-Agent，默认的User-Agent是Python-urllib/3.5。可能一些网站会将该请求拦截，所以需要伪装成浏览器发起请求。我使用的 User-Agent 是 Chrome 浏览器。</p>
+<pre><code>#修改User-Agent为chrome的UA进行伪装
+import urllib.request
+url = &quot;http://tieba.baidu.com/&quot;
+headers = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/..'
+}
+request = urllib.request.Request(url=url, headers=headers)
+response = urllib.request.urlopen(request)
+print(response.read().decode('utf-8'))
+</code></pre>
+<p>例子2-添加HTTP请求头部</p>
+<pre><code>import urllib.request
+req = urllib.request.Request('http://www.example.com/')
+req.add_header('Referer', 'http://www.python.org/')
+r = urllib.request.urlopen(req)
+</code></pre>
+<p>例子3-更改User-agent</p>
+<pre><code>import urllib.request
+opener = urllib.request.build_opener()
+opener.addheaders = [('User-agent', 'Mozilla/5.0')]
+opener.open('http://www.example.com/')
+</code></pre>
+<p>例子4-使用 data 参数提交数据：</p>
+<pre><code>import urllib.parse
+import urllib.request
+url = &quot;http://www.baidu.com/&quot;
+headers = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/..'
+}
+params = {
+  'name':'TTT',
+  'author':'Miracle'
+}
+data = bytes(urllib.parse.urlencode(params), encoding='utf8')
+request = urllib.request.Request(url=url, headers=headers, data=data, Method=&quot;POST&quot;)
+response = urllib.request.urlopen(request)
+print(response.read().decode('utf-8'))
+</code></pre>
+<p><strong><em>上面的headers中可以增加编写cookie</em></strong></p>
+<h3 id="22request">2.2.Request的高级用法</h3>
+<p>如果我们需要在请求中添加代理、处理请求的 Cookies，我们需要用到<code>Handler</code>和<code>OpenerDirector</code>。</p>
+<p>1)<code>Handler</code><br>
+Handler 的中文是处理者、处理器。 Handler 能处理请求（HTTP、HTTPS、FTP等）中的各种事情。它的具体实现是这个类 <code>urllib.request.BaseHandler</code>。它是所有的 Handler 的基类，其提供了最基本的Handler的方法，例如<code>default_open()</code>、<code>protocol_request()</code>等。</p>
+<p>继承 BaseHandler 有很多个，我就列举几个比较常见的类：</p>
+<p>1.<code>ProxyHandler</code>：为请求设置代理<br>
+2.<code>HTTPCookieProcessor</code>：处理 HTTP 请求中的 Cookies<br>
+3.<code>HTTPDefaultErrorHandler</code>：处理 HTTP 响应错误。<br>
+4.<code>HTTPRedirectHandler</code>：处理 HTTP 重定向。<br>
+5.<code>HTTPPasswordMgr</code>：用于管理密码，它维护了用户名密码的表。<br>
+6.<code>HTTPBasicAuthHandler</code>：用于登录认证，一般和 <code>HTTPPasswordMgr</code> 结合使用。</p>
+<p>2)<code>OpenerDirector</code><br>
+对于 OpenerDirector，我们可以称之为 <strong>Opener</strong>。我们之前用过 urlopen() 方法，实际上它就是 urllib 为我们提供的一个Opener。那 Opener 和 Handler 又有什么关系？opener 对象是由 <strong>build_opener(handler)</strong> 方法来创建出来 。我们需要创建自定义的 opener，就需要使用 <code>install_opener(opener)</code>方法。值得注意的是，install_opener 实例化会得到一个全局的 OpenerDirector 对象。</p>
+<h4 id="221">2.2.1.使用代理</h4>
+<p>我们已经了解了 opener 和 handler，接下来我们就通过示例来深入学习。第一个例子是为 HTTP 请求设置代理
+有些网站做了浏览频率限制。如果我们请求该网站频率过高。该网站会被封 IP，禁止我们的访问。所以我们需要使用代理来突破这“枷锁”。</p>
+<p>例子1-光代理：</p>
+<pre><code>import urllib.request
+url = &quot;http://tieba.baidu.com/&quot;
+headers = {
+    'User-Agent': 'Mozilla/5.0 AppleWebKit/537.36 Chrome/...'
+}
+proxy_handler = urllib.request.ProxyHandler({
+    'http': 'web-proxy.oa.com:8080',
+    'https': 'web-proxy.oa.com:8080'
+})
+opener = urllib.request.build_opener(proxy_handler)
+urllib.request.install_opener(opener)
+
+request = urllib.request.Request(url=url, headers=headers)
+response = urllib.request.urlopen(request)
+print(response.read().decode('utf-8'))  
+</code></pre>
+<p>例子2-代理兼登录</p>
+<pre><code>proxy_handler = urllib.request.ProxyHandler({'http':
+'http://www.example.com:3128/'})
+proxy_auth_handler = urllib.request.ProxyBasicAuth()
+proxy_auth_handler.add_password(realm, host, username, password)
+
+opener = urllib.request.build_opener(proxy_handler, proxy_auth_handler)
+opener.open('http://www.example.com/login.html')
+</code></pre>
+<h4 id="222">2.2.2.认证登录</h4>
+<p>有些网站需要携带账号和密码进行登录之后才能继续浏览网页。碰到这样的网站，我们需要用到认证登录。我们首先需要使用 <code>HTTPPasswordMgrWithDefaultRealm()</code> 实例化一个账号密码管理对象；然后使用 <code>add_password()</code> 函数添加账号和密码；接着使用 <code>HTTPBasicAuthHandler()</code> 得到 hander；再使用 build_opener() 获取 opener 对象；最后使用 opener 的 open() 函数发起请求。</p>
+<p>第二个例子是携带账号和密码请求登录博，代码如下：</p>
+<pre><code>import urllib.request
+url = &quot;http://cnblogs.com/xt../&quot;
+user = '奇迹'
+password = 'password'
+pwdmgr = urllib.request.HTTPPasswordMgrWithDefaultRealm()
+pwdmgr.add_password(None,url,user,password)
+
+auth_handler = urllib.request.HTTPBasicAuthHandler(pwdmgr)
+opener = urllib.request.build_opener(auth_handler)
+response = opener.open(url)
+print(response.read().decode('utf-8'))
+</code></pre>
+<p>备注：在使用<code>HTTPPasswordMgrWithDefaultRealm()</code>的条件下，<code>add_password()</code>的 第一个参数realm可以设置成None，前提是你不知道。</p>
+<h4 id="223cookies">2.2.3.Cookies设置</h4>
+<p>如果请求的页面每次需要身份验证，我们可以使用 Cookies 来自动登录，免去重复登录验证的操作。获取 Cookies 需要使用 http.cookiejar.CookieJar() 实例化一个 Cookies 对象。再用 urllib.request.HTTPCookieProcessor 构建出 handler 对象。最后使用 opener 的 open() 函数即可。</p>
+<p>第三个例子是获取请求百度贴吧的 Cookies 并保存到文件中，代码如下：</p>
+<pre><code>import http.cookiejar
+import urllib.request
+
+url = &quot;http://tieba.baidu.com/&quot;
+fileName = 'cookie.txt'
+
+cookie = http.cookiejar.CookieJar()
+handler = urllib.request.HTTPCookieProcessor(cookie)
+opener = urllib.request.build_opener(handler)
+response = opener.open(url)
+
+f = open(fileName,'a')
+for item in cookie:
+    f.write(item.name+&quot; = &quot;+item.value+'\n')
+f.close()
+</code></pre>
+<h2 id="3">3.错误解析</h2>
+<p>发起请求难免会出现各种异常，我们需要对异常进行处理，这样会使得程序比较人性化。</p>
+<p>异常处理主要用到两个类，<code>urllib.error.URLError</code>和<code>urllib.error.HTTPError</code>。</p>
+<p>1.<strong><code>URLError</code></strong> 是 <code>urllib.error</code> 异常类的基类, 可以捕获由urllib.request 产生的异常。<br>
+它具有一个属性reason，即返回错误的原因。</p>
+<p>捕获 URL 异常的示例代码：</p>
+<pre><code>import urllib.request
+import urllib.error
+
+url = &quot;http://www.google.com&quot;
+try:
+    response = request.urlopen(url)
+except error.URLError as e:
+    print(e.reason)
+</code></pre>
+<p>2.<strong><code>HTTPError</code></strong> 是 <code>URLError</code> 的子类，专门处理 HTTP 和 HTTPS 请求的错误。它具有三个属性。</p>
+<p>1）code：http 请求返回的状态码。<br>
+2）reson：与父类用法一样，返回错误的原因。<br>
+3）headers：http 请求返回的相应头信息。</p>
+<p>获取 HTTP 异常的示例代码, 输出了错误状态码、错误原因、服务器响应头</p>
+<pre><code>import urllib.request
+import urllib.error
+
+url = &quot;http://www.google.com&quot;
+try:
+    response = request.urlopen(url)
+except error.HTTPError as e:
+   print('code: ' + e.code + '\n')
+   print('reason: ' + e.reason + '\n')
+   print('headers: ' + e.headers + '\n')
+</code></pre>
+<h2 id="4url-urllibparse">4.URL转义-urllib.parse的使用</h2>
+<p>(urllib.parse是urllib中用来解析各种数据格式的模块)</p>
+<h3 id="41urllibparsequote">4.1.urllib.parse.quote（转义）</h3>
+<p>在url中，是只能使用ASCII中包含的字符的，也就是说，ASCII不包含的特殊字符，以及中文等字符都是不可以在url中使用的。而我们有时候又有将中文字符加入到url中的需求，例如百度的搜索地址：https://www.baidu.com/s?wd=南北。?之后的wd参数，则是我们搜索的关键词。那么我们实现的方法就是将特殊字符进行url编码，转换成可以url可以传输的格式，urllib中可以使用quote()方法来实现这个功能。</p>
+<pre><code>from urllib import parse
+keyword = '南北'
+parse.quote(keyword)
+=======&gt;&gt;'%E5%8D%97%E5%8C%97'
+
+#如果需要将编码后的数据转换回来，可以使用unquote()方法。
+parse.unquote('%E5%8D%97%E5%8C%97')
+=======&gt;&gt;'南北'
+</code></pre>
+<h3 id="42urllibparseurlencode">4.2.urllib.parse.urlencode（拼接参数）</h3>
+<p>在访问url时，我们常常需要传递很多的url参数，而如果用字符串的方法去拼接url的话，会比较麻烦，所以urllib中提供了urlencode这个方法来拼接url参数。</p>
+<pre><code>from urllib import parse 
+params = {'wd': '南北', 'code': '1', 'height': '188'}  
+parse.urlencode(params)
+
+=======&gt;&gt;'wd=%E5%8D%97%E5%8C%97&amp;code=1&amp;height=188'
+</code></pre>
+<p><a href="https://www.cnblogs.com/xtznb/p/10960396.html">文章部分来源</a></p>
+			</div>
+			<div id="page-navigator">
+			</div>
+		</div>
+		<div id="footer">
+			<span>© 2023</span>
+		</div>
+	</div>
+	<script>
+	function loadDoc(url, str) {
+		  var xhttp;
+		  xhttp=new XMLHttpRequest();
+		  xhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+				try{
+					document.getElementById(str).innerHTML = xhttp.responseText; 
+				}catch (err){
+					console.log(err);
+				}finally{
+					document.getElementsByClassName(str)[0].innerHTML = xhttp.responseText;
+				}
+			}
+		  };
+		  xhttp.open("GET", url, true);
+		  xhttp.send();
+		}
+
+	loadDoc("/extra/menu.html", "navbar");
+	</script>
+	<script type="text/javascript" src="/extra/js/img.js"></script>
+</body>
+</html>

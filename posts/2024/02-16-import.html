@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta name="viewport" content="width=device-width">
+<meta charset="utf-8">
+<title>Python使用import引入其他目录文件的方式（备份）</title>
+<link href="/extra/css/style20240202.css" rel="stylesheet" type="text/css" />
+<link rel="icon" href="/extra/favicon.ico"/>
+<meta name="keywords" content="python,import,path,sys">
+<meta name="description" content="月牙博客:Python使用import引入其他目录文件的方式（备份）">
+</head>
+<body>
+	<div id="container">
+		<div id="hdr">
+		    <span id="logo">月牙博客</span>
+			<span id="subtitle">记录所思所想</span>
+		</div>
+		<div id="navbar">
+			
+		</div>
+		<div id="content">
+			<div id="lftcol">
+			    <p>《犬夜叉》 神无之死</p>
+				<p>忧思逢苦雨，人世叹徒然。<br>春色无暇赏，奈何花已残。</p><p style="text-align:right">—— 小野小町</p>
+			</div>
+			<div id="rgtcol">
+				<div id="article_title">
+					<h1>Python使用import引入其他目录文件的方式（备份）</h1>
+				</div>
+				<p>最近一直在苦恼，如何引入其他目录文件，翻阅了一堆资料，找到了解决方案，特别记录下来。</p>
+<p>为了演示清楚，特别写了一份文件分布图如下：</p>
+<pre><code>python-import
+    one
+        blue.py
+    Three
+        threeOne
+            black.py
+        threeTwo
+            purple.py
+    Two
+        green.py
+    red.py
+    __init__.py
+    a.py
+</code></pre>
+<p><strong>1.使用相对路径</strong></p>
+<p><code>.</code>代表当前文件所在路径，<code>..</code>代表当前文件的父目录，<code>...</code>代表爷爷目录，以此类推，每多一个点，就向上翻一层目录。</p>
+<p>1.在blue.py中引入green.py</p>
+<p><code>from ..Two import green</code></p>
+<p>2.在red.py中引入black.py</p>
+<p><code>from .Three.threeOne import black</code></p>
+<p>3.在black.py中引入red.py</p>
+<p><code>from ... import red</code></p>
+<p><strong>2.使用绝对路径</strong></p>
+<p>1.在red.py中引入black.py</p>
+<p><code>from Three.threeOne import black</code></p>
+<p>2.在blue.py中引入red.py</p>
+<pre><code>import sys
+from  pathlib import Path
+sys.path.append( str( Path(__file__).resolve().parents[1]) )
+import red
+</code></pre>
+<p>说明：代码中parents返回一个列表，parents[0]代表当前文件所在目录，下标每加一，目录向上一层，parents[1]得到父目录。
+<code>__file__</code>当前文件相对与终端的路径，os.path.abspath(__file__)可获得文件的绝对路径。</p>
+			</div>
+			<div id="page-navigator">
+			</div>
+		</div>
+		<div id="footer">
+			<span>© 2023</span>
+		</div>
+	</div>
+	<script>
+	function loadDoc(url, str) {
+		  var xhttp;
+		  xhttp=new XMLHttpRequest();
+		  xhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+				try{
+					document.getElementById(str).innerHTML = xhttp.responseText; 
+				}catch (err){
+					console.log(err);
+				}finally{
+					document.getElementsByClassName(str)[0].innerHTML = xhttp.responseText;
+				}
+			}
+		  };
+		  xhttp.open("GET", url, true);
+		  xhttp.send();
+		}
+
+	loadDoc("/extra/menu.html", "navbar");
+	</script>
+	<script type="text/javascript" src="/extra/js/img.js"></script>
+</body>
+</html>

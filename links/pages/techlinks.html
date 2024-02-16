@@ -5,19 +5,24 @@
 <meta charset="utf-8">
 <meta name="robots" content="noarchive">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script type="text/javascript">
+<!-- <script type="text/javascript">
     var targetProtocol = "https:";
     if (window.location.protocol !=targetProtocol)
         window.location.href = targetProtocol + window.location.href.substring(window.location.protocol.length);
-</script>
+</script> -->
 <style>
-	body{max-width:900px; margin: 0 auto; padding:1em; font-family:"宋体"}
+    *{margin:0;padding:0;border:0}
+	body{max-width:900px; margin: 0 auto; padding:50px; font-family:"宋体";font-size:16px}
 	h1{font-size:1.4em}
 	h2{font-size:1.2em}
 	h3{font-size:1em}
-	.mokuai{padding:0.5em; margin:0;margin-bottom:0.5em;border:1px dashed}
-	p{line-height:1.2em;padding:0;margin:0;margin-bottom:0.5em}
-	pre{margin:0; padding:0.5em; border:1px dashed; overflow:auto}
+	h1, h2, h3{margin-bottom:1em}
+	.mokuai{margin-bottom:30px;padding:10px;border:1px dashed;border-radius:3px}
+	.mokuai ol{margin-left:40px}
+	.mokuai ul{margin-left:40px}
+	.mokuai li{margin:0 0 10px 0}
+	p{line-height:1.2;margin-bottom:0.5em}
+	pre{ padding:0.5em; border:1px dashed; overflow:auto}
 	code{font-size:1.1em}
 	pre, code{border-radius:10px;background-color:#f1ecec; color:black}
 </style>
@@ -63,20 +68,26 @@
 <div class="mokuai">
 	<h2>服务器:</h2>
 	<p><a href="https://wangdoc.com/bash" target="_blank">网道：Bash脚本教程</a>&nbsp;&nbsp;</p>
-	<p><a href="http://baijiahao.baidu.com/s?id=1681306919565244742" target="_blank">如何使用Apache Web服务器来安装和配置网站？</a>
+	<p><a href="http://baijiahao.baidu.com/s?id=1681306919565244742" target="_blank">如何使用Apache Web服务器来安装和配置网站？</a>（推荐使用phpstudy，操作简单。）
 	</p>
 </div>
 
 <!-- python -->
 <div class="mokuai">
 	<h2>Python:</h2>
-	<p><strong><a href="http://runoob.com/python/python-tutorial.html" target="_blank">菜鸟教程：Python</a></strong>&nbsp;&nbsp;<a href = "https://docs.python.org/zh-cn/3/" rel = "noopener noreferrer nofollow" target="_blank" >Python 3.10.4 Documentation</a></p>
-	<p><a href="https://www.cnblogs.com/CYHISTW/articles/10966448.html" target="_blank">python中的类与继承</a>&nbsp;&nbsp;<a href="https://cnblogs.com/wulixia/p/12069500.html" target="_blank">Python读取yaml配置文件1</a>&nbsp;&nbsp;<a href="https://cnblogs.com/zzpython/p/13158591.html" target="_blank">Python读取yaml文件2</a>
-	</p>
-	<p><a href="http://zhuanlan.zhihu.com/p/460511660" target="_blank">Python如何切割字符串</a>&nbsp;&nbsp;<a href="http://zhihu.com/question/65334284" target="_blank">Python里的元组、列表和字典有哪些区别</a>&nbsp;&nbsp;
-	</p>
-	<p><a href="https://baijiahao.baidu.com/s?id=1693206126043294531"rel = "noopener noreferrer nofollow" target="_blank" >Python列表生成式</a>
-	</p>
+	<ol>
+		<li><strong><a href="http://runoob.com/python/python-tutorial.html" target="_blank">菜鸟教程：Python</a></strong></li>
+		<li><a href = "https://docs.python.org/zh-cn/3/" target="_blank" >Python 3.10.4 Documentation</a></li>
+		<li><a href="https://www.cnblogs.com/CYHISTW/articles/10966448.html" target="_blank">python中的类与继承</a></li>
+		<li><a href="https://cnblogs.com/wulixia/p/12069500.html" target="_blank">Python读取yaml配置文件1</a></li>
+		<li><a href="https://cnblogs.com/zzpython/p/13158591.html" target="_blank">Python读取yaml文件2</a></li>
+		<li><a href="http://zhuanlan.zhihu.com/p/460511660" target="_blank">Python如何切割字符串</a></li>
+		<li><a href="http://zhihu.com/question/65334284" target="_blank">Python里的元组、列表和字典有哪些区别</a></li>
+		<li><a href="https://baijiahao.baidu.com/s?id=1693206126043294531" target="_blank" >Python列表生成式</a></li>
+		<li><a href="https://www.cjavapy.com/article/3048" target="_blank">Python列出目录所有文件及文件夹的方法及实列代码</a></li>
+		<li><a href="https://pythonjishu.com/mvtdbgpwlfjhcln" target="_blank">如何使用Python批量更新数据库中的数据？</a></li>
+		<li><a href="https://m.jb51.net/python/3103094t3.html" target="_blank">Python中文件路径的拼接的几种方法实列</a></li>
+	</ol>
 	<!--  ---------------------------------------------------------- -->
 	<div class="mokuai">
 		<h3>python 爬虫</h3>
@@ -93,12 +104,17 @@
 	<div class="mokuai">
 		<h3>Selenium</h3>
 		<p>这个用来登录、抓取脚本构成的网页啥的还有点用，其他用途很慢，不如urllib、requests快。</p>
-		<p><a href="https://blog.csdn.net/beichanbb/article/details/122240155" target="_blank">selenium中的find_element方法: </a>&nbsp;&nbsp;<a href="https://blog.csdn.net/hb_lxp/article/details/115227091" target="_blank">Selenium3自动化测试【16】元素定位之Tag:</a></p>
+		<ol>
+			<li><a href="https://blog.csdn.net/beichanbb/article/details/122240155" target="_blank">selenium中的find_element方法: </a></li>
+			<li><a href="https://blog.csdn.net/hb_lxp/article/details/115227091" target="_blank">Selenium3自动化测试【16】元素定位之Tag:</a></li>
 
-		<p><a href=" https://www.cnblogs.com/hanmk/p/8997786.html" target="_blank">python+selenium基础之XPATH定位(第一篇) - 我是冰霜 - 博客园:</a>&nbsp;&nbsp;  <a href="http://t.zoukankan.com/leoych-p-12765296.html" target="_blank">用python selenium提取网页中的所有a标签中的超级链接地址： </a></p>
+			<li><a href=" https://www.cnblogs.com/hanmk/p/8997786.html" target="_blank">python+selenium基础之XPATH定位(第一篇) - 我是冰霜 - 博客园:</a></li>
+			<li><a href="http://t.zoukankan.com/leoych-p-12765296.html" target="_blank">用python selenium提取网页中的所有a标签中的超级链接地址： </a></li>
 
-		<p><a href="http://cn.voidcc.com/question/p-xcfrrldz-bkw.html" target="_blank">使用xpath-selenium-python从网页中提取文本/数字:</a>&nbsp;&nbsp;	<a href="https://zhuanlan.zhihu.com/p/81312687" target="_blank">selenium自动化测试xpath定位详解: </a>&nbsp;&nbsp;<a href="https://blog.csdn.net/weixin_40444270/article/details/80593058" target="_blank">关于selenium获取cookie然后实现免登录:</a> <br>
-		</p>
+			<li><a href="http://cn.voidcc.com/question/p-xcfrrldz-bkw.html" target="_blank">使用xpath-selenium-python从网页中提取文本/数字:</a></li>	
+			<li><a href="https://zhuanlan.zhihu.com/p/81312687" target="_blank">selenium自动化测试xpath定位详解: </a></li>
+			<li><a href="https://blog.csdn.net/weixin_40444270/article/details/80593058" target="_blank">关于selenium获取cookie然后实现免登录:</a> </li>
+		</ol>
 	</div>
 </div>
 
@@ -112,9 +128,17 @@ imgs[i].src = imgs[i].getAttribute('data-src')
 }	  </code></pre>
 先做判断，再替换，不然编写网页时候没有将<code>src</code>改成<code>data-src</code>，就会造成<code>src="null"</code>的情况，滑动网页图片消失的神奇现象。
 	</p>
-
+	<br>
+	<p><a href="https://m.jb51.net/article/96120.htm" target="_blank">JS中用三种方式实现导航菜单的二级下拉菜单</a>【推荐】<br>
+	   <a href="https://m.jb51.net/article/253958.htm" target="_blank">HTML+CSS+JavaScript实现下拉菜单效果</a>
+	</p>
 </div>
 
-
+<!-- json -->
+<div class="mokuai">
+	<h2>Json</h2>
+	<p> <a href="https://pythonjishu.com/xfwgayzkakajdtl" target="_blank">json文件书写格式详解</a>
+	</p>
+</div>
 </body>
 </html>
