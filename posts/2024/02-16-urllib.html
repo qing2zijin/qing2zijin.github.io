@@ -51,6 +51,7 @@
 <li><a href="#42urllibparseurlencode">4.2.urllib.parse.urlencode（拼接参数）</a></li>
 </ul>
 </li>
+<li><a href="#5urlretrieve">5.urlretrieve()文件下载函数</a></li>
 </ul>
 </div>
 <p>为了避免遗忘，现做如下记录。</p>
@@ -279,7 +280,31 @@ parse.urlencode(params)
 
 =======&gt;&gt;'wd=%E5%8D%97%E5%8C%97&amp;code=1&amp;height=188'
 </code></pre>
-<p><a href="https://www.cnblogs.com/xtznb/p/10960396.html">文章部分来源</a></p>
+<p><a href="https://www.cnblogs.com/xtznb/p/10960396.html">上面文章的部分来源</a></p>
+<h2 id="5urlretrieve">5.urlretrieve()文件下载函数</h2>
+<p><code>urllib.request.urlretrieve(url, filename=None, reporthook=None, data=None)</code></p>
+<p>将一个URL形式的网络对象复制为本地文件。如果URL指向一个本地文件，则必须提供文件名才会复制对象。.......</p>
+<p>第二个参数是：指定文件的保存地点（若未给出，则会是名称随机生成的临时文件）。</p>
+<p>第三个参数是：可调取对象，在建立网络连接将会调用一次，之后每次读完数据块后会调用一次。该可调用对象将会传入3个参数：已传输的块数、块的大小（以字节为单位）、文件总的大小。</p>
+<p>第四个参数：data，如果采用"GET"方式便是none，如果采用 "POST"方式，data的格式是标准的application/x-www-form-urlencoded格式的字符串对象，参考<a href="#13-data">#13-data</a>。</p>
+<p>如果不设置headers，直接以程序默认方式访问的话，服务器或许会拦截，考虑设置访问头。</p>
+<p>例子：</p>
+<pre><code>def main(url, **kwargs):
+    ...
+
+    opener = urllib.request.build_opener()
+    opener.addheaders = [ (&quot;User-Agent&quot;, &quot;....&quot;) ]
+    urllib.request.install_opener(opener)
+
+    urllib.request.urlretrieve(url, filename, callbackfunc， data=None)
+    return
+
+def callbackfunc(blocknum, blocksize, totalsize):
+    percent = 100.0 * blocknum * blocksize / totalsize
+    if percent &gt; 100:
+        percent = 100
+    print(&quot;%.2f%%&quot; % percent)
+</code></pre>
 			</div>
 			<div id="page-navigator">
 			</div>
