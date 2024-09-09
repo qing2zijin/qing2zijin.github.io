@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta name="viewport" content="width=device-width">
+<meta charset="utf-8">
+<title>天帝颂</title>
+<link href="/extra/css/style20240202.css" rel="stylesheet" type="text/css" />
+<link rel="icon" href="/extra/favicon.ico"/>
+<meta name="keywords" content="天帝,天帝颂,伟大,爱,温暖,创造者,推动者">
+<meta name="description" content="月牙博客:天帝颂">
+</head>
+<body>
+	<div id="container">
+		<div id="hdr">
+		    <span id="logo">月牙博客</span>
+			<span id="subtitle">记录所思所想</span>
+		</div>
+		<div id="navbar">
+			
+		</div>
+		<div id="content">
+			<div id="lftcol">
+			    <p>《犬夜叉》 神无之死</p>
+				<p>忧思逢苦雨，人世叹徒然。<br>春色无暇赏，奈何花已残。</p><p style="text-align:right">—— 小野小町</p>
+			</div>
+			<div id="rgtcol">
+				<div id="article_title">
+					<h1>天帝颂</h1>
+				</div>
+				<p>一</p>
+<p>天帝，宇宙的创造者，万物生长繁衍的推动者，是无影无形的，是更高层次的存在。</p>
+<p>世间的美丽与奇妙皆出自于天帝，世界运转的底层逻辑皆出自天帝的意志。</p>
+<p>天帝永恒存在，世界运转生生不息，与天帝比起来，人的时光是无比的短暂，</p>
+<p>虽然人类创造了无比辉煌的文明，但是一切都建立在天帝创造的基础之上。</p>
+<p>若是没有天帝的作为，又怎么会有我们的作为？我们应该赞美天帝。<br></p>
+<p>二</p>
+<p>天帝身在高处，俯瞰众生，世间万物的所作所为皆在天帝的掌控之中。</p>
+<p>人们犯错，不知悔过，一再破坏天帝创造的世界，</p>
+<p>天帝仁慈，在冥冥之中帮助人们，</p>
+<p>可惜，还是有些人无视天帝的存在，冒犯天帝，他们未来的道路，天帝已经为他们安排好了。</p>
+<p>天帝，如海上的灯塔，照亮我们的航路；我们有责任把天帝的爱洒向人间。</p>
+<p>敬天帝，爱众生。<br></p>
+<p>三</p>
+<p>死亡并不可怕，可怕的是人生没有方向，</p>
+<p>明明有天帝在，有的人却还像无头苍蝇一般乱窜，还在苦海里挣扎，</p>
+<p>追寻天帝，用心去体会，用理性去思考，天帝的爱何其温暖！天帝的意志何其精妙！<br></p>
+<p>四</p>
+<p>天帝，伟大，不与日月争辉，只是默默守护。</p>
+<p>渺小的人类，总想着与天帝争高下，蚍蜉撼树而已。</p>
+			</div>
+			<div id="page-navigator">
+			</div>
+		</div>
+		<div id="footer">
+			<span>© 2023</span>
+		</div>
+	</div>
+	<script>
+	function loadDoc(url, str) {
+		  var xhttp;
+		  xhttp=new XMLHttpRequest();
+		  xhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+				try{
+					document.getElementById(str).innerHTML = xhttp.responseText; 
+				}catch (err){
+					console.log(err);
+				}finally{
+					document.getElementsByClassName(str)[0].innerHTML = xhttp.responseText;
+				}
+			}
+		  };
+		  xhttp.open("GET", url, true);
+		  xhttp.send();
+		}
+
+	loadDoc("/extra/menu.html", "navbar");
+	</script>
+	<script type="text/javascript" src="/extra/js/img.js"></script>
+</body>
+</html>

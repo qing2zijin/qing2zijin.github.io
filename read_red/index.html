@@ -1,12 +1,14 @@
-
 <!DOCTYPE html>
 <html lang="zh">
 <head>
 <meta name="viewport" content="width=device-width">
 <meta charset="utf-8">
 <title>阅读</title>
-<link href="/extra/css/style20240202.css" rel="stylesheet" type="text/css" />
-<link rel="icon" href="/extra/favicon.ico"/>
+<link href="../extra/css/style20240202.css" rel="stylesheet" type="text/css" />
+<link rel="icon" href="../extra/favicon.ico"/>
+<style>
+.books{margin-right:2em}
+</style>
 </head>
 <body>
 	<div id="container">
@@ -20,34 +22,57 @@
 		<div id="content">
 			<div id="lftcol">
 				<p>《犬夜叉》 神无之死</p>
-				<p>忧思逢苦雨，人世叹徒然。<br>春色无暇赏，奈何花已残。</p><p style="text-align:right">—— 小野小町</p>
+				<p>忧思逢苦雨，人世叹徒然。<br>春色无暇赏，奈何花已残。</p><p style="text-aspangn:right">—— 小野小町</p>
 			</div>
 			<div id="rgtcol">
 			        <ol>2024:
-					    <li>西方哲学史</li>
-					    <li>东周列国志 明 冯梦龙</li>
+						<li><b>《泰戈尔选集》泰戈尔 吴岩译（在读）</b></li>
+						<li>《公孙龙子》</li>
+						<li><b>《形而上学》亚里士多德</b></li>
+						<li><b> 基督教《圣经》</b>部分选读 创世记 出埃及记 诗篇 马太福音 马可福音 约翰福音 使徒行传 启示录等 </li>
+       					<li><b>《理想国》柏拉图</b></li>
+						<li><b>《会饮篇》柏拉图</b></li>
+                        <li>《蒂迈欧篇》柏拉图 在读</li>
+						<li>《存在与虚无》让·保罗·萨特 在读</li>
+						<li>《西方哲学史》罗素（泛读）</li>
+						
+						<li>《梨俱吠陀 神曲选》</li>
+						<li>《罗马神话》经典畅销版（在读）</li>
+						<li>《希腊神话》古斯塔夫·施瓦布</li>
+						<li>《印度神话》经典畅销版（在读）</li>
+						<li>《北欧神话》经典畅销版（在读）</li>
+						<li><b>《埃及神话》经典畅销版</b></li>
+						<li>《非洲神话》经典畅销版</li>
+						
+						<li> 《大学》《中庸》《孟子 节选》《论语译注》<b>《尚书》《诗经》</b>、《礼记》、《孝经》</li>
+						<li>《道德经》、《荀子》、《列子》、《庄子》</li>
+					    <li>《东周列国志》 明 冯梦龙（泛读）</li>
+						<li>《元曲三百首》</li>
+						
+						<li>《货币金融学》</li>
+						<li><b>《批判性思维原理和方法--走向新的认知和实践》</b></li>
+						<li><b>《虚空 宇宙源起何处》弗兰克·克洛斯</b></li>
 					</ol>
 
 					<ol>2023:
-					    <li>道德理想国的覆灭-从卢梭到罗伯斯庇尔</li>
-					    <li>易中天中华史</li>
-						<li>霍乱时期的爱情</li>
-						<li>走出帝制 从晚清到民国的历史回望</li>
-						<li>权力论 罗素</li>
-						<li>家庭-私有制和国家的起源 恩格斯</li>
-						<li>就业-利息和货币通论 凯恩斯</li>
+					    <li>《道德理想国的覆灭-从卢梭到罗伯斯庇尔》</li>
+					    <li>《易中天中华史》（前三卷）</li>
+						<li>《走出帝制 从晚清到民国的历史回望》</li>
+						<li>《权力论》罗素</li>
+						<li>《家庭-私有制和国家的起源》恩格斯</li>
+						<li>《就业-利息和货币通论》凯恩斯</li>
 					</ol>
 
 					<ol>2022:
-						<li>通往奴役之路 哈耶克</li>
-						<li>致命的自负 哈耶克</li>
-						<li>中国近代史 徐中约</li>
-						<li>老人与海</li>
-						<li>复活 列夫·托尔斯泰 (Leo Tolstoy)</li>
+						<li>《通往奴役之路》哈耶克</li>
+						<li>《中国近代史》徐中约</li>
+						<li>《老人与海》海明威</li>
+						<li>《复活》 列夫托尔斯泰</li>
 					</ol>
 
 					<ol>2021:
-						<li>明朝那些事儿</li>
+						<li>《明朝那些事儿》</li>
+						<li>《拿破仑传》</li>
 					</ol>
 			</div>
 			<div id="page-navigator">
@@ -66,7 +91,7 @@
 				try{
 					document.getElementById(str).innerHTML = xhttp.responseText; 
 				}catch (err){
-					console.log(err);
+					conspe.log(err);
 				}finally{
 					document.getElementsByClassName(str)[0].innerHTML = xhttp.responseText;
 				}

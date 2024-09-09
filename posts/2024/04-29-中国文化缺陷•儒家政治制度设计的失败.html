@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta name="viewport" content="width=device-width">
+<meta charset="utf-8">
+<title>中国文化缺陷</title>
+<link href="/extra/css/style20240202.css" rel="stylesheet" type="text/css" />
+<link rel="icon" href="/extra/favicon.ico"/>
+<meta name="keywords" content="文化缺陷,个人原子化">
+<meta name="description" content="月牙博客:中国文化缺陷">
+</head>
+<body>
+	<div id="container">
+		<div id="hdr">
+		    <span id="logo">月牙博客</span>
+			<span id="subtitle">记录所思所想</span>
+		</div>
+		<div id="navbar">
+			
+		</div>
+		<div id="content">
+			<div id="lftcol">
+			    <p>《犬夜叉》 神无之死</p>
+				<p>忧思逢苦雨，人世叹徒然。<br>春色无暇赏，奈何花已残。</p><p style="text-align:right">—— 小野小町</p>
+			</div>
+			<div id="rgtcol">
+				<div id="article_title">
+					<h1>中国文化缺陷</h1>
+				</div>
+				<p>【中国文化缺陷•儒家政治制度设计的失败】</p>
+<p>唯一依靠血缘、亲情为纽带建立起来的社会关系，需要持续不断的生育繁衍，最终会人口与资源紧张。</p>
+<p>人口与资源紧张，这里面的资源在一段时间内是有限的，反过来是让社会竞争加剧，人与人就会关系紧张，社会矛盾激化。</p>
+<p>于此同时，陌生人之间会失去信任，人会主动往小圈子靠拢，会认为血缘型组织是最可靠的，是更加促进人口增长，直到引发社会崩溃。</p>
+<p>中国有改朝换代的传统，很大原因就来源于此。</p>
+<p>崩溃会有这么几点表现：</p>
+<p>1.年轻一代压力增大。</p>
+<p>生育繁衍压力，供养长辈（组织领导者）的压力会显现。</p>
+<p>2.生育率下降，组织崩溃，个人原子化，没有任何组织可以依靠。</p>
+<p>3.社会暴力流血事件增多。</p>
+<p>如何破解？</p>
+<p>1.非血缘型组织，主动适应陌生人社会；政党、兴趣俱乐部，交友团是选择途径。</p>
+<p>2.宗教信仰，自我节制欲望，以信仰为纽带的组织互帮互助，这里应该指出：以爱为名义的宗教是最好的。</p>
+<p>宗教型民主社会 会不会优于 世俗型民主社会？</p>
+			</div>
+			<div id="page-navigator">
+			</div>
+		</div>
+		<div id="footer">
+			<span>© 2023</span>
+		</div>
+	</div>
+	<script>
+	function loadDoc(url, str) {
+		  var xhttp;
+		  xhttp=new XMLHttpRequest();
+		  xhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+				try{
+					document.getElementById(str).innerHTML = xhttp.responseText; 
+				}catch (err){
+					console.log(err);
+				}finally{
+					document.getElementsByClassName(str)[0].innerHTML = xhttp.responseText;
+				}
+			}
+		  };
+		  xhttp.open("GET", url, true);
+		  xhttp.send();
+		}
+
+	loadDoc("/extra/menu.html", "navbar");
+	</script>
+	<script type="text/javascript" src="/extra/js/img.js"></script>
+</body>
+</html>

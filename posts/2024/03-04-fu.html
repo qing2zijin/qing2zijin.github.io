@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta name="viewport" content="width=device-width">
+<meta charset="utf-8">
+<title>关于人口与资源的思考</title>
+<link href="/extra/css/style20240202.css" rel="stylesheet" type="text/css" />
+<link rel="icon" href="/extra/favicon.ico"/>
+<meta name="keywords" content="思考">
+<meta name="description" content="月牙博客:关于人口与资源的思考">
+</head>
+<body>
+	<div id="container">
+		<div id="hdr">
+		    <span id="logo">月牙博客</span>
+			<span id="subtitle">记录所思所想</span>
+		</div>
+		<div id="navbar">
+			
+		</div>
+		<div id="content">
+			<div id="lftcol">
+			    <p>《犬夜叉》 神无之死</p>
+				<p>忧思逢苦雨，人世叹徒然。<br>春色无暇赏，奈何花已残。</p><p style="text-align:right">—— 小野小町</p>
+			</div>
+			<div id="rgtcol">
+				<div id="article_title">
+					<h1>关于人口与资源的思考</h1>
+				</div>
+				<div class="toc">
+<ul>
+<li><a href="#_1">阶级矛盾能彻底解决吗？</a><ul>
+<li><a href="#_2">资源困境</a></li>
+<li><a href="#_3">公共管理的影响</a></li>
+<li><a href="#_4">第三方的缺失</a></li>
+</ul>
+</li>
+<li><a href="#_5">苟活而已</a></li>
+</ul>
+</div>
+<h2 id="_1">阶级矛盾能彻底解决吗？</h2>
+<p>答案是不能，无解的问题，马尔萨斯陷阱依旧存在。</p>
+<h3 id="_2">资源困境</h3>
+<p>你应该明白，太阳恩泽大地，人类的能量消耗的上限就是太阳光能转化的10%（应该更少，毕竟有生物食物链存在，我只是表达这个意思），总的是有上限的，人类和非人类生物就是在竞争获取其中的资源，人类社会越发达，非人类动物过得越凄惨。</p>
+<h3 id="_3">公共管理的影响</h3>
+<p>人类的社会问题到底是分配问题，但是在一段时间内，自然资源是有限的。在竞争当中必然会有一些人得到的多，一些人得到的少；社会管理里面也是一部分人拥有权力，一部分人没有权力，有与无的哲学矛盾，在人类可见世界里面是没有单极事物存在的。</p>
+<h3 id="_4">第三方的缺失</h3>
+<p>人类在远古时代，人的力量和自然相比，人类弱，人们会本能的抱团取暖，集体管理很强；到了人类远离蒙昧的时代后，人的力量和自然相比，人类强，人们抱团取暖就显得没那么必要了，集体观念就没有多少了，今天人们拥有集体观念很大程度是由于战争和自然灾害，战争是人为的第三方，在和平年代，这个第三方就没有了。</p>
+<h2 id="_5">苟活而已</h2>
+<p>资本主义其实一种外表美好，内在肮脏的慢性的控制人口的经济制度罢了，现状是牺牲大自然和消灭异（国）族。</p>
+<p>共产主义是外表不好看的，但是人类和自然双赢的经济制度，意识形态上就是类似一神宗教，地球整体意识、国际人道主义意识。</p>
+			</div>
+			<div id="page-navigator">
+			</div>
+		</div>
+		<div id="footer">
+			<span>© 2023</span>
+		</div>
+	</div>
+	<script>
+	function loadDoc(url, str) {
+		  var xhttp;
+		  xhttp=new XMLHttpRequest();
+		  xhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+				try{
+					document.getElementById(str).innerHTML = xhttp.responseText; 
+				}catch (err){
+					console.log(err);
+				}finally{
+					document.getElementsByClassName(str)[0].innerHTML = xhttp.responseText;
+				}
+			}
+		  };
+		  xhttp.open("GET", url, true);
+		  xhttp.send();
+		}
+
+	loadDoc("/extra/menu.html", "navbar");
+	</script>
+	<script type="text/javascript" src="/extra/js/img.js"></script>
+</body>
+</html>
