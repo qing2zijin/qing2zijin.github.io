@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta name="viewport" content="width=device-width">
+<meta charset="utf-8">
+<title>【思辨日记系列 家国同构】</title>
+<link href="/extra/css/style20240202.css" rel="stylesheet" type="text/css" />
+<link rel="icon" href="/extra/favicon.ico"/>
+<meta name="keywords" content="家国">
+<meta name="description" content="月牙博客:【思辨日记系列 家国同构】">
+</head>
+<body>
+	<div id="container">
+		<div id="hdr">
+		    <span id="logo">月牙博客</span>
+			<span id="subtitle">记录所思所想</span>
+		</div>
+		<div id="navbar">
+			
+		</div>
+		<div id="content">
+			<div id="lftcol">
+			    <p>《犬夜叉》 神无之死</p>
+				<p>忧思逢苦雨，人世叹徒然。<br>春色无暇赏，奈何花已残。</p><p style="text-align:right">—— 小野小町</p>
+			</div>
+			<div id="rgtcol">
+				<div id="article_title">
+					<h1>【思辨日记系列 家国同构】</h1>
+				</div>
+				<p>中国人确确实实受到了家国同构的影响，认为国就是放大版的家，将家族长辈投影到政府上。在家里面，由于亲人之间存在着很强的情感联系，可以偶尔犯错，大家可以容忍，但是在国家层面或者说政府层面就会是错误的。按照家的逻辑推广到国的层面，大家应该有福同享，有难同当，不应该有如此大的贫富差距；现实是政府官员与民众势如水火，差强人意。</p>
+<p>所以说家国不能同构，更不能一体，家是个人小集体，而国是公域，不能乱认，关于家是否为私域问题，家可以是私域也可以不是，关键在于小集体里面的个体之间如何达成默契了。家国同构的后果就是混淆了公私概念，容易倡导公有而不是划分彼此的私有，而且也模糊了个人在社会中的定位，整个社会缺乏公德心，一直就是以孩子心态看待政府。</p>
+<p>家国同构不分彼此，个人产权责任不明晰，倡导做蛋糕，而不注重分蛋糕，最终使整个社会离心离德，很容易依赖强势政府从中调解，有点像孩子间打架，找长辈调解。</p>
+<p>家国同构会让中国人长不大，不倡导独立，是不利于中国人的，同时不利于市场经济的发展，因为市场经济特别强调理性、产权、法治，而家国同构会出现强势政府，不利于市场公平，也不利于底层民众的团结。</p>
+			</div>
+			<div id="page-navigator">
+			</div>
+		</div>
+		<div id="footer">
+			<span>© 2023</span>
+		</div>
+	</div>
+	<script>
+	function loadDoc(url, str) {
+		  var xhttp;
+		  xhttp=new XMLHttpRequest();
+		  xhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+				try{
+					document.getElementById(str).innerHTML = xhttp.responseText; 
+				}catch (err){
+					console.log(err);
+				}finally{
+					document.getElementsByClassName(str)[0].innerHTML = xhttp.responseText;
+				}
+			}
+		  };
+		  xhttp.open("GET", url, true);
+		  xhttp.send();
+		}
+
+	loadDoc("/extra/menu.html", "navbar");
+	</script>
+	<script type="text/javascript" src="/extra/js/img.js"></script>
+</body>
+</html>
