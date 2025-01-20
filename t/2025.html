@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta name="viewport" content="width=device-width">
+<meta charset="utf-8">
+<title>个人日志_2025</title>
+<link href="/extra/css/style20240202.css" rel="stylesheet" type="text/css" />
+<link rel="icon" href="/extra/favicon.ico"/>
+</head>
+<body>
+	<div id="container">
+		<div id="hdr">
+		    <span id="logo">月牙博客</span>
+			<span id="subtitle">记录所思所想</span>
+		</div>
+		<div id="navbar">
+			
+		</div>
+		<div id="content">
+			<div id="lftcol">
+			    <!-- <p>《犬夜叉》 神无之死</p> -->
+				<!-- <p>忧思逢苦雨，人世叹徒然。<br>春色无暇赏，奈何花已残。</p><p style="text-align:right">—— 小野小町</p> -->
+				<p>吾爱吾师，吾更爱真理。</p>
+				<p style="text-align:right">——亚里士多德</p>
+			</div>
+			<div id="rgtcol">
+				<div class="post-time">2025-01-15</div>
+            <div class="post-entry">
+                <div class="post-title">
+					<h3>《论语》思想无法普及的原因</h3>
+				</div>
+				<div class="post-desc">原因还是很多的。<br>1.论语的落脚点就是社会秩序，是整体的，不是个人的，对个人而言是没有多少吸引力；社会再乱，也会有侥幸者过得很舒服。<br>2.维系社会的出发点就有问题，并不是让多数人参与，而是贵族精英带领的方式，忽视社会团体，理想色彩浓厚。<br>3.孔子不谈论生死，缺少彼岸世界观，对底层民众的吸引力极其有限。<br>4.道德说得太多，利益问题涉及少，对底层民众的吸引力极其有限；提倡德治，将底层民众驱逐出政治舞台。<br>5.小帮派文化色彩浓厚，反而容易制造社会分裂；原因在于孔子知天却不谈论天对于个人的作用，只是讲述天礼这一社会秩序，那么民众必然离开上天，社会秩序就无从谈起，就好像建房子先要打地基，但是孔子却是在建立一座没有地基的房子，只能是空中楼阁，这一点在诸子百家的著作中也都有体现。当然也第3点有联系。<br>6.正如第3点所说，缺少彼岸世界观；仁义道德的吸引力就会大打折扣。</div>
+			</div>
+            
+			</div>
+			<div id="page-navigator">
+			</div>
+		</div>
+		<div id="footer">
+			<span>© 2023</span>
+		</div>
+	</div>
+	<script>
+		function loadDoc(url, str) {
+			  var xhttp;
+			  xhttp=new XMLHttpRequest();
+			  xhttp.onreadystatechange = function() {
+				if (this.readyState == 4 && this.status == 200) {
+					try{
+						document.getElementById(str).innerHTML = xhttp.responseText; 
+					}catch (err){
+						console.log(err);
+					}finally{
+						document.getElementsByClassName(str)[0].innerHTML = xhttp.responseText;
+					}
+				}
+			  };
+			  xhttp.open("GET", url, true);
+			  xhttp.send();
+			}
+
+		loadDoc("/extra/menu.html", "navbar");
+	</script>
+</body>
+</html>
