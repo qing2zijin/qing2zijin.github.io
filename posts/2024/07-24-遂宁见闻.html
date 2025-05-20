@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta name="viewport" content="width=device-width">
+<meta charset="utf-8">
+<title>遂宁见闻</title>
+<link href="/extra/css/style20240202.css" rel="stylesheet" type="text/css" />
+<link rel="icon" href="/extra/favicon.ico"/>
+<meta name="keywords" content="遂宁、见闻">
+<meta name="description" content="遂宁见闻">
+</head>
+<body>
+	<div id="container">
+		<div id="hdr">
+		    <span id="logo">月牙博客</span>
+			<span id="subtitle">记录所思所想</span>
+		</div>
+		<div id="navbar">
+			
+		</div>
+		<div id="content">
+			<div id="lftcol">
+			   <!--  <p>《犬夜叉》 神无之死</p>
+				<p>忧思逢苦雨，人世叹徒然。<br>春色无暇赏，奈何花已残。</p><p style="text-align:right">—— 小野小町</p> -->
+				<p>吾爱吾师，吾更爱真理。</p>
+				<p style="text-align:right">——亚里士多德</p>
+			</div>
+			<div id="rgtcol">
+				<div id="article_title">
+					<h1>遂宁见闻</h1>
+				</div>
+				<p>今天，到超市里去采购生活物资，路过购物街，发现与之前不一样的状况，现在的街道上孩子是真多，街溜子也多，外卖员也是非常多，移动小商贩也很多，这和两年前的景象完全不同，这真实能够反映经济状况的。</p>
+<p>1.外卖人员多，首先说明，遂宁市城区的制造中心在市区角落，和市中心很远，招工App也有很多招聘信息，说明了两点：<br>【1】工厂生活单调、压抑，不符合劳动者的工作要求，送外卖更自由。<br>【2】送外卖挣的钱一点也不比上流水线的挣得少，工人有更多的选择。</p>
+<p>2.街上孩子多。小孩多，应运而生的便是专门针对小孩的商铺增多，以往针对成年人的商铺基本关闭，购物街名存实亡。街上带孩子的往往是母亲、奶奶，男性缺失，而且星期六、星期天都是如此，说明了什么？有可能这些人根本没有休息日，也可能是前面提到的工人家属，但是这里离制造区太远，不太可能，只能是男性外出打工最有可能。</p>
+<p>3.街上街溜子多。政府保安、特警严防死守，阵势吓人，像是要发生什么，临危受命？不知道这些街溜子是失业的中产？还是工厂仔？看外表是看不出来的，都是白白净净的，但是可以肯定不是工地仔。</p>
+<p>4.移动小商贩多。这很好判断，就业困难，经济有问题，人们开发新赛道，只为了活着。</p>
+<p>总而言之，失业的很多是中产，寻常时节的“人上人”群体，为何看起来如此凄凉？</p>
+			</div>
+			<div id="page-navigator">
+			</div>
+		</div>
+		<div id="footer">
+			<span>© 2023</span>
+		</div>
+	</div>
+	<script>
+	function loadDoc(url, str) {
+		  var xhttp;
+		  xhttp=new XMLHttpRequest();
+		  xhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+				try{
+					document.getElementById(str).innerHTML = xhttp.responseText; 
+				}catch (err){
+					console.log(err);
+				}finally{
+					document.getElementsByClassName(str)[0].innerHTML = xhttp.responseText;
+				}
+			}
+		  };
+		  xhttp.open("GET", url, true);
+		  xhttp.send();
+		}
+
+	loadDoc("/extra/menu.html", "navbar");
+	</script>
+	<script type="text/javascript" src="/extra/js/img.js"></script>
+</body>
+</html>
