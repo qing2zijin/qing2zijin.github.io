@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta name="viewport" content="width=device-width">
+<meta charset="utf-8">
+<title>孔子的乌托邦</title>
+<link href="/extra/css/style20240202.css" rel="stylesheet" type="text/css" />
+<link rel="icon" href="/extra/favicon.ico"/>
+<meta name="keywords" content="孔子,乌托邦">
+<meta name="description" content="孔子的乌托邦">
+</head>
+<body>
+	<div id="container">
+		<div id="hdr">
+		    <span id="logo">月牙博客</span>
+			<span id="subtitle">记录所思所想</span>
+		</div>
+		<div id="navbar">
+			
+		</div>
+		<div id="content">
+			<div id="lftcol">
+			   <!--  <p>《犬夜叉》 神无之死</p>
+				<p>忧思逢苦雨，人世叹徒然。<br>春色无暇赏，奈何花已残。</p><p style="text-align:right">—— 小野小町</p> -->
+				<p>吾爱吾师，吾更爱真理。</p>
+				<p style="text-align:right">——亚里士多德</p>
+			</div>
+			<div id="rgtcol">
+				<div id="article_title">
+					<h1>孔子的乌托邦</h1>
+				</div>
+				<p>细品《论语》知晓社会百态，这是很多中国人潜意识里面的东西，论语中涉及：</p>
+<ol>
+<li>道德。仁义信忠孝</li>
+<li>行为规范。礼</li>
+<li>宗教。一王天子教</li>
+<li>言行实践观。观察言行，知人识人。</li>
+<li>人性思考。习相远，上德、下愚。</li>
+<li>心性。中庸。</li>
+</ol>
+<p>整体上看待《论语》，问题有这些：</p>
+<p>首先是宗教，缺乏对人精神的考察，盲目复古，照搬夏商与西周经验，认为人们相信天，但是从历史史料上可知，那个时代的人根本就不相信神灵，上天一词取代上帝，虚化神格，无法演变成信仰。而中庸思想强调可知守中，直接斩断宗教的根，也就阻碍了底层民众团结的可能，与此同时，阻碍了科学思想的萌芽。</p>
+<p>其次是底层需求的漠视。鼓吹君子，空谈道德，制造老实人，重义轻利，缺乏对人物质需求的考察。</p>
+<p>然后是强调忠孝，人为制造价值观念，情感绑架，家国同构，儒家沦为礼教，为商鞅的耕战术、弱民法的实施奠定了基础。</p>
+<p>最后，虽有仁爱观，但是在没有社会保障的情形下，这样的主张是没用的，而且人是能自由思考，人心隔肚皮，让“老实人”吃亏。有教无类没有问题，但是过于强调老师的重要性，不鼓励学生大胆发言，孔子之后，上层文化与中下层的需求不适应。</p>
+<p>过于强调家庭，以此为根基，天下为家，社会呈现撕裂状态。强调遵老及上下尊卑，文化上造成社会暮气沉沉、没活力。</p>
+<p><strong>相关文章</strong></p>
+<p><a href="/posts/Philosophical_thinking/2024-07-18-%E5%AE%B6%E5%9B%BD%E8%AF%9D%E9%A2%98.html">家国话题</a></p>
+<p><a href="/study/%E8%AE%BA%E8%AF%AD%E6%96%B0%E7%BC%96.html">论语新编</a></p>
+<p><a href="/posts/2024/04-09-lun-yu-jing-xuan.html">论语精选</a></p>
+			</div>
+			<div id="page-navigator">
+			</div>
+		</div>
+		<div id="footer">
+			<span>© 2023</span>
+		</div>
+	</div>
+	<script>
+	function loadDoc(url, str) {
+		  var xhttp;
+		  xhttp=new XMLHttpRequest();
+		  xhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+				try{
+					document.getElementById(str).innerHTML = xhttp.responseText; 
+				}catch (err){
+					console.log(err);
+				}finally{
+					document.getElementsByClassName(str)[0].innerHTML = xhttp.responseText;
+				}
+			}
+		  };
+		  xhttp.open("GET", url, true);
+		  xhttp.send();
+		}
+
+	loadDoc("/extra/menu.html", "navbar");
+	</script>
+	<script type="text/javascript" src="/extra/js/img.js"></script>
+</body>
+</html>

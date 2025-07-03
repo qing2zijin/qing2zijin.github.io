@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta name="viewport" content="width=device-width">
+<meta charset="utf-8">
+<title>信仰之力</title>
+<link href="/extra/css/style20240202.css" rel="stylesheet" type="text/css" />
+<link rel="icon" href="/extra/favicon.ico"/>
+<meta name="keywords" content="信仰">
+<meta name="description" content="信仰之力">
+</head>
+<body>
+	<div id="container">
+		<div id="hdr">
+		    <span id="logo">月牙博客</span>
+			<span id="subtitle">记录所思所想</span>
+		</div>
+		<div id="navbar">
+			
+		</div>
+		<div id="content">
+			<div id="lftcol">
+			   <!--  <p>《犬夜叉》 神无之死</p>
+				<p>忧思逢苦雨，人世叹徒然。<br>春色无暇赏，奈何花已残。</p><p style="text-align:right">—— 小野小町</p> -->
+				<p>吾爱吾师，吾更爱真理。</p>
+				<p style="text-align:right">——亚里士多德</p>
+			</div>
+			<div id="rgtcol">
+				<div id="article_title">
+					<h1>信仰之力</h1>
+				</div>
+				<p>关于一神教的解读，确实是很有意思的，比如基督教，旧约上说，女人在蛇的引诱下，期满神，和男人一起偷吃了神树上面的智慧国，后被发现，遭驱逐出伊甸园。这里以无神论的角度来解读就是女人容易受到引诱，相对于男人而言，从侧面肯定男权大于女权；在解读整个伊甸园传说时候，强调了信仰的重要性，神面前人人有罪，肯定自身的不足，让人谦卑。</p>
+<p><em>2025.3.14解释就是，人们容易忽视正义，丢失自己的社会责任，告诉人们不要搭便车。</em></p>
+<p>在圣经旧约里面的善恶问题被简化了，因信得善，确实有些牵强，因为有的人没有信仰照样善良，这其实和家庭环境息息相关；不过，由此可知有信仰者在独处之时的表现是优于无信仰者。</p>
+<p>抛开神学思考，考察背后的历史也可以知道旧约更偏近“奴隶”社会，是犹太人的苦难遭遇。在伊甸园中是喜剧的，赶出伊甸园之后是悲剧的，是堕落、忏悔、救赎的基调，而新约是旧约结局的高潮，弥赛亚出现了！新约内容偏向于封建社会，由耶稣受难为标志，对个人而言就是转悲剧为喜剧，当然喜剧的出现也是需要不断努力才能获取的。新约对旧约进行了更新，平等、博爱是新约的核心之一。</p>
+<p>在喜剧-悲剧-喜剧的转变过程中，有向内求取，也有向外求取的方式。向内忏悔，向外斗争，本身就很好，但是在新约的后几篇内容涉及政治、社会改造思想即方法论，是向外求取，对于有良知的人而言并无关系，有坏心思的就蠢蠢欲动了，忏悔的意义就没有意义了。善恶问题被简化，历史上发生多次“十字军东征”就不难理解了。不过，中庸本身就是很难的事情，做适宜的举动在于先要理解多少才适宜。</p>
+			</div>
+			<div id="page-navigator">
+			</div>
+		</div>
+		<div id="footer">
+			<span>© 2023</span>
+		</div>
+	</div>
+	<script>
+	function loadDoc(url, str) {
+		  var xhttp;
+		  xhttp=new XMLHttpRequest();
+		  xhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+				try{
+					document.getElementById(str).innerHTML = xhttp.responseText; 
+				}catch (err){
+					console.log(err);
+				}finally{
+					document.getElementsByClassName(str)[0].innerHTML = xhttp.responseText;
+				}
+			}
+		  };
+		  xhttp.open("GET", url, true);
+		  xhttp.send();
+		}
+
+	loadDoc("/extra/menu.html", "navbar");
+	</script>
+	<script type="text/javascript" src="/extra/js/img.js"></script>
+</body>
+</html>
