@@ -25,6 +25,13 @@
 	pre{ padding:0.5em; border:1px dashed; overflow:auto}
 	code{font-size:1.1em}
 	pre, code{border-radius:10px;background-color:#f1ecec; color:black}
+	@media screen and (max-width:960px){
+		body{font-size:12px}
+		h1{font-size:1.2em}
+		h2{font-size:1em}
+		h3{font-size:1em}
+		body{padding:1em}
+	}
 </style>
 </head>
 <body>
@@ -36,7 +43,7 @@
 
 <!-- 基础科学 -->
 <div class="mokuai">
-	<h2>理论基础</h2>
+	<h2 id="theory">理论基础</h2>
 	<ol>
 		<li><a href="https://www.bilibili.com/video/BV1hC4y1f7BF" target="_blank">基础物理（耶鲁大学）1080p高清修复（全集）</a>、<a href="https://www.bilibili.com/video/BV1nV411j7M9" target="_blank">【公开课】麻省理工学院：电和磁（全35讲）</a></li>
 		<li><a href="https://www.bilibili.com/video/BV1dK4y1n7Yh" target="_blank">【公开课-104集全】可汗学院：基础化学</a></li>
@@ -45,7 +52,7 @@
 
 <!-- 电子电气 -->
 <div class="mokuai">
-	<h2>电气</h2>
+	<h2 id="electricity">电气</h2>
 		<ol>
 			<li><a href="https://www.bilibili.com/video/BV1NR4y1W7bK" target="_blank">电气控制技术与PLC入门精讲</a>，Bilibili</li>
 			<li><a href="https://www.bilibili.com/video/BV1Ks411u7ib" target="_blank">东南大学 可编程控制器（共40讲）</a>，Bilibili</li>
@@ -66,21 +73,22 @@
 
 <!-- c/c++ Go Java PHP 服务器-->
 <div class="mokuai">
-	<h2>C/C++:</h2>
+	<h2 id="computer">计算机语言</h2>
+	<h3>C/C++:</h3>
 		<p>&nbsp;&nbsp;<a href="http://runoob.com/cplusplus/cpp-tutorial.html" target="_blank">菜鸟教程：C++</a>&nbsp;&nbsp;<a href="https://c-cpp.com" target="_blank">C语言|C++中文网：参考手册</a>&nbsp;&nbsp;<a href="https://wangdoc.com/clang" target="_blank">网道：C语言教程</a>&nbsp;&nbsp;</p>
 	
 		<p>&nbsp;&nbsp;<a href="https://www.cnblogs.com/dongry/articles/10210609.html" target="_blank">静态链表C语言实例</a>&nbsp;&nbsp;<a href="https://www.cnblogs.com/dongry/p/" target="_blank">基于C语言编写的数据结构的实例【dongry】</a></p>
 		
-    <br/><h2>Golang/Go:</h2>
+    <br/><h3>Golang/Go:</h3>
 		<p>&nbsp;&nbsp;<b><a href="http://runoob.com/go/go-tutorial.html" target="_blank">菜鸟教程：Go</a></b>&nbsp;&nbsp;</p> 
 
-	<br/><h2>Java:</h2>
+	<br/><h3>Java:</h3>
 		<p>&nbsp;&nbsp;<a href="http://runoob.com/java/java-tutorial.html" target="_blank">菜鸟教程：Java</a>&nbsp;&nbsp;</p>
 	
-	<br/><h2>PHP:</h2>
+	<br/><h3>PHP:</h3>
 		<p>&nbsp;&nbsp;<a href="http://runoob.com/php/php-tutorial.html" target="_blank">菜鸟教程：PHP</a>&nbsp;&nbsp;</p>
 	
-	<br/><h2>服务器:</h2>
+	<br/><h3>服务器:</h3>
 		<p>&nbsp;&nbsp;<a href="https://wangdoc.com/bash" target="_blank">网道：Bash脚本教程</a>&nbsp;&nbsp;</p>
 		<p>&nbsp;&nbsp;<a href="http://baijiahao.baidu.com/s?id=1681306919565244742" target="_blank">如何使用Apache Web服务器来安装和配置网站？</a>（推荐使用phpstudy，操作简单。）</p>
 </div>
@@ -88,7 +96,7 @@
 
 <!-- python -->
 <div class="mokuai">
-	<h2>Python:</h2>
+	<h3>Python:</h3>
 	<ol>
 		<li><strong><a href="http://runoob.com/python/python-tutorial.html" target="_blank">菜鸟教程：Python</a></strong></li>
 		<li><a href = "https://docs.python.org/zh-cn/3/" target="_blank" >Python 3.10.4 Documentation</a></li>
@@ -134,7 +142,7 @@
 
 <!-- HTML -->
 <div class="mokuai">
-	<h2>网页</h2>
+	<h3>网页</h3>
 	<p><a href="https://www.cnblogs.com/panwudi/p/16076379.html" target="_blank">性能优化Lazy-Load懒加载(网页需滑动才起效):  </a>
 	<br>代码优化：在中间<code>imgs[i].src = imgs[i].getAttribute('data-src')</code>改成：
 	<pre><code>if (imgs[i].hasAttribute('data-src') ){ 		
@@ -150,9 +158,20 @@ imgs[i].src = imgs[i].getAttribute('data-src')
 
 <!-- json -->
 <div class="mokuai">
-	<h2>Json</h2>
+	<h3>Json</h3>
 	<p> <a href="https://pythonjishu.com/xfwgayzkakajdtl" target="_blank">json文件书写格式详解</a>
 	</p>
 </div>
+
+<!-- git -->
+<div class="mokuai">
+	<h3>Git</h3>
+	<ol>
+		<!-- <li></li> -->
+		<li><a href="https://blog.csdn.net/m0_74075298/article/details/127224691" target="_blank">use git on the termux</a>（在Termux上使用git将项目提交到github）</li>
+		<li><a href="https://blog.csdn.net/ff186345/article/details/104533879" target="_blank">error: src refspec master does not match any</a>（Git常见错误与操作：error: src refspec master does not match any解决办法）</li>
+	</ol>
+</div>
+ <p>返回<a href="../index.html">上一页</a></p>
 </body>
 </html>
