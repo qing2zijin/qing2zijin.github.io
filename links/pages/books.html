@@ -12,7 +12,7 @@
 	h2{font-size:1.2em}
 	h3{font-size:1em}
 	h1, h2, h3{margin-bottom:1em}
-	.mokuai{margin-bottom:30px;padding:10px;border:1px dashed;border-radius:3px;font-size:92%}
+	.mokuai{margin-bottom:30px;padding:10px;border:1px dashed;border-radius:5px;font-size:92%}
 	.mokuai ol{margin-left:40px}
 	.mokuai ul{margin-left:40px}
 	.mokuai li{margin:0 0 10px 0}
@@ -20,7 +20,7 @@
 	a:visited{color:gray}
 	a:hover{color:green}
 	a:active{color:yellow} 
-	p{line-height:1.5;margin-bottom:0.5em}
+	p{line-height:1.8;margin:0.25em 0 0.25em 0;}
 	pre{ padding:0.5em; border:1px dashed; overflow:auto}
 	code{font-size:1.1em}
 	pre, code{border-radius:10px;background-color:#f1ecec; color:black}
@@ -37,18 +37,44 @@
  <!--文章标题-->
  <h1 style="text-align:center">书籍</h1>
  <!--文章内容-->
-
 <!-- 2025.6.26 -->
-
 <!-- 2025.4.28 -->
-
-
 <!-- -------------------------------------------------------------------- -->
+<p>返回<a href="../index.html">上一页</a></p><br>
 
+<!-- 目录 -->
 <div class="mokuai">
+<p>目录<span style="font-size:80%">（二次点击消失）</span></p><br>
+
+	<p>&nbsp;&nbsp;思想学派：
+		<a href="#" onclick='toggleDisplay("道家")'>道家</a>
+		&nbsp;&nbsp;<a href="#" onclick='toggleDisplay("名家")'>名家</a>
+		&nbsp;&nbsp;<a href="#" onclick='toggleDisplay("儒家")'>儒家</a>
+		&nbsp;&nbsp;<a href="#" onclick='toggleDisplay("法家")'>法家</a>
+	</p><br>
+	
+	<p>&nbsp;&nbsp;具备宗教特质的学说：
+		<a href="#" onclick='toggleDisplay("墨家")'>墨家</a>
+		&nbsp;&nbsp;<a href="#" onclick='toggleDisplay("佛教")'>佛教</a>
+		&nbsp;&nbsp;<a href="#" onclick='toggleDisplay("中东三教")'>中东三教</a>
+	</p><br>
+	
+	<p>&nbsp;&nbsp;<a href="#" onclick='toggleDisplay("历史")'>历史</a></p><br>
+	
+	<p>&nbsp;&nbsp;<a href="#" onclick='toggleDisplay("参考书库")'>参考书库</a></p>
+</div>
+
+<!-- 参考书库 -->
+<div class="mokuai" id="参考书库" style="display:none">
+<p>参考书库：<a href="https://www.gushiwen.cn/guwen/" target="_blank">古诗文库</a>&nbsp;&nbsp;<a href="https://www.guoxuemeng.com/guoxue/zi/" target="_blank">子部-国学经典</a>&nbsp;&nbsp;</p>
+</div>
+
+<!-- 道家 -->
+<div class="mokuai" id="道家" style="display:none">
 	<p>道家：<a href="https://www.guoxuemeng.com/guoxue/7150.html" target="_blank">《杨朱》</a>、
 		<a href="https://www.guoxuemeng.com/guoxue/laozi/" target="_blank">《老子》</a>、
-		<a href="https://www.guoxuemeng.com/guoxue/liezi/" target="_blank">《列子》</a>、<a href="https://www.guoxuemeng.com/guoxue/zhuangzi/" target="_blank">《庄子》</a>、
+		<a href="https://www.guoxuemeng.com/guoxue/liezi/" target="_blank">《列子》</a>、
+		<a href="https://www.guoxuemeng.com/guoxue/zhuangzi/" target="_blank">《庄子》</a>、
 		<a href="https://www.guoxuemeng.com/guoxue/baopuzi/" target="_blank">《抱朴子》</a>、
 		<a href="https://www.gushiwen.cn/guwen/book_bfcc9d090ed5.aspx" target="_blank">《淮南子》</a>
 	</p>
@@ -57,33 +83,83 @@
 		<a href="https://www.daorenjia.com/daozang22-1099" target="_blank">《太虚心渊篇》</a>、
 		<a href="https://www.daorenjia.com/daozang22-1088" target="_blank">《坐忘论》</a>
 	</p>
-		
-	<p>名家：<a href="https://www.guoxuemeng.com/guoxue/gongsunlongzi/" target="_blank">《公孙龙子》</a>、
-		<a href="http://www.guoxue.com/book/zhuangzi/0033.htm" target="_blank">《惠施 历物十事》</a>
-	</p>
-	
-	<p>墨家：<a href="https://www.guoxuemeng.com/guoxue/mozi/" target="_blank">《墨子》</a>、<b><a href="https://www.guoxuemeng.com/guoxue/12377.html" target="_blank">《墨家·修身》</a></b>（必须强调<b>选天子</b>这一概念，否则就有专制的嫌疑）</p>
 </div>
 
-<!-- -------------------------------------------------------------------- -->
+<!-- 名家 -->
+<div class="mokuai" id="名家" style="display:none">	
+	<p>名家：<a href="https://www.guoxuemeng.com/guoxue/gongsunlongzi/" target="_blank">《公孙龙子》</a>、
+		<a href="http://www.guoxue.com/book/zhuangzi/0033.htm" target="_blank">《惠施 历物十事》</a>、
+		<a href="https://www.gushiwen.cn/guwen/book_78fb1d598723.aspx" target="_blank">《尹文子》</a>、
+		<a href="https://www.guoxuemeng.com/guoxue/dengxizi/" target="_blank">《邓析子》</a>（可以划归到法家，涉及权势问题）
+	</p>
+</div>
 
-<div class="mokuai">
-	<p>佛教：<a href="http://www.shixiu.net/dujing/fojing/ahanbu/1509.html" target="_blank">《缘起经》</a>、
-		<a href="https://www.gushicimingju.com/dianji/miaofalianhuajing/" target="_blank">《妙法莲华经》</a>、
-		<a href="https://www.gushicimingju.com/dianji/xinjing/" target="_blank">《般若波罗蜜多心经》</a>、
+<!-- 墨家 -->
+<div class="mokuai" id="墨家" style="display:none">
+	<!-- <p>墨家：<a href="https://www.guoxuemeng.com/guoxue/mozi/" target="_blank">《墨子》</a>_<a href="https://www.gushiwen.cn/guwen/book_1a02b10fe543.aspx" target="_blank">备用链接</a>、<b><a href="https://www.guoxuemeng.com/guoxue/12377.html" target="_blank">《墨家·修身》</a></b>（必须强调<b>选天子</b>）</p> -->
+	<p>墨家：
+		<a href="mojia/mojia_goodideal.html" target="_blank">战国墨家优秀价值：所染与修身篇</a>、&nbsp;
+		<a href="mojia/mojia.html" target="_blank">墨家简介</a>、&nbsp;
+		<a href="https://www.guoxuemeng.com/guoxue/mozi/" target="_blank">《墨子》书籍</a>、&nbsp;
+		<a href="https://jssword.neocities.org" target="_blank">neocities网络空间中关于墨家的简介</a>
+	</p>
+</div>
+
+<!-- 佛教 -->
+<div class="mokuai" id="佛教" style="display:none">
+	<p>佛教：
+		<b><a href="#" onclick='toggleDisplay("心经")'>冥想</a></b>、
+		<a href="http://www.shixiu.net/dujing/fojing/ahanbu/1509.html" target="_blank">《缘起经》</a>、
+		<a href="https://www.gushicimingju.com/dianji/xinjing/7649.html" target="_blank">《般若波罗蜜多心经》</a>、
 		<a href="https://www.gushicimingju.com/dianji/jingangjing/" target="_blank">《金刚般若波罗蜜经》</a>、
 		<a href="http://www.shixiu.net/dujing/fojing/zg-yj/3063.html" target="_blank">《大乘五蕴论》</a>、
-		<a href="https://www.quanxue.cn/ct_fojia/zhonglunindex.html" target="_blank">《中论》</a>
+		<a href="https://www.quanxue.cn/ct_fojia/zhonglunindex.html" target="_blank">《中论》</a>、
+		<a href="https://www.gushicimingju.com/dianji/miaofalianhuajing/" target="_blank">《妙法莲华经》</a>
 	</p>
-	<p>基督教：<a href="http://www.chinesebibleonline.com/" target="_blank">《圣经》</a></p>
-	<p>伊斯兰教：<a href="https://chinese-tafsir.com/app/sura/1" target="_blank">《古兰经》</a></p>
+	
+	<div class="mokuai" style="display:none" id="心经">
+		<p>《般若波罗蜜多心经》</p><br>
+		<p>&nbsp;&nbsp;观自在菩萨，行深般若波罗蜜多时，照见五蕴皆空，度一切苦厄。</p><br>
+		<p>&nbsp;&nbsp;舍利子，色不异空，空不异色，色即是空，空即是色，受想行识，亦复如是。</p><br>
+		<p>&nbsp;&nbsp;舍利子，是诸法空相，不生不灭，不垢不净，不增不减。是故空中无色，无受想行识，无眼耳鼻舌身意，无色声香味触法，无眼界，乃至无意识界。无无明，亦无无明尽，乃至无老死，亦无老死尽。无苦集灭道，无智亦无得。</p><br>
+		<p>&nbsp;&nbsp;以无所得故，菩提萨埵，依般若波罗蜜多故，心无挂碍，无挂碍故，无有恐怖，远离颠倒梦想，究竟涅槃。</p><br>
+		<p>&nbsp;&nbsp;三世诸佛，依般若波罗蜜多故，得阿耨多罗三藐三菩提。故知般若波罗蜜多，是大神咒，是大明咒，是无上咒，是无等等咒，能除一切苦，真实不虚。</p><br>
+		<p>&nbsp;&nbsp;故说般若波罗蜜多咒，即说咒曰：揭谛揭谛，波罗揭谛，波罗僧揭谛，菩提萨婆诃。</p><br><br>
+		
+		<p>《金刚般若波罗蜜经》节选：</p><br>
+		<p>&nbsp;&nbsp;一切有为法 如梦幻泡影</p>
+　　		<p>&nbsp;&nbsp;如露亦如电 应作如是观</p><br><br>
+		
+		<p>读的时候：<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>要幻想自己像一颗光量子在太阳系中穿梭；要幻想自己像鱼儿一样在莲花池中游玩，<br><br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;鱼儿跃出水面；要幻想自己像莲花一样，花开花谢。要保持腹中空空状态，<br><br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;五官处于相融状态，以至于，无五官感知状态，身体像蒲公英的绒毛随风一样飘荡，<br><br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;水滴滴落发出滴答地声音，这一切如梦幻泡影，以至于终极寂静。</b>
+		</p><br><br>
+		<p>一、光之纪行</p>
+		<p>&nbsp;&nbsp;想象你是一束氦离子，正穿越猎户座大星云。</p>
+		<p>&nbsp;&nbsp;气态尘埃拂过你的"皮肤"，其实你并无皮肤——你只是光，只是存在，只是宇宙打了个喷嚏。</p>
+		<p>二、莲池禅机</p>
+		<p>&nbsp;&nbsp;现在你化作一尾锦鲤，鳞片是未写完的梵文。莲花瓣落下时，你突然明白：所谓"游"，不过是水在游自己。</p>
+		<p>三、草木宣言</p>
+		<p>&nbsp;&nbsp;你是一株蒲公英的绒毛，被风选中去远方。泥土在下面喊："记得回家！"可你的家，是整片草原的遗忘。...</p>
+		<p>&nbsp;&nbsp;（此处省略9个冥想场景）...</p>
+		<p>十二、寂静终章</p>
+		<p>&nbsp;&nbsp;现在你连"你"都忘记了。风在吹你，其实风在吹它自己。虚空开始咳嗽，抖落出许多个——崭新的你。</p>
+	</div>
+	
 </div>
 
-<!-- -------------------------------------------------------------------- -->
+<!-- 中东三教 -->
+<div class="mokuai" id="中东三教" style="display:none">	
+	<p>中东三教：此二者难以接受，容易造成心理压力，故而不看</p>
+	<p>&nbsp;&nbsp;犹太教：《托拉》，狭义上指《旧约》的首五卷（犹太人不称旧约）</p>
+	<p>&nbsp;&nbsp;基督教：<a href="http://www.chinesebibleonline.com/" target="_blank">《圣经》</a></p>
+	<p>&nbsp;&nbsp;伊斯兰教：<a href="https://chinese-tafsir.com/app/sura/1" target="_blank">《古兰经》</a></p>
+</div>
 
-<div class="mokuai">
+<!-- 儒家 -->
+<div class="mokuai" id="儒家" style="display:none">
 	<p>儒家：</p>
-	
 		<p>&nbsp;<b><a href="https://www.gushiwen.cn/gushi/chuci.aspx" target="_blank">《楚辞》</a></b>、
 			<a href="https://www.guoxuemeng.com/guoxue/shijing/" target="_blank">《诗经》</a>、
 			<a href="https://www.guoxuemeng.com/guoxue/shangshu/" target="_blank">《尚书》</a>、
@@ -104,69 +180,68 @@
 		<p>&nbsp;<a href="https://www.guoxuemeng.com/guoxue/yantielun/" target="_blank">《盐铁论》</a>（国营经济与民营经济矛盾，反映法家与儒家之争，成书于西汉）</p>
 		<p>&nbsp;宋明理学：</p>
 		<p>&nbsp;&nbsp;<a href="https://www.guoxuemeng.com/guoxue/jinsilu/" target="_blank">《近思录》</a>、
-		   <a href="https://www.gushiwen.cn/guwen/book_fbeb88b6373e.aspx" target="_blank">《四书章句集注》</a></p>
+		   <a href="https://www.gushiwen.cnhttps://www.gushiwen.cn/guwen/book_fbeb88b6373e.aspx" target="_blank">《四书章句集注》</a></p>
 		<p>&nbsp;阳明心学：</p>
 		<p>&nbsp;&nbsp;<a href="https://www.quanxue.cn/ct_rujia/daxuewindex.html" target="_blank">《大学问》</a></p>
-</div>	
+		
+	<div class="mokuai">
+		<p>《孟子》中关于天（上帝）的描述在具体章节：<br>
+				&nbsp;&nbsp;1.梁惠王章句下--天降下民，作之君，作之师，惟曰其助上帝宠之四方<br>
+				&nbsp;&nbsp;2.公孙丑章句上--永言配命，自求多福<br>
+				&nbsp;&nbsp;3.离娄章句上--虽有恶人，斋戒沐浴，则可以祀上帝<br>
+				&nbsp;&nbsp;4.离娄章句下--诚者，天之道也；思诚者，人之道也<br>
+				&nbsp;&nbsp;5.万章章句上--天视自我民视，天听自我民听<br>
+				&nbsp;&nbsp;6.尽心章句上--尽其心者，知其性也；知其性，则知天矣
+		</p>
+		<p>《孟子》中关于正气的描述在具体章节：<br>
+				&nbsp;&nbsp;1.公孙丑章句上--我善养吾浩然之气<br>
+				&nbsp;&nbsp;2.滕文公章句下--居天下之广居，立天下之正位，行天下之大道...富贵不能淫，贫贱不能移，威武不能屈...
+		</p>
+		<p><a href="http://www.guoxue.com/shibu/24shi/shiji/sj_028.htm" target="_blank">天、上帝、太一</a></p>
+	</div>
+	<div class="mokuai">
+		<p>儒家君师关系：</p>
+			<p>&nbsp;&nbsp;殷商宇宙王制，<a href="https://c.m.163.com/news/a/JA0OLN0105566FH1.html" target="_blank">原始儒教：政教一元还是政教二元？</a></p>
+			<p>
+				&nbsp;&nbsp;【君师不可能平等的学术资料源头】：<br>
+				&nbsp;&nbsp;<a href="https://www.guoxuemeng.com/guoxue/596.html" target="_blank">天先乎地，君先乎臣，其义一也。</a>出自《礼记·效特牲》<br>
+				&nbsp;&nbsp;<a href="https://www.guoxuemeng.com/guoxue/488.html" target="_blank">天佑下民，作之君，作之师，惟其克相上帝，宠绥四方。</a>出自《尚书·泰誓》<br>
+				&nbsp;&nbsp;<a href="https://www.guoxuemeng.com/guoxue/491.html" target="_blank">皇极思想</a>，出自《尚书·洪范》<br>
+				&nbsp;&nbsp;<a href="https://www.guoxuemeng.com/guoxue/499.html" target="_blank">皇天上帝，改厥元子兹大国殷之命。</a>出自《尚书·召诰》
+			</p>
+	</div>
+</div>
 
-<div class="mokuai">
+<!-- 法家 -->
+<div class="mokuai"  id="法家" style="display:none">
 	<p>法家：</p>
 		<p>&nbsp;重刑：<a href="https://www.guoxuemeng.com/guoxue/shangjunshu/" target="_blank">《商君书》</a></p>
 		<p>&nbsp;权术、威势：<a href="https://www.guoxuemeng.com/guoxue/hanfeizi/" target="_blank">《韩非子》</a></p>
 			
-	
 	<p>道法：</p>
-		<p>&nbsp;<a href="https://www.gushiwen.cn/guwen/book_94f35da6046f.aspx" target="_blank">《黄帝四经》</a></p>
+		<p>&nbsp;<a href="https://www.gushiwen.cnhttps://www.gushiwen.cn/guwen/book_94f35da6046f.aspx" target="_blank">《黄帝四经》</a></p>
 		<p>&nbsp;<a href="https://www.guoxuemeng.com/guoxue/guanzi/" target="_blank">《管子》</a>（战国著作）</p>
-		<p>&nbsp;<a href="https://www.guoxuemeng.com/guoxue/dengxizi/" target="_blank">《邓析子》</a>（可以划归到名家，但涉及权势问题）</p>
+		<p></p>
 </div>
 
-<!-- -------------------------------------------------------------------- -->
 
-<div class="mokuai">	
+<!-- 历史 -->
+<div class="mokuai"  id="历史" style="display:none">	
 	<p>历史：<a href="https://www.guoxuemeng.com/guoxue/shanhaijing/" target="_blank">《山海经》</a>、<a href="https://www.guoxuemeng.com/guoxue/shiji/" target="_blank">《史记》</a>、《东周列国志》</p>
 </div>
 
-<!-- -----------------------------道学--------------------------------------- -->
 
 
-<!-- -----------------------------儒、墨学--------------------------------------- -->
 
-<div class="mokuai">
-<!-- 其他 -->
-	<p>《孟子》中关于天（上帝）的描述在具体章节：<br>
-			&nbsp;&nbsp;1.梁惠王章句下--天降下民，作之君，作之师，惟曰其助上帝宠之四方<br>
-			&nbsp;&nbsp;2.公孙丑章句上--永言配命，自求多福<br>
-			&nbsp;&nbsp;3.离娄章句上--虽有恶人，斋戒沐浴，则可以祀上帝<br>
-			&nbsp;&nbsp;4.离娄章句下--诚者，天之道也；思诚者，人之道也<br>
-			&nbsp;&nbsp;5.万章章句上--天视自我民视，天听自我民听<br>
-			&nbsp;&nbsp;6.尽心章句上--尽其心者，知其性也；知其性，则知天矣
-	</p>
-	<p>《孟子》中关于正气的描述在具体章节：<br>
-			&nbsp;&nbsp;1.公孙丑章句上--我善养吾浩然之气<br>
-			&nbsp;&nbsp;2.滕文公章句下--居天下之广居，立天下之正位，行天下之大道...富贵不能淫，贫贱不能移，威武不能屈...
-	</p>
-	
-	<p><a href="http://www.guoxue.com/shibu/24shi/shiji/sj_028.htm" target="_blank">天、上帝、太一</a></p>
-	
-</div>
-
-<!-- -----------------------------儒学--------------------------------------- -->
-
-<div class="mokuai">
-	
-	<br>
-	<p>儒家君师关系：</p>
-		<p>&nbsp;&nbsp;殷商宇宙王制，<a href="https://c.m.163.com/news/a/JA0OLN0105566FH1.html" target="_blank">原始儒教：政教一元还是政教二元？</a></p>
-		<p>
-			&nbsp;&nbsp;【君师不可能平等的学术资料源头】：<br>
-			&nbsp;&nbsp;<a href="https://www.guoxuemeng.com/guoxue/596.html" target="_blank">天先乎地，君先乎臣，其义一也。</a>出自《礼记·效特牲》<br>
-			&nbsp;&nbsp;<a href="https://www.guoxuemeng.com/guoxue/488.html" target="_blank">天佑下民，作之君，作之师，惟其克相上帝，宠绥四方。</a>出自《尚书·泰誓》<br>
-			&nbsp;&nbsp;<a href="https://www.guoxuemeng.com/guoxue/491.html" target="_blank">皇极思想</a>，出自《尚书·洪范》<br>
-			&nbsp;&nbsp;<a href="https://www.guoxuemeng.com/guoxue/499.html" target="_blank">皇天上帝，改厥元子兹大国殷之命。</a>出自《尚书·召诰》
-		</p>
-</div>
-
-<p>返回<a href="../index.html">上一页</a></p>
+<script>
+	function toggleDisplay(elementl) {
+		var element = document.getElementById(elementl);
+		if (element.style.display === 'none') {
+			element.style.display = 'block'; // 或者使用 'flex', 'inline', 等，取决于你的布局需求
+		} else {
+			element.style.display = 'none';
+		}
+	}
+</script>
 </body>
 </html>
