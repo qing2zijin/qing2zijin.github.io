@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta name="viewport" content="width=device-width">
+<meta charset="utf-8">
+<title>个人日志_2018</title>
+<link href="/extra/css/style20240202.css" rel="stylesheet" type="text/css" />
+<link rel="icon" href="/extra/favicon.ico"/>
+</head>
+<body>
+	<div id="container">
+		<div id="hdr">
+		    <span id="logo">月牙博客</span>
+			<span id="subtitle">记录所思所想</span>
+		</div>
+		<div id="navbar">
+			
+		</div>
+		<div id="content">
+			<div id="lftcol">
+			    <!-- <p>《犬夜叉》 神无之死</p> -->
+				<!-- <p>忧思逢苦雨，人世叹徒然。<br>春色无暇赏，奈何花已残。</p><p style="text-align:right">—— 小野小町</p> -->
+				<p>“吾爱吾师，吾更爱真理。”<br>
+				<span style="float:right">—— 亚里士多德</span></p><br><br>
+			</div>
+			<div id="rgtcol">
+				<div class="post-time">2018-10-29</div>
+            <div class="post-entry">
+                <div class="post-title"></div>
+				<div class="post-desc"><p>（麻省理工公开课：线性代数）<a href="https://c.open.163.com/mob/video.htm?plid=M6V0BQC4M&mid=M6V2ADFDT#share-mob" target="_blank">四个基本子空间 </a></p></div>
+			</div>
+            
+			</div>
+			<div id="page-navigator">
+			</div>
+		</div>
+		<div id="footer">
+			<span>© 2023</span>
+		</div>
+	</div>
+	<script>
+		function loadDoc(url, str) {
+			  var xhttp;
+			  xhttp=new XMLHttpRequest();
+			  xhttp.onreadystatechange = function() {
+				if (this.readyState == 4 && this.status == 200) {
+					try{
+						document.getElementById(str).innerHTML = xhttp.responseText; 
+					}catch (err){
+						console.log(err);
+					}
+				}
+			  };
+			  xhttp.open("GET", url, true);
+			  xhttp.send();
+			}
+
+		loadDoc("/extra/menu.html", "navbar");
+	</script>
+<script type="text/javascript" src="/extra/js/img.js"></script>
+</body>
+</html>

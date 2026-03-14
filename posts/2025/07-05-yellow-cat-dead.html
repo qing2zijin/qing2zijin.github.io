@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta name="viewport" content="width=device-width">
+<meta charset="utf-8">
+<title>大黄猫亡</title>
+<link href="/extra/css/style20240202.css" rel="stylesheet" type="text/css" />
+<link rel="icon" href="/extra/favicon.ico"/>
+<meta name="keywords" content="猫,死亡">
+<meta name="description" content="大黄猫亡">
+</head>
+<body>
+	<div id="container">
+		<div id="hdr">
+		    <span id="logo">月牙博客</span>
+			<span id="subtitle">记录所思所想</span>
+		</div>
+		<div id="navbar">
+			
+		</div>
+		<div id="content">
+			<div id="lftcol">
+			   <!--  <p>《犬夜叉》 神无之死</p>
+				<p>忧思逢苦雨，人世叹徒然。<br>春色无暇赏，奈何花已残。</p><p style="text-align:right">—— 小野小町</p> -->
+				<p>“吾爱吾师，吾更爱真理。”<br>
+				<span style="float:right">—— 亚里士多德</span></p><br><br>
+			</div>
+			<div id="rgtcol">
+				<div id="article_title">
+					<h1>大黄猫亡</h1>
+				</div>
+				<p><img data-src="/pics/2025/IMG_20241005_173640.jpg" alt="20241005"/><img data-src="/pics/2025/IMG_20241202_173446.jpg" alt="20241202"/><img data-src="/pics/2025/IMG_20250204_101142.jpg" alt="20250204_1"/><img data-src="/pics/2025/IMG_20250204_101159.jpg" alt="20250204_2"/><img data-src="/pics/2025/IMG_20250204_101210.jpg" alt="20250204_3"/></p>
+<p>上午10点左右，养了一年多的温驯母猫亡于底层楼道至厕所的过道处，葬于核桃树下，黄猫留下5只1个月大的小猫：两只黑白混色兼部分黄色猫、两只黑猫、一只黄猫。不知什么原因猫亡，估计是肠胃问题，没有很好的预防、及时就医。<br>愿它于天堂安息。</p>
+			</div>
+			<div id="page-navigator">
+			</div>
+		</div>
+		<div id="footer">
+			<span>© 2023</span>
+		</div>
+	</div>
+	<script>
+	function loadDoc(url, str) {
+		  var xhttp;
+		  xhttp=new XMLHttpRequest();
+		  xhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+				try{
+					document.getElementById(str).innerHTML = xhttp.responseText; 
+				}catch (err){
+					console.log(err);
+				}
+			}
+		  };
+		  xhttp.open("GET", url, true);
+		  xhttp.send();
+		}
+
+	loadDoc("/extra/menu.html", "navbar");
+	</script>
+	<script type="text/javascript" src="/extra/js/img.js"></script>
+</body>
+</html>

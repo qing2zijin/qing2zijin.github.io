@@ -183,7 +183,9 @@ body{
 	padding:0 0 10px 0
 }
 #rgtcol p{
-	margin-bottom:10px
+	margin-bottom:10px;
+	width:100%;
+	float:left
 }
 #rgtcol pre{
 	margin:1em 0em 1em 0em; 	
@@ -205,7 +207,8 @@ body{
 	padding:0px;
 	border:0px;
 	border-radius:3px;
-	width:100%
+	width:100%;
+	float:left
 }
 
 #rgtcol blockquote{
