@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta name="viewport" content="width=device-width">
+<meta charset="utf-8">
+<title>对生成式AI的思考</title>
+<link href="../../extra/css/style20240202.css" rel="stylesheet" type="text/css" />
+<link rel="icon" href="/extra/favicon.ico"/>
+<meta name="keywords" content="AI,人">
+<meta name="description" content="对生成式AI的思考">
+</head>
+<body>
+	<div id="container">
+		<div id="hdr">
+		    <span id="logo">月牙博客</span>
+			<span id="subtitle">记录所思所想</span>
+		</div>
+		<div id="navbar">
+			
+		</div>
+		<div id="content">
+			<div id="lftcol">
+			   <!--  <p>《犬夜叉》 神无之死</p>
+				<p>忧思逢苦雨，人世叹徒然。<br>春色无暇赏，奈何花已残。</p><p style="text-align:right">—— 小野小町</p> -->
+				<p>“吾爱吾师，吾更爱真理。”<br>
+				<span style="float:right">—— 亚里士多德</span></p><br><br>
+			</div>
+			<div id="rgtcol">
+				<div id="article_title">
+					<h1>对生成式AI的思考</h1>
+				</div>
+				<p>一）</p>
+
+<p>虽然我不是专业从事AI的人，但是凭借我的信息识别能力，对于AI我是了解一些的。</p>
+
+<p>现在所谓的AI更多的是生成式AI，一种能够‌创造文本、图片、声音、视频及代码等新内容‌的人工智能技术，它的原理本质是概率计算，通过“喂数据、学规律、做推理”三个步骤，预测并输出最可能的内容序列 。其运行过程通常包含训练、调整以及生成评估三个阶段，利用海量无标记数据创建基础模型，再通过微调适应特定任务。</p>
+
+<p>它依赖既定程序做概率统计，给这个模型喂养大量的人工数据，从数据中得到一个准确的贴合现实的结果。这个过程更像是在“摸奖”，抛出一枚硬币会得到两种结果：正面和反面，很明显在没有外部刺激之下，AI不会主动给出结果，需要使用AI的人给AI一个起始值（刺激）。</p>
+
+<p>在不给AI刺激的情况下，AI自己其实是陷入一种混沌状态，不确定状态，只有人给定条件，AI才给出确定答案，这个有点像量子力学。</p>
+
+<p>量子力学就是在用概率描述事物。在经典力学中，可以连续地测量各种物理量。但是在量子力学中，各种物理量的值是离散的，并且不能无限准确地测量某几对物理量（不确定性原理）。在量子力学中，物质呈现出波粒二象性。量子力学用波函数来描述体系的状态，量子态出现的概率由波函数的平方决定，哈密顿量决定了体系的演化，这个关系由薛定谔方程给出。</p>
+
+<p>同样的，从不确定状态到确定状态，需要人给定方向，说明AI并不智能，不会自己独立思考，这种AI和人理想中的AI相去甚远。</p>
+
+<p>二）</p>
+
+<p>对于人和动物而言，人和其他生物能够产生智慧，很大的一个原因是生死存续导致的，有缺陷的生物为求活命，自己拟定了方向，倒逼生物“进化”，而现有AI没有外在威胁，没有缺陷，反而就失去了方向。</p>
+
+<p>没有从0到1的原生动机，在底层上就失去了成为智慧生命体的潜能。</p>
+
+<p>三）</p>
+
+<p>很多人都在说AI要取代人了，其实这种说法是不正确的，现有AI技术并不智能，它连人都不是，何来取代人？</p>
+
+<p>前面说过现有AI是要经过喂数据的过程，只要自己从事的行业、自己行为模式没有被AI学习到，AI拿什么去取代人呢？</p>
+
+<p>再者，人有自主运动特性，人是灵活的呀，AI能把人的行为都学去了？现有AI模型就是对人的模仿，还不能取代人。</p>
+
+<p>人的岗位被AI取代了，但是，人可以成为培养AI的人呀。</p>
+
+<p>四）</p>
+
+<p>估计人类永远都不能创造出“理想AI”，因为AI技术本质是人对自然万物的理解，AI是经过人思考的产物，只要人对宇宙的了解还是像走在“迷雾”之中，那么就不会产生具备自主意识的AI（类似人）。</p>
+
+<p><br>相关文章：<a href="https://blog.csdn.net/cf2suds8x8f0v/article/details/142447674">杨立昆哈佛大学演讲:生成式大模型很糟糕,我们需要目标驱动的AI</a></p>
+			</div>
+			<div id="page-navigator">
+			</div>
+		</div>
+		<div id="footer">
+			<span>© 2023</span>
+		</div>
+	</div>
+	<script>
+	function loadDoc(url, str) {
+		  var xhttp;
+		  xhttp=new XMLHttpRequest();
+		  xhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+				try{
+					document.getElementById(str).innerHTML = xhttp.responseText; 
+				}catch (err){
+					console.log(err);
+				}
+			}
+		  };
+		  xhttp.open("GET", url, true);
+		  xhttp.send();
+		}
+
+	loadDoc("/extra/menu.html", "navbar");
+	</script>
+	<script type="text/javascript" src="/extra/js/img.js"></script>
+</body>
+</html>

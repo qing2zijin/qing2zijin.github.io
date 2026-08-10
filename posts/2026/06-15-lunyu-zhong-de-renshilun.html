@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta name="viewport" content="width=device-width">
+<meta charset="utf-8">
+<title>《论语》中的认识论</title>
+<link href="../../extra/css/style20240202.css" rel="stylesheet" type="text/css" />
+<link rel="icon" href="/extra/favicon.ico"/>
+<meta name="keywords" content="论语,认识论">
+<meta name="description" content="《论语》中的认识论">
+</head>
+<body>
+	<div id="container">
+		<div id="hdr">
+		    <span id="logo">月牙博客</span>
+			<span id="subtitle">记录所思所想</span>
+		</div>
+		<div id="navbar">
+			
+		</div>
+		<div id="content">
+			<div id="lftcol">
+			   <!--  <p>《犬夜叉》 神无之死</p>
+				<p>忧思逢苦雨，人世叹徒然。<br>春色无暇赏，奈何花已残。</p><p style="text-align:right">—— 小野小町</p> -->
+				<p>“吾爱吾师，吾更爱真理。”<br>
+				<span style="float:right">—— 亚里士多德</span></p><br><br>
+			</div>
+			<div id="rgtcol">
+				<div id="article_title">
+					<h1>《论语》中的认识论</h1>
+				</div>
+				<p>认识论‌是哲学里研究“人怎么认识世界”的学问，主要搞清楚知识的来源、本质以及我们怎么判断什么是对的 。</p>
+
+<p>对认识论有个粗浅的了解，读过庄子和惠施关于“子非鱼”的典故（具体出自《庄子·秋水》）就明白：</p>
+
+<blockquote>庄子曰：“儵（‌shū）鱼出游从容，是鱼之乐也。” <br>惠子曰∶“子非鱼，安知鱼之乐?”<br>庄子曰：“子非我，安知我不知 鱼之乐?”<br>惠子曰：“我非子，固不知子矣;子固非鱼也，子之不知鱼 之乐，全矣!”<br>庄子曰：“请循其本。子曰‘汝安知鱼乐’云者，既 已知吾知之而问我。我知之濠上也。”</blockquote>
+
+<p>在《论语》中就涉及到认识论：</p>
+
+<ol>
+<li>子曰：“学而时习之，不亦说乎？有朋自远方来，不亦乐乎？<strong>人不知而不愠，不亦君子乎？</strong>”（学而篇）</li><li>子曰：“不患人之不己知，患不知人也。”（学而篇）</li><li>子曰：“温故而知新，可以为师矣。”（为政篇）</li><li>子曰：“人之过也，各于其党。观过，斯知仁矣。”（里仁篇）</li><li>子曰：“不患无位，患所以立；不患莫己知，求为可知也。”（里仁篇）</li><li>子绝四：毋意、毋必、毋固、毋我。（子罕篇）</li>
+</ol>
+
+<p>《论语》中的认识论是孔子在确定知识来源的原则问题，并没有详尽解释认识机理，这点不如佛教和名家仔细，不是纯粹地逻辑思考。</p>
+			</div>
+			<div id="page-navigator">
+			</div>
+		</div>
+		<div id="footer">
+			<span>© 2023</span>
+		</div>
+	</div>
+	<script>
+	function loadDoc(url, str) {
+		  var xhttp;
+		  xhttp=new XMLHttpRequest();
+		  xhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+				try{
+					document.getElementById(str).innerHTML = xhttp.responseText; 
+				}catch (err){
+					console.log(err);
+				}
+			}
+		  };
+		  xhttp.open("GET", url, true);
+		  xhttp.send();
+		}
+
+	loadDoc("/extra/menu.html", "navbar");
+	</script>
+	<script type="text/javascript" src="/extra/js/img.js"></script>
+</body>
+</html>

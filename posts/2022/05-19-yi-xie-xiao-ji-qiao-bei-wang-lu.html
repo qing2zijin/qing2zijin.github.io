@@ -4,7 +4,7 @@
 <meta name="viewport" content="width=device-width">
 <meta charset="utf-8">
 <title>关于电脑的一些小操作备忘录-关闭自动维护/关闭某软件联网</title>
-<link href="/extra/css/style20240202.css" rel="stylesheet" type="text/css" />
+<link href="../../extra/css/style20240202.css" rel="stylesheet" type="text/css" />
 <link rel="icon" href="/extra/favicon.ico"/>
 <meta name="keywords" content="windows自动维护,软件联网,windows">
 <meta name="description" content="关于电脑的一些小操作备忘录-关闭自动维护/关闭某软件联网">
@@ -29,22 +29,32 @@
 				<div id="article_title">
 					<h1>关于电脑的一些小操作备忘录-关闭自动维护/关闭某软件联网</h1>
 				</div>
-				<p>最近电脑老是自动维护，维护的时候就卡，很是影响电脑操作，于是关闭它。
-具体操作：<a href="https://product.pconline.com.cn/itbk/software/dnyw/1492/14921790.html">https://product.pconline.com.cn/itbk/software/dnyw/1492/14921790.html</a></p>
-<blockquote>
-第一步、Win+R组合键调出运行命令输入框，输入regedit后，点击确定或者回车<br>
-温馨提示：如果弹出用户账户控制窗口，点击“是”即可<br>
-第二步、在注册表编辑器窗口，依次展开并定位至<br>
-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Schedule\Maintenance<br>
-第三步、在Maintenance对应的右侧窗口，单击鼠标右键，弹出菜单中鼠标指向“ 新建”然后点击次级菜单中的“DWORD(32位)值”，<br>
-第四步、将新建的DWORD(32位)值命名为MaintenanceDisabled，对其双击鼠标<br>
-第五步、在弹出的编辑DWORD(32位)值窗口，把MaintenanceDisabled的数值数据从“0”更改为“1”，然后点击“确定”<br>
-第六步、重启计算机，Windows10系统自动维护功能就会关闭了<br>
-温馨提示：需要重新开启自动维护功能，只需把MaintenanceDisabled数值数据从“1”修改为“0”，或删除MaintenanceDisabled值即可
-</blockquote>
+				<p>最近电脑老是自动维护，维护的时候就卡，很是影响电脑操作，于是关闭它。</p>
 
-<p>另外，有些软件开启之后就加载广告，导致开启缓慢，于是可以考虑关闭软件联网：
-<a href="https://www.52zixue.com/dnjc/06/01/32402/">https://www.52zixue.com/dnjc/06/01/32402/</a></p>
+<p>具体操作：<a href="https://product.pconline.com.cn/itbk/software/dnyw/1492/14921790.html">https://product.pconline.com.cn/itbk/software/dnyw/1492/14921790.html</a></p>
+
+<p>第一步、Win+R组合键调出运行命令输入框，输入regedit后，点击确定或者回车<br></p>
+
+<p>温馨提示：如果弹出用户账户控制窗口，点击“是”即可</p>
+
+<p>第二步、在注册表编辑器窗口，依次展开并定位至<br></p>
+
+<p>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Schedule\Maintenance</p>
+
+<p>第三步、在Maintenance对应的右侧窗口，单击鼠标右键，弹出菜单中鼠标指向“ 新建”然后点击次级菜单中的“DWORD(32位)值”，</p>
+
+<p>第四步、将新建的DWORD(32位)值命名为MaintenanceDisabled，对其双击鼠标</p>
+
+<p>第五步、在弹出的编辑DWORD(32位)值窗口，把MaintenanceDisabled的数值数据从“0”更改为“1”，然后点击“确定”</p>
+
+<p>第六步、重启计算机，Windows10系统自动维护功能就会关闭了<br></p>
+
+<p>温馨提示：需要重新开启自动维护功能，只需把MaintenanceDisabled数值数据从“1”修改为“0”，或删除MaintenanceDisabled值即可</p>
+
+<p>另外，有些软件开启之后就加载广告，导致开启缓慢，于是可以考虑关闭软件联网：</p>
+
+<p><a href="https://www.52zixue.com/dnjc/06/01/32402/">https://www.52zixue.com/dnjc/06/01/32402/</a></p>
+
 <p>很实用。</p>
 			</div>
 			<div id="page-navigator">

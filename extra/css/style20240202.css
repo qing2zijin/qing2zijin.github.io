@@ -141,7 +141,7 @@ body{
 }
 /* --------------------------------------------------------- */
 @media screen and (max-width:960px){
-	#hdr{display:none}
+	/*#hdr{display:none}*/
 	#navbar{float:left}
 	#navbar ul{
 		float:left;
@@ -175,12 +175,16 @@ body{
 	/* list-style:arabic-indic; */
 	list-style:disc;
 	margin:0 0 0 10px;
-	padding:0 0 10px 0	
+	padding:0 0 10px 0;
+	float:left;
+	width:90%;
 }
 #rgtcol > ol li{
 	list-style:inherit; 
 	margin:0 0 0 20px;
-	padding:0 0 10px 0
+	padding:0 0 10px 0;
+	float:left;
+	width:90%;
 }
 #rgtcol p{
 	margin-bottom:10px;
@@ -189,13 +193,21 @@ body{
 }
 #rgtcol pre{
 	margin:1em 0em 1em 0em; 	
-	overflow:auto;
-	background-color:#c9c9c354
+	/*overflow:auto;*/
+	background-color:#c9c9c354;
+	width:100%;
+	float:left;
+    white-space: pre-wrap;       /* CSS3 */
+    white-space: -moz-pre-wrap;  /* Firefox */
+    white-space: -pre-wrap;      /* Opera <7 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
 }
 
-#rgtcol code{	
+
+#rgtcol p code{	
 	border-radius:10px;	
-	background-color:#e9e3e5
+	background-color:#eeeeeb54
 }
 
 #rgtcol pre code{
@@ -212,10 +224,13 @@ body{
 }
 
 #rgtcol blockquote{
-	margin:0px 0px 24px 0px;
-	border-bottom:1px solid; 
+	margin:5px 0px 1em 0px;
+	border-bottom:1px dashed; 
 	background-color:#c9c9c354;
-	line-height:2em
+	line-height:1.6;
+	overflow: auto;
+	width:100%;
+	float:left
 }
 .toc{
 	max-width:400px;
@@ -226,7 +241,7 @@ body{
 }
 .toc ul, .toc ol{
 	margin:0px;
-	padding:0px
+	padding:0px;
 }
 .toc li{
 	margin:0px 0px 0px 20px;
